@@ -1,0 +1,15 @@
+{
+  "name": "Eras da Luísa",
+  "short_name": "Eras",
+  "description": "A turnê de estudos da Luísa rumo à ONC 2027.",
+  "lang": "pt-BR",
+  "start_url": "./#/hoje",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#110d22",
+  "theme_color": "#110d22",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
