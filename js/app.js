@@ -553,7 +553,7 @@ function viewEra(mo) {
       ${done ? `${beadState(s.d) === "ok" ? `<span class="ok-ic">${I.check}</span>` : statusPill(s.d)}${isPai() ? `<button type="button" class="link" data-act="undo" data-d="${s.d}">desfazer</button>` : ""}` : ""}</li>`;
   }).join("");
   return `<div class="page">${back("#/turne")}<span class="eyebrow">${MES[mo].toUpperCase()} 2027</span><h1 class="display xl" style="color:${tx(E.cor)}">Era ${esc(E.nome)}</h1><p class="muted">${esc(E.sub)}</p>
-    <a class="btn ghost" href="${esc(trilhaUrl(mo) || spotifySearch(mo))}" target="_blank" rel="noopener">${I.music} Trilha da era</a>
+    <a class="btn ghost" href="${esc(isPhone() ? trilhaUrl(mo) || spotifySearch(mo) : spotifyApp(mo))}" ${isPhone() ? 'target="_blank" rel="noopener"' : ""}>${I.music} Trilha da era</a>
     <ol class="sessions">${rows}</ol></div>`;
 }
 
