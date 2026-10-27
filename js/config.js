@@ -16,11 +16,12 @@ export const CONFIG = {
   // O pai pode mudar pela tela Bastidores; isto é só o valor inicial.
   horarioPadrao: { 1: "17:00", 3: "17:00", 5: "17:00" },
 
-  // Blocos do modo foco, em minutos (15 de aquecimento + 75 aqui = 1h30).
+  // Blocos do modo foco, em minutos.
+  // 15 de aquecimento + 70 aqui + uns 10 de mapa mental = 1h30 e pouco.
   blocos: [
     { nome: "Bloco 1 · foco", min: 35 },
     { nome: "Pausa", min: 5, pausa: true },
-    { nome: "Bloco 2 · foco", min: 35 },
+    { nome: "Bloco 2 · foco", min: 30 },
   ],
 };
 
@@ -47,18 +48,15 @@ export const ERAS = {
   8: { nome: "The Life of a Showgirl", sub: "Reta final", cor: "#f2662f", trilha: "" },
 };
 
-// Recompensas. tipo:
-//   "contagem"  -> alvo = número de encontros feitos
-//   "era"       -> mes = mês que precisa estar completo
-//   "sequencia" -> alvo = semanas completas seguidas (a maior sequência)
-//   "simulados" -> alvo = encontros de simulado feitos
+// Recompensas: cada prêmio é liberado numa miçanga (encontro com mapa
+// mental aprovado pelo pai). "alvo" = número da miçanga.
 export const REWARDS = [
-  { id: "cinema", titulo: "Noite de cinema", desc: "Ela escolhe o filme e a pizza.", meta: "6 encontros", tipo: "contagem", alvo: 6 },
-  { id: "japones", titulo: "Jantar japonês", desc: "Fechou a era Midnights.", meta: "Completar janeiro", tipo: "era", mes: 1 },
-  { id: "envelope", titulo: "Envelope surpresa", desc: "O pai decide o que vai dentro.", meta: "4 semanas cheias seguidas", tipo: "sequencia", alvo: 4 },
-  { id: "livro", titulo: "Livro à escolha dela", desc: "Qualquer livro, sem palpite dos pais.", meta: "25 encontros", tipo: "contagem", alvo: 25 },
-  { id: "planetario", titulo: "Planetário", desc: "Uma sessão de planetário em São Paulo.", meta: "Metade do caminho: 44 encontros", tipo: "contagem", alvo: 44 },
-  { id: "rodizio", titulo: "Rodízio japonês com uma amiga", desc: "Fechou a era Folklore.", meta: "Completar junho", tipo: "era", mes: 6 },
-  { id: "taylor", titulo: "Noite Taylor", desc: "Karaokê e o filme do show em casa, com quem ela quiser.", meta: "Os 3 simulados de julho e agosto", tipo: "simulados", alvo: 3 },
-  { id: "grande", titulo: "A grande recompensa", desc: "Fez a ONC, qualquer que seja o resultado.", meta: "Completar agosto", tipo: "era", mes: 8 },
+  { id: "cinema", titulo: "Noite de cinema", desc: "Ela escolhe o filme e a pizza.", alvo: 6 },
+  { id: "japones", titulo: "Jantar japonês", desc: "No restaurante que ela escolher.", alvo: 12 },
+  { id: "envelope", titulo: "Envelope surpresa", desc: "O pai decide o que vai dentro.", alvo: 20 },
+  { id: "livro", titulo: "Livro à escolha dela", desc: "Qualquer livro, sem palpite dos pais.", alvo: 30 },
+  { id: "planetario", titulo: "Planetário", desc: "Metade do caminho! Uma sessão de planetário em São Paulo.", alvo: 44 },
+  { id: "rodizio", titulo: "Rodízio japonês com uma amiga", desc: "Ela e uma amiga, por conta do pai.", alvo: 60 },
+  { id: "taylor", titulo: "Noite Taylor", desc: "Karaokê e o filme do show em casa, com quem ela quiser.", alvo: 75 },
+  { id: "grande", titulo: "A grande recompensa", desc: "Fez a turnê inteira, qualquer que seja o resultado da ONC.", alvo: 88 },
 ];

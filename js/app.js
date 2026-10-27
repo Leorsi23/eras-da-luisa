@@ -25,6 +25,18 @@ const st = () => store.getState();
 const enc = (d) => st().encontros[d] || {};
 const isDone = (d) => Boolean(enc(d).feito);
 const isPai = () => ["pai", "pai-local"].includes(store.getRole());
+const ap = (d) => st().aprovacoes[d];
+// Estado da miçanga: ok (aprovada) · aguardando (mapa enviado) · semmapa · refazer · none
+function beadState(d) {
+  const e = enc(d); if (!e.feito) return "none";
+  const a = ap(d);
+  if (a && a.status === "aprovado") return "ok";
+  if (!e.mapa) return "semmapa";
+  if (a && a.status === "refazer" && (!e.mapaEm || e.mapaEm <= a.decididoEm)) return "refazer";
+  return "aguardando";
+}
+const isApproved = (d) => beadState(d) === "ok";
+const isPhone = () => matchMedia("(pointer: coarse)").matches;
 
 function horario(iso) {
   const w = dt(iso).getDay();
@@ -44,36 +56,25 @@ function phetEmbed(url) {
 // ---------- métricas ----------
 function weekKey(iso) { const d = dt(iso); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); return d.toLocaleDateString("sv-SE"); }
 function metrics() {
-  const n = REAL.filter((s) => isDone(s.d)).length;
+  const n = REAL.filter((s) => isApproved(s.d)).length;
+  const feitos = REAL.filter((s) => isDone(s.d)).length;
+  const aguardando = REAL.filter((s) => beadState(s.d) === "aguardando").length;
+  const pendentes = REAL.filter((s) => ["semmapa", "refazer"].includes(beadState(s.d)));
   const weeks = {};
   REAL.forEach((s) => { (weeks[weekKey(s.d)] ||= []).push(s); });
-  const keys = Object.keys(weeks).sort();
-  let full = 0, best = 0, run = 0;
-  keys.forEach((k) => { if (weeks[k].every((s) => isDone(s.d))) { full++; run++; best = Math.max(best, run); } else run = 0; });
   const today = todayISO();
   let thisWeek = weekKey(today);
-  if (today < REAL[0].d) { const lastDone = REAL.filter((s) => isDone(s.d)).pop(); thisWeek = lastDone ? weekKey(lastDone.d) : thisWeek; }
-  let cur = 0;
-  for (let i = keys.length - 1; i >= 0; i--) {
-    if (keys[i] > thisWeek) continue;
-    if (weeks[keys[i]].every((s) => isDone(s.d))) cur++;
-    else if (keys[i] !== thisWeek) break;
-  }
+  if (today < REAL[0].d) { const lastDone = REAL.filter((s) => isDone(s.d)).pop(); thisWeek = lastDone ? weekKey(lastDone.d) : weekKey(REAL[0].d); }
   const eraTotal = (m) => (BY_MONTH[m] || []).filter((s) => !s.off).length;
   const eraDoneN = (m) => (BY_MONTH[m] || []).filter((s) => !s.off && isDone(s.d)).length;
+  const eraApproved = (m) => (BY_MONTH[m] || []).filter((s) => !s.off).every((s) => isApproved(s.d));
   const eraDone = (m) => eraDoneN(m) === eraTotal(m);
-  const sims = REAL.filter((s) => s.t.startsWith("Simulado") && isDone(s.d)).length;
   const thisWeekSessions = (weeks[thisWeek] || []);
-  return { n, full, cur, best, eraTotal, eraDoneN, eraDone, sims, weekDone: thisWeekSessions.filter((s) => isDone(s.d)).length, weekTotal: thisWeekSessions.length || 3 };
+  return { n, feitos, aguardando, pendentes, eraTotal, eraDoneN, eraDone, eraApproved, weekDone: thisWeekSessions.filter((s) => isDone(s.d)).length, weekTotal: thisWeekSessions.length || 3 };
 }
-function rewardProgress(r, m) {
-  if (r.tipo === "contagem") return [m.n, r.alvo];
-  if (r.tipo === "sequencia") return [m.best, r.alvo];
-  if (r.tipo === "simulados") return [m.sims, r.alvo];
-  if (r.tipo === "era") return [m.eraDoneN(r.mes), m.eraTotal(r.mes)];
-  return [0, 1];
-}
-const unlocked = (m) => REWARDS.filter((r) => { const [a, t] = rewardProgress(r, m); return a >= t; }).map((r) => r.id);
+const rewardProgress = (r, m) => [m.n, r.alvo];
+const unlocked = (m) => REWARDS.filter((r) => m.n >= r.alvo).map((r) => r.id);
+const nextReward = (m) => REWARDS.find((r) => m.n < r.alvo);
 function nextSession() {
   const t = todayISO();
   return REAL.find((s) => !isDone(s.d) && s.d >= t) || REAL.find((s) => !isDone(s.d)) || null;
@@ -129,12 +130,38 @@ const I = {
   ingressos: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8a2 2 0 002-2h14a2 2 0 002 2v2a2 2 0 000 4v2a2 2 0 00-2 2H5a2 2 0 00-2-2v-2a2 2 0 000-4z"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg>',
   bastidores: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
   check: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>',
+  mapas: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M6 6l4 4M18 6l-4 4M6 18l4-4M18 18l-4-4"/></svg>',
+  camera: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
+  clock: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
   circle: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>',
 };
 
 const tx = (c) => `color-mix(in srgb, ${c} 62%, #2d1f3d)`;
 const chip = (a) => `<span class="chip" style="--c:${AREAS[a].cor}">${esc(AREAS[a].nome)}</span>`;
 const steps = (i) => `<ol class="steps" aria-label="Passo ${i} de 3">${["Aquecimento", "Foco", "Miçanga"].map((n, k) => `<li class="${k + 1 < i ? "ok" : k + 1 === i ? "on" : ""}">${k + 1} · ${n}${k + 1 < i ? " ✓" : ""}</li>`).join("")}</ol>`;
+
+function beadHtml(s, nxd) {
+  const b = beadState(s.d), c = AREAS[s.a].cor;
+  if (b === "ok") return `<span class="bead" style="--c:${c}" title="${esc(dLabel(s.d))}: aprovada"></span>`;
+  if (b === "aguardando") return `<span class="bead wait" style="--c:${c}" title="${esc(dLabel(s.d))}: aguardando o pai"></span>`;
+  if (b === "semmapa" || b === "refazer") return `<span class="bead todo" style="--c:${c}" title="${esc(dLabel(s.d))}: falta o mapa"></span>`;
+  if (s.d === nxd) return `<span class="bead next" title="Próximo encontro"></span>`;
+  return `<span class="bead empty"></span>`;
+}
+const STATUS = {
+  ok: ["Aprovada", "ok"], aguardando: ["Aguardando o pai", "wait"], semmapa: ["Falta o mapa", "todo"], refazer: ["Pai pediu para completar", "todo"], none: ["Não feito", "none"],
+};
+const statusPill = (d) => { const [t, k] = STATUS[beadState(d)]; return `<span class="pill ${k}">${t}</span>`; };
+const uploadBtn = (d, label = "Enviar foto do mapa") => `<label class="btn primary upl">${I.camera} ${label}<input type="file" accept="image/*" capture="environment" data-act="upload" data-d="${d}"></label>`;
+const mapaImg = (path, alt, cls = "mapa-img") => path ? `<img class="${cls}" data-mapa="${esc(path)}" alt="${esc(alt)}">` : "";
+function hydrate() {
+  document.querySelectorAll("img[data-mapa]").forEach(async (img) => {
+    const u = await store.mapaUrl(img.dataset.mapa);
+    if (u) img.src = u; else img.replaceWith(Object.assign(document.createElement("p"), { className: "muted small", textContent: "Não consegui carregar a foto agora." }));
+  });
+}
+function seenUnlock() { try { return JSON.parse(localStorage.getItem("eras-visto") || "null"); } catch (e) { return null; } }
+function setSeenUnlock(v) { try { localStorage.setItem("eras-visto", JSON.stringify(v)); } catch (e) { /* ignora */ } }
 
 // ---------- timer do modo foco ----------
 const TKEY = "eras-timer";
@@ -174,7 +201,6 @@ function paintTimer() {
 
 // ---------- views ----------
 let route = { name: "hoje", args: [] };
-let lastUnlock = [];
 let foco = { tab: 0 };
 
 function viewLogin(msg = "") {
@@ -203,10 +229,30 @@ function dateTile(iso) {
 }
 function howtoOpen() { try { return localStorage.getItem("eras-howto") !== "fechado"; } catch (e) { return true; } }
 
+function pendHtml(m) {
+  if (isPai()) {
+    return m.aguardando ? `<a class="card pend-card row" href="#/bastidores"><span class="pend-ic">${I.mapas}</span><span class="stack-xs grow"><b>${m.aguardando} ${m.aguardando === 1 ? "mapa esperando" : "mapas esperando"} sua aprovação</b><span class="small muted">Aprove em Bastidores para a miçanga ganhar cor.</span></span>${I.chev}</a>` : "";
+  }
+  const items = m.pendentes.map((s) => {
+    const a = ap(s.d), ref = beadState(s.d) === "refazer";
+    return `<li class="pend-item">${dateTile(s.d)}<span class="stack-xs grow"><b>${esc(s.t)}</b>
+      ${ref ? `<span class="small pai-msg"><b>Pai:</b> ${esc(a.comentario || "complete o mapa e envie de novo.")}</span>` : `<span class="small muted">Falta enviar a foto do mapa mental.</span>`}
+      ${isPhone() ? uploadBtn(s.d, ref ? "Enviar mapa de novo" : "Enviar foto do mapa") : `<span class="small b accent">Envie pelo celular: abra o app lá, na tela Hoje.</span>`}</span></li>`;
+  }).join("");
+  if (!items && !m.aguardando) return "";
+  return `<section class="card pend-card stack-s">
+    <div class="row between"><h2 class="display md">Mapas mentais</h2><a href="#/mapas" class="small">ver todos</a></div>
+    ${items ? `<ol class="pend-list">${items}</ol>` : ""}
+    ${m.aguardando ? `<p class="small wait-msg">${I.clock} ${m.aguardando} ${m.aguardando === 1 ? "mapa esperando" : "mapas esperando"} o pai aprovar. Quando ele aprovar, a miçanga ganha cor.</p>` : ""}
+  </section>`;
+}
+
 function viewHoje() {
   const m = metrics(), nx = nextSession(), era = currentEra(), E = ERAS[era];
-  const beads = REAL.slice(Math.max(0, m.n - 4), Math.max(0, m.n - 4) + 12).map((s) => isDone(s.d) ? `<span class="bead" style="--c:${AREAS[s.a].cor}"></span>` : s.d === nx?.d ? `<span class="bead next"></span>` : `<span class="bead empty"></span>`).join("");
-  const nr = REWARDS.map((r) => ({ r, p: rewardProgress(r, m) })).find(({ p }) => p[0] < p[1]);
+  const lastIdx = REAL.reduce((k, s, i) => (isDone(s.d) ? i : k), -1);
+  const start = Math.max(0, lastIdx - 6);
+  const beads = REAL.slice(start, start + 12).map((s) => beadHtml(s, nx?.d)).join("");
+  const nrw = nextReward(m);
   const upcoming = REAL.filter((s) => !isDone(s.d) && s.d >= todayISO() && s.d !== nx?.d).slice(0, 6);
   const tr = trilhaUrl(era);
   const preStart = todayISO() < REAL[0].d;
@@ -217,12 +263,15 @@ function viewHoje() {
     lastWeek = wl;
     return `${head}<li class="up">${dateTile(s.d)}<span class="stack-xs grow"><span class="up-time">${cap(WD_LONG[dt(s.d).getDay()])} · ${horario(s.d)}</span><span class="up-t">${esc(s.t)}</span><span>${chip(s.a)}</span></span></li>`;
   }).join("");
-  const nav = [["hoje", "Hoje", "o próximo encontro e o que vem pela frente"], ["turne", "Turnê", "o calendário completo, mês a mês"], ["pulseira", "Pulseira", "cada encontro feito vira uma miçanga"], ["ingressos", "Ingressos", "as recompensas e quanto falta"]];
+  const nav = [["hoje", "Hoje", "o próximo encontro e o que vem pela frente"], ["turne", "Turnê", "o calendário completo, mês a mês"], ["pulseira", "Pulseira", "suas miçangas e os pingentes dos prêmios"], ["mapas", "Mapas", "todos os seus mapas mentais, para consultar quando quiser"], ["ingressos", "Ingressos", "os prêmios e quantas miçangas faltam"]];
+  const newly = REWARDS.filter((r) => (hoje.fresh || []).includes(r.id));
   return `<div class="hoje">
     <div class="hello row between">
       <div class="stack-xs"><span class="eyebrow" style="color:${tx(E.cor)}">Era ${esc(E.nome)}</span><h1 class="display xl">Oi, Luísa!</h1></div>
       <div class="count"><b>${daysToOnc()}</b><span>dias para a ONC</span></div>
     </div>
+    ${newly.map((r) => `<a class="ticket-mini open full" href="#/ingressos"><span class="stack-xs grow"><span class="mono pink">INGRESSO DESTRAVADO</span><b class="display md">${esc(r.titulo)}</b><span class="small">Miçanga ${r.alvo} aprovada. Combine com o pai!</span></span>${I.chev}</a>`).join("")}
+    ${pendHtml(m)}
     ${nx ? `<article class="card hero">
       <span class="eyebrow">${preStart ? `A turnê começa em ${daysToStart} dias` : "Próximo encontro"}</span>
       <div class="hero-when">${dateTile(nx.d)}<span class="stack-xs"><b class="hero-day">${cap(WD_LONG[dt(nx.d).getDay()])}, ${+nx.d.slice(8)} de ${MES[monthOf(nx.d)]}</b><span class="hero-time">às ${horario(nx.d)} · 1h30</span></span></div>
@@ -238,26 +287,30 @@ function viewHoje() {
     <details class="card howto" ${howtoOpen() ? "open" : ""}>
       <summary><span class="display md">Como funciona</span><span class="small muted howto-hint">toque para ${howtoOpen() ? "recolher" : "abrir"}</span></summary>
       <ol class="howto-steps">
-        <li><b>Aquecimento · 15 min.</b> Aparecem temas de semanas atrás. Escreva no papel o que lembra, sem olhar nada, e depois confira.</li>
-        <li><b>Foco · 75 min.</b> Vídeo, simulação ou exercício do dia, com timer de 35 + 5 + 35 minutos e a trilha da era tocando.</li>
-        <li><b>Miçanga.</b> Escreva 3 frases sobre o tema, diga como foi e ganhe uma miçanga na pulseira.</li>
+        <li><b>Aquecimento · 15 min.</b> Aparecem temas de semanas atrás. Escreva no papel o que lembra, sem olhar nada, e depois confira no seu mapa mental daquele dia.</li>
+        <li><b>Foco · 70 min.</b> Vídeo, simulação ou exercício do dia, com timer de 35 + 5 + 30 minutos e a trilha da era tocando.</li>
+        <li><b>Mapa mental · 10 min.</b> No papel e sem olhar o material: o tema no meio e ramos com o que você aprendeu. Depois tire uma foto pelo celular e envie no app.</li>
+        <li><b>Miçanga.</b> Quando o pai aprova o mapa, a miçanga ganha cor na pulseira.</li>
       </ol>
+      <p class="small b">Os prêmios</p>
+      <p class="small">Cada miçanga aprovada conta. Os prêmios caem nas miçangas ${REWARDS.map((r) => r.alvo).join(", ").replace(/, (\d+)$/, " e $1")}. Na pulseira, cada prêmio é um pingente: dá para ver quanto falta. Encontro perdido pode ser feito depois e vale igual.</p>
       <p class="small b">No menu</p>
       <ul class="howto-nav">${nav.map(([k, n, d]) => `<li>${I[k]}<span><b>${n}:</b> ${d}</span></li>`).join("")}</ul>
-      <p class="small muted">Celular fora do quarto durante o encontro. Os ingressos valem pelo esforço, nunca pela nota.</p>
+      <p class="small muted">Celular fora do quarto durante o encontro; ele só volta no fim, para a foto do mapa. Os prêmios valem pelo esforço, nunca pela nota.</p>
     </details>
     <section class="card stack-s">
       <div class="row between"><h2 class="display md">Sua pulseira</h2><a href="#/pulseira" class="small">${m.n} de ${REAL.length} · ver</a></div>
       <div class="strip">${beads}</div>
-      <span class="muted small">Esta semana: ${m.weekDone} de ${m.weekTotal}${nx ? " · a pontilhada é a próxima" : ""}</span>
+      <span class="muted small">Esta semana: ${m.weekDone} de ${m.weekTotal} encontros · contorno = esperando o pai aprovar</span>
     </section>
-    ${nr ? `<a class="ticket-mini" href="#/ingressos"><span class="stack-xs grow"><span class="mono pink">PRÓXIMO INGRESSO</span><b>${esc(nr.r.titulo)} · faltam ${nr.p[1] - nr.p[0]}</b><span class="bar"><i style="width:${(100 * nr.p[0]) / nr.p[1]}%"></i></span></span>${I.chev}</a>` : ""}
+    ${nrw ? `<a class="ticket-mini" href="#/ingressos"><span class="stack-xs grow"><span class="mono pink">PRÓXIMO PRÊMIO · MIÇANGA ${nrw.alvo}</span><b>${esc(nrw.titulo)} · faltam ${nrw.alvo - m.n}</b><span class="bar"><i style="width:${(100 * m.n) / nrw.alvo}%"></i></span></span>${I.chev}</a>` : ""}
     <a class="card row tune" href="${esc(tr || spotifySearch(era))}" target="_blank" rel="noopener">
       <span class="tune-ic" style="--c:${E.cor}">${I.music}</span>
       <span class="stack-xs grow"><b>Trilha da era: ${esc(E.nome)}</b><span class="muted small">Abre no Spotify · no computador toca dentro do modo foco</span></span>${I.ext}
     </a>
   </div>`;
 }
+const hoje = { fresh: [] };
 
 function viewAquecimento(d) {
   const s = BY_DATE[d]; if (!s) return viewNotFound();
@@ -265,14 +318,14 @@ function viewAquecimento(d) {
   const shown = viewAquecimento.shown ||= {};
   const cards = revs.map(([lbl, t, src]) => {
     const srcS = BY_DATE[src], area = srcS ? srcS.a : "rev", val = (e.lembranca || {})[src] || "";
-    const pontos = src && enc(src).pontos;
+    const pontos = src && enc(src).pontos, mapa = src && enc(src).mapa;
     const open = shown[d + src];
     return `<article class="card recall">
       <div class="row between"><span class="mono muted">DE ${esc(lbl.toUpperCase())} ATRÁS</span>${chip(area)}</div>
       <h3 class="display md">${esc(t)}</h3>
-      ${open ? `<div class="keys"><span class="mono accent">PONTOS-CHAVE</span>${pontos ? `<p class="pre">${esc(pontos)}</p>` : `<p class="muted">Sem frases anotadas para este tema. Confira no caderno.</p>`}</div>
+      ${open ? `<div class="keys"><span class="mono accent">${mapa ? "SEU MAPA MENTAL DESSE DIA" : "PONTOS-CHAVE"}</span>${mapa ? `<a href="#/mapa/${src}">${mapaImg(mapa, "Mapa mental: " + t)}</a>` : pontos ? `<p class="pre">${esc(pontos)}</p>` : `<p class="muted">Sem mapa enviado para este tema. Confira no caderno.</p>`}</div>
         <div class="grid3">${[["esqueci", "Esqueci"], ["parte", "Lembrei parte"], ["tudo", "Lembrei tudo"]].map(([k, n]) => `<button type="button" class="opt ${val === k ? "sel" : ""}" data-act="lembra" data-d="${d}" data-src="${src}" data-v="${k}">${n}</button>`).join("")}</div>`
-      : `<div class="hidden-keys">Escreva no papel primeiro.<br>Os pontos-chave abrem depois.</div>
+      : `<div class="hidden-keys">Escreva no papel primeiro.<br>Seu mapa mental desse dia abre depois.</div>
          <button type="button" class="btn ghost" data-act="revela" data-k="${d + src}">Já escrevi · conferir</button>`}
     </article>`;
   }).join("");
@@ -280,7 +333,7 @@ function viewAquecimento(d) {
     <div class="topbar">${back("#/hoje")}${steps(1)}<span class="phone-off">${I.phone} Celular fora do quarto</span></div>
     <header class="stack-xs"><span class="eyebrow">${dLabel(d).toUpperCase()} · ANTES DE: ${esc(s.t.toUpperCase())}</span>
       <h1 class="display xl">O que você lembra?</h1>
-      <p class="muted lead">Escreva no papel, sem consultar nada, tudo o que lembra de cada tema. Depois abra os pontos-chave e confira. Errar aqui é o que faz lembrar em agosto.</p></header>
+      <p class="muted lead">Escreva no papel, sem consultar nada, tudo o que lembra de cada tema. Depois abra o seu mapa mental daquele dia e confira. Errar aqui é o que faz lembrar em agosto.</p></header>
     ${revs.length ? `<div class="recalls">${cards}</div>` : `<div class="card"><p>Hoje não tem revisão marcada. Pode ir direto para o foco.</p></div>`}
     <div class="row end"><a class="btn primary big" href="#/encontro/${d}/foco">Ir para o foco ${I.arrow}</a></div>
   </div>`;
@@ -304,7 +357,7 @@ function viewFoco(d) {
         </div></div>`;
   }
   const rk = (k) => (e.roteiro || {})[k];
-  const items = [["aquec", "Aquecimento"], ...mats.map((x, i) => ["m" + i, `${x[0]}: ${x[1]}`]), ["pontos", "3 frases no caderno sobre o tema"]];
+  const items = [["aquec", "Aquecimento"], ...mats.map((x, i) => ["m" + i, `${x[0]}: ${x[1]}`]), ["mapa", "Mapa mental no papel, sem olhar o material"]];
   const emb = spotifyEmbed(trilhaUrl(m));
   return `<div class="encontro">
     <div class="topbar">${back(`#/encontro/${d}/aquecimento`)}${steps(2)}<span class="phone-off">${I.phone} Celular fora do quarto</span></div>
@@ -337,58 +390,81 @@ function viewFoco(d) {
 function viewConcluido(d) {
   const s = BY_DATE[d]; if (!s) return viewNotFound();
   const e = enc(d), m = metrics(), idx = REAL.filter((x) => isDone(x.d) && x.d <= d).length;
-  const nr = REWARDS.map((r) => ({ r, p: rewardProgress(r, m) })).find(({ p }) => p[0] < p[1]);
-  const fresh = REWARDS.filter((r) => lastUnlock.includes(r.id));
+  const nrw = nextReward(m), b = beadState(d);
   const c = AREAS[s.a].cor;
+  const a = ap(d);
   return `<div class="encontro">
     <div class="topbar">${back("#/hoje")}${steps(3)}<span></span></div>
     <div class="split done">
       <div class="drop" aria-hidden="true">
         <svg viewBox="0 0 520 360" width="100%"><path d="M40 220 Q260 380 480 220" fill="none" stroke="var(--line2)" stroke-width="2"/>
         ${[58, 96, 136, 178, 220].map((x, i) => `<circle cx="${x}" cy="${[240, 266, 285, 297, 303][i]}" r="15" fill="${c}" opacity="${0.45 + i * 0.1}"/>`).join("")}
-        <circle class="falling" cx="262" cy="305" r="17" fill="${c}"/>
+        <circle class="falling" cx="262" cy="305" r="16" fill="${b === "ok" ? c : "#fff"}" stroke="${c}" stroke-width="4" ${b === "ok" ? "" : 'stroke-dasharray="6 5"'}/>
         ${[304, 346, 388, 428, 464].map((x, i) => `<circle cx="${x}" cy="${[303, 297, 285, 266, 240][i]}" r="15" fill="var(--line)"/>`).join("")}</svg>
       </div>
       <div class="stack">
-        <span class="eyebrow" style="color:${tx(c)}">MIÇANGA Nº ${idx} DE ${REAL.length}</span>
-        <h1 class="display xxl">Encontro feito!</h1>
-        <p class="muted lead">${esc(s.t)} entra para a pulseira. Volta no aquecimento daqui a 1 semana, 1 mês e 3 meses.</p>
-        ${fresh.map((r) => `<a class="ticket-mini open" href="#/ingressos"><span class="stack-xs grow"><span class="mono pink">INGRESSO DESTRAVADO</span><b>${esc(r.titulo)}</b><span class="small">Mostre ao pai para combinar.</span></span>${I.chev}</a>`).join("")}
-        ${!fresh.length && nr ? `<a class="ticket-mini" href="#/ingressos"><span class="stack-xs grow"><span class="mono pink">PRÓXIMO INGRESSO · FALTAM ${nr.p[1] - nr.p[0]}</span><b>${esc(nr.r.titulo)}</b><span class="bar"><i style="width:${(100 * nr.p[0]) / nr.p[1]}%"></i></span></span>${I.chev}</a>` : ""}
-        <label for="pontos" class="b">As 3 frases do caderno sobre o tema</label>
-        <textarea id="pontos" rows="4" data-act="pontos" data-d="${d}" placeholder="Elas aparecem no aquecimento das próximas semanas.">${esc(e.pontos || "")}</textarea>
+        <span class="eyebrow" style="color:${tx(c)}">MIÇANGA Nº ${idx} DE ${REAL.length} · ${statusPill(d)}</span>
+        <h1 class="display xxl">${b === "ok" ? "Miçanga aprovada!" : "Encontro feito!"}</h1>
+        ${b === "ok" ? `<p class="muted lead">${esc(s.t)} está na pulseira e já conta para os prêmios.</p>`
+          : `<div class="card stack-s mapa-steps"><b class="display md">Agora, o mapa mental</b>
+          <ol class="howto-steps">
+            <li><b>No papel, sem olhar o material.</b> O tema no centro e ramos com tudo o que você aprendeu hoje. Uns 10 minutos.</li>
+            <li><b>Foto pelo celular.</b> Abra o app no celular: o pedido aparece na tela Hoje.</li>
+            <li><b>O pai aprova</b> e a miçanga ganha cor. Ela conta para os prêmios.</li>
+          </ol>
+          ${b === "refazer" ? `<p class="small pai-msg"><b>Pai:</b> ${esc(a.comentario || "complete o mapa e envie de novo.")}</p>` : ""}
+          ${isPhone() && b !== "aguardando" ? uploadBtn(d, b === "refazer" ? "Enviar mapa de novo" : "Enviar foto do mapa") : ""}
+          ${b === "aguardando" ? `<p class="small wait-msg">${I.clock} Mapa enviado. Agora é com o pai.</p>` : ""}
+        </div>`}
+        ${e.mapa ? `<a href="#/mapa/${d}">${mapaImg(e.mapa, "Mapa mental: " + s.t, "mapa-img small-img")}</a>` : ""}
+        ${nrw ? `<a class="ticket-mini" href="#/ingressos"><span class="stack-xs grow"><span class="mono pink">PRÓXIMO PRÊMIO · MIÇANGA ${nrw.alvo}</span><b>${esc(nrw.titulo)} · faltam ${nrw.alvo - m.n} aprovadas</b><span class="bar"><i style="width:${(100 * m.n) / nrw.alvo}%"></i></span></span>${I.chev}</a>` : ""}
         <fieldset class="stack-s"><legend class="b">Como foi hoje?</legend>
           <div class="grid3">${[["facil", "Fácil"], ["medida", "Na medida"], ["puxado", "Puxado"]].map(([k, n]) => `<button type="button" class="opt ${e.humor === k ? "sel" : ""}" data-act="humor" data-d="${d}" data-v="${k}">${n}</button>`).join("")}</div>
         </fieldset>
-        <a class="btn primary big" href="#/hoje">Voltar para Hoje</a>
+        <a class="btn ghost big" href="#/hoje">Voltar para Hoje</a>
       </div>
     </div>
   </div>`;
 }
 
 function viewPulseira() {
-  const m = metrics(), N = REAL.length, slots = N + 8, cx = 175, cy = 175, R = 150;
+  const m = metrics(), N = REAL.length, slots = N + 8, cx = 175, cy = 175, R = 136, RC = 160;
   const ang = (i) => -Math.PI / 2 + ((i + 0.5) * 2 * Math.PI) / slots;
-  let slot = 0, svg = "";
+  const P = (r, a) => [(cx + r * Math.cos(a)).toFixed(1), (cy + r * Math.sin(a)).toFixed(1)];
+  let slot = 0, k = 0, svg = "";
+  const beadSlot = {};
   for (let mo = 1; mo <= 8; mo++) {
     (BY_MONTH[mo] || []).filter((s) => !s.off).forEach((s) => {
-      const a = ang(slot++);
-      svg += `<circle cx="${(cx + R * Math.cos(a)).toFixed(1)}" cy="${(cy + R * Math.sin(a)).toFixed(1)}" r="5.4" fill="${isDone(s.d) ? AREAS[s.a].cor : "var(--line)"}"><title>${esc(dLabel(s.d) + " · " + s.t)}</title></circle>`;
+      const a = ang(slot); k++; beadSlot[k] = slot++;
+      const [x, y] = P(R, a), b = beadState(s.d), c = AREAS[s.a].cor;
+      const fill = b === "ok" ? c : b === "none" ? "var(--line)" : "#fff";
+      const stroke = b === "ok" || b === "none" ? "none" : c;
+      svg += `<circle cx="${x}" cy="${y}" r="5.4" fill="${fill}" stroke="${stroke}" stroke-width="2" ${b === "semmapa" || b === "refazer" ? 'stroke-dasharray="2 2"' : ""}><title>${esc(dLabel(s.d) + " · " + s.t + " · " + STATUS[b][0])}</title></circle>`;
     });
-    const a = ang(slot++);
-    svg += `<rect x="${(cx + R * Math.cos(a) - 8).toFixed(1)}" y="${(cy + R * Math.sin(a) - 8).toFixed(1)}" width="16" height="16" rx="4" fill="${m.eraDone(mo) ? "#f2b705" : "var(--line)"}" stroke="#fff" stroke-width="2"><title>Era ${esc(ERAS[mo].nome)}</title></rect>`;
+    const [x, y] = P(R, ang(slot++));
+    svg += `<rect x="${(+x - 7).toFixed(1)}" y="${(+y - 7).toFixed(1)}" width="14" height="14" rx="4" fill="${m.eraApproved(mo) ? "#f2b705" : "var(--line)"}" stroke="#fff" stroke-width="2"><title>Era ${esc(ERAS[mo].nome)}</title></rect>`;
   }
-  const erasDone = [1, 2, 3, 4, 5, 6, 7, 8].filter((x) => m.eraDone(x)).length;
+  REWARDS.forEach((r) => {
+    const a = ang(beadSlot[r.alvo]), [x1, y1] = P(R + 7, a), [x, y] = P(RC, a), got = m.n >= r.alvo;
+    svg += `<line x1="${x1}" y1="${y1}" x2="${x}" y2="${y}" stroke="var(--pink-line)" stroke-width="1.5"/>
+      <g transform="translate(${x} ${y}) rotate(45)"><rect x="-7" y="-7" width="14" height="14" rx="3" fill="${got ? "var(--pink)" : "#fff"}" stroke="var(--pink)" stroke-width="2"/></g>
+      <title>Miçanga ${r.alvo}: ${esc(r.titulo)}</title>`;
+  });
+  const nrw = nextReward(m);
   return `<div class="page">
     <h1 class="display xl">A pulseira</h1>
-    <div class="bracelet"><svg viewBox="0 0 350 350" role="img" aria-label="Pulseira com ${m.n} de ${N} miçangas"><circle cx="175" cy="175" r="150" fill="none" stroke="var(--line)" stroke-width="2"/>${svg}</svg>
-      <div class="bracelet-c"><span class="display huge">${m.n}</span><span class="mono muted">de ${N} miçangas</span></div></div>
+    <div class="bracelet"><svg viewBox="0 0 350 350" role="img" aria-label="Pulseira com ${m.n} de ${N} miçangas aprovadas"><circle cx="175" cy="175" r="${R}" fill="none" stroke="var(--line)" stroke-width="2"/>${svg}</svg>
+      <div class="bracelet-c"><span class="display huge">${m.n}</span><span class="small muted">de ${N} miçangas aprovadas</span>${nrw ? `<span class="small pink b">faltam ${nrw.alvo - m.n} para: ${esc(nrw.titulo)}</span>` : ""}</div></div>
     <div class="grid3">
-      <div class="mini"><b class="mono n">${erasDone}</b><span class="muted small">eras completas</span></div>
-      <div class="mini"><b class="mono n">${m.full}</b><span class="muted small">semanas cheias</span></div>
-      <div class="mini"><b class="mono n">${m.cur}</b><span class="muted small">em sequência</span></div>
+      <div class="mini"><b class="n">${m.n}</b><span class="muted small">aprovadas</span></div>
+      <div class="mini"><b class="n">${m.aguardando}</b><span class="muted small">esperando o pai</span></div>
+      <div class="mini"><b class="n">${m.pendentes.length}</b><span class="muted small">falta o mapa</span></div>
     </div>
-    <div class="legend">${Object.entries(AREAS).map(([k, a]) => `<span><i style="background:${a.cor}"></i>${esc(a.nome)}</span>`).join("")}<span><i class="sq"></i>Era completa</span></div>
+    <section class="card stack-s"><h2 class="display md">Os pingentes</h2>
+      <ol class="ladder">${REWARDS.map((r) => `<li class="${m.n >= r.alvo ? "got" : ""}"><span class="lad-n">${r.alvo}</span><span class="grow">${esc(r.titulo)}</span><span class="small ${m.n >= r.alvo ? "ok-t" : "muted"}">${m.n >= r.alvo ? "liberado" : `faltam ${r.alvo - m.n}`}</span></li>`).join("")}</ol>
+    </section>
+    <div class="legend">${Object.entries(AREAS).map(([kk, a]) => `<span><i style="background:${a.cor}"></i>${esc(a.nome)}</span>`).join("")}
+      <span><i class="ring"></i>Esperando o pai</span><span><i class="ring dash"></i>Falta o mapa</span><span><i class="dia"></i>Pingente = prêmio</span><span><i class="sq"></i>Era toda aprovada</span></div>
   </div>`;
 }
 
@@ -400,7 +476,7 @@ function viewIngressos() {
     const k = got ? "got" : open ? "open" : a > 0 ? "going" : "lock";
     const tag = { got: "RESGATADO", open: "DESTRAVADO · MOSTRE AO PAI", going: "EM ANDAMENTO", lock: "BLOQUEADO" }[k];
     return `<article class="ticket ${k}">
-      <div class="t-main stack-xs"><span class="mono t-tag">${tag}</span><b class="display md">${esc(r.titulo)}</b><span class="small t-sub">${esc(r.desc)}</span><span class="small t-sub">Meta: ${esc(r.meta)}</span>
+      <div class="t-main stack-xs"><span class="mono t-tag">${tag}</span><b class="display md">${esc(r.titulo)}</b><span class="small t-sub">${esc(r.desc)}</span><span class="small t-sub">Miçanga ${r.alvo}${open ? "" : ` · faltam ${t - a}`}</span>
         ${!open ? `<span class="bar"><i style="width:${(100 * Math.min(a, t)) / t}%"></i></span>` : ""}
         ${got && r.id === "envelope" && env ? `<span class="small"><b>Dentro do envelope:</b> ${esc(env)}</span>` : ""}
         ${open && !got && isPai() ? `<button type="button" class="btn pink small-btn" data-act="claim" data-id="${r.id}">Marcar como resgatado</button>` : ""}
@@ -408,7 +484,45 @@ function viewIngressos() {
       <div class="t-stub"><span class="mono small">Nº</span><b class="display md">${String(i + 1).padStart(2, "0")}</b><span class="small">${got ? "Usado" : open ? "Pedir" : `${Math.min(a, t)}/${t}`}</span></div>
     </article>`;
   }).join("");
-  return `<div class="page"><h1 class="display xl">Seus ingressos</h1><p class="muted">Valem pelo esforço, nunca pela nota.</p><div class="tickets">${rows}</div></div>`;
+  return `<div class="page"><h1 class="display xl">Seus ingressos</h1><p class="muted">Cada miçanga aprovada pelo pai te aproxima do próximo. Valem pelo esforço, nunca pela nota.</p><div class="tickets">${rows}</div></div>`;
+}
+
+function viewMapas() {
+  const done = REAL.filter((s) => isDone(s.d)).reverse();
+  const cards = done.map((s) => {
+    const e = enc(s.d), b = beadState(s.d);
+    return `<li class="mapa-card card">
+      <a href="#/mapa/${s.d}" class="mapa-thumb">${e.mapa ? mapaImg(e.mapa, "Mapa mental: " + s.t, "thumb") : `<span class="thumb empty">${I.mapas}<span class="small">sem foto</span></span>`}</a>
+      <span class="stack-xs"><span class="row"><span class="mono muted">${dLabel(s.d).toUpperCase()}</span>${statusPill(s.d)}</span>
+        <a href="#/mapa/${s.d}" class="mapa-t">${esc(s.t)}</a>${chip(s.a)}
+        ${isPhone() && (b === "semmapa" || b === "refazer") ? uploadBtn(s.d) : ""}</span>
+    </li>`;
+  }).join("");
+  return `<div class="page"><h1 class="display xl">Seus mapas</h1><p class="muted">Todos os mapas mentais da turnê, do mais recente para o mais antigo. Toque num mapa para ver grande.</p>
+    ${cards ? `<ol class="mapas">${cards}</ol>` : `<div class="card"><p>Os mapas aparecem aqui depois do primeiro encontro.</p></div>`}</div>`;
+}
+
+function viewMapa(d) {
+  const s = BY_DATE[d]; if (!s || !isDone(d)) return viewNotFound();
+  const e = enc(d), b = beadState(d), a = ap(d);
+  return `<div class="page">${back("#/mapas")}
+    <span class="eyebrow" style="color:${tx(AREAS[s.a].cor)}">${dLabel(d).toUpperCase()} · ${esc(AREAS[s.a].nome.toUpperCase())}</span>
+    <h1 class="display lg">${esc(s.t)}</h1>
+    <div class="row">${statusPill(d)}</div>
+    ${b === "refazer" ? `<p class="pai-msg"><b>Pai:</b> ${esc(a.comentario || "complete o mapa e envie de novo.")}</p>` : ""}
+    ${e.mapa ? mapaImg(e.mapa, "Mapa mental: " + s.t, "mapa-img big") : `<div class="card"><p>Ainda não tem foto deste mapa.</p></div>`}
+    ${isPhone() && b !== "ok" && !isPai() ? uploadBtn(d, e.mapa ? "Trocar a foto" : "Enviar foto do mapa") : ""}
+    ${isPai() && b === "aguardando" ? decideHtml(d) : ""}
+  </div>`;
+}
+
+function decideHtml(d) {
+  return `<div class="decide stack-s">
+    <button type="button" class="btn primary" data-act="aprovar" data-d="${d}">Aprovar</button>
+    <details><summary class="small b">Pedir para completar</summary>
+      <div class="stack-s"><textarea id="c-${d}" rows="2" placeholder="Ex.: faltou a parte dos eclipses"></textarea>
+      <button type="button" class="btn ghost" data-act="refazer" data-d="${d}">Enviar pedido</button></div></details>
+  </div>`;
 }
 
 function viewTurne() {
@@ -430,7 +544,7 @@ function viewEra(mo) {
     const done = isDone(s.d);
     return `<li class="ses ${done ? "ok" : ""}"><span class="mono muted">${dLabel(s.d)}</span>
       <a class="grow" href="#/encontro/${s.d}/${done ? "concluido" : "aquecimento"}"><span class="area-dot" style="--c:${AREAS[s.a].cor}"></span>${esc(s.t)}</a>
-      ${done ? `<span class="ok-ic">${I.check}</span>${isPai() ? `<button type="button" class="link" data-act="undo" data-d="${s.d}">desfazer</button>` : ""}` : ""}</li>`;
+      ${done ? `${beadState(s.d) === "ok" ? `<span class="ok-ic">${I.check}</span>` : statusPill(s.d)}${isPai() ? `<button type="button" class="link" data-act="undo" data-d="${s.d}">desfazer</button>` : ""}` : ""}</li>`;
   }).join("");
   return `<div class="page">${back("#/turne")}<span class="eyebrow">${MES[mo].toUpperCase()} 2027</span><h1 class="display xl" style="color:${tx(E.cor)}">Era ${esc(E.nome)}</h1><p class="muted">${esc(E.sub)}</p>
     <a class="btn ghost" href="${esc(trilhaUrl(mo) || spotifySearch(mo))}" target="_blank" rel="noopener">${I.music} Trilha da era</a>
@@ -446,19 +560,28 @@ function viewBastidores() {
   const hard = {};
   Object.entries(E).forEach(([d, e]) => { if (e.feito && e.humor === "puxado" && d >= since && BY_DATE[d]) (hard[BY_DATE[d].a] ||= []).push(BY_DATE[d].t); });
   const alerts = Object.entries(hard).filter(([, l]) => l.length >= 2);
-  const pend = REWARDS.filter((r) => { const [a, t] = rewardProgress(r, m); return a >= t && !st().ingressos[r.id]; });
+  const pend = REWARDS.filter((r) => m.n >= r.alvo && !st().ingressos[r.id]);
+  const fila = REAL.filter((s) => beadState(s.d) === "aguardando");
+  const semMapa = m.pendentes;
   const recent = REAL.filter((s) => s.d <= todayISO()).slice(-6).reverse();
   const hor = aj.horario || {}, tr = aj.trilhas || {};
   return `<div class="page">
     <span class="eyebrow">SÓ PARA O PAI</span><h1 class="display xl">Bastidores</h1>
     ${store.isCloud() ? "" : `<p class="note">Modo local: estes dados são só deste aparelho. Com o Supabase configurado, você vê o progresso dela do seu celular.</p>`}
+    <section class="stack-s"><h2 class="display md">Mapas para aprovar ${fila.length ? `(${fila.length})` : ""}</h2>
+      ${fila.length ? fila.map((s) => `<article class="card approve">
+        <span class="mono muted">${dLabel(s.d).toUpperCase()}</span><b>${esc(s.t)}</b>
+        <a href="#/mapa/${s.d}">${mapaImg(enc(s.d).mapa, "Mapa mental: " + s.t, "mapa-img")}</a>
+        ${decideHtml(s.d)}</article>`).join("") : `<p class="small muted">Nada esperando. Quando ela enviar um mapa, ele aparece aqui.</p>`}
+      ${semMapa.length ? `<p class="small">Feitos sem mapa enviado: ${semMapa.map((s) => dLabel(s.d)).join(", ")}${semMapa.some((s) => beadState(s.d) === "refazer") ? " (inclui pedidos para completar)" : ""}.</p>` : ""}
+    </section>
     <div class="grid3">
       <div class="mini"><b class="mono n">${m.weekDone} de ${m.weekTotal}</b><span class="muted small">nesta semana</span></div>
-      <div class="mini"><b class="mono n">${m.n}/${REAL.length}</b><span class="muted small">no ano</span></div>
+      <div class="mini"><b class="mono n">${m.n}/${REAL.length}</b><span class="muted small">aprovadas no ano</span></div>
       <div class="mini"><b class="mono n">${pct === null ? "—" : pct + "%"}</b><span class="muted small">lembrou no aquecimento</span></div>
     </div>
     ${alerts.map(([a, l]) => `<div class="alert"><b>${esc(AREAS[a].nome)} marcada como "puxado" ${l.length} vezes no último mês</b><span class="small">${esc(l.join(" · "))}. Vale uma conversa ou levar ao professor.</span></div>`).join("")}
-    ${pend.length ? `<section class="stack-s"><b>Ingressos para combinar</b>${pend.map((r) => `<div class="row between card"><span class="stack-xs"><b>${esc(r.titulo)}</b><span class="small muted">${esc(r.meta)}</span></span><button type="button" class="btn pink" data-act="claim" data-id="${r.id}">Resgatado</button></div>`).join("")}</section>` : ""}
+    ${pend.length ? `<section class="stack-s"><b>Ingressos para combinar</b>${pend.map((r) => `<div class="row between card"><span class="stack-xs"><b>${esc(r.titulo)}</b><span class="small muted">Miçanga ${r.alvo}</span></span><button type="button" class="btn pink" data-act="claim" data-id="${r.id}">Resgatado</button></div>`).join("")}</section>` : ""}
     <section class="stack-s"><b>Últimos encontros</b>${recent.map((s) => { const e = E[s.d] || {}; const h = { facil: "Fácil", medida: "Na medida", puxado: "Puxado" }[e.humor] || (e.feito ? "Feito" : "Não feito"); return `<div class="agenda"><span class="mono muted">${dLabel(s.d)}</span><span class="grow">${esc(s.t)}</span><span class="hum ${e.humor || (e.feito ? "" : "no")}">${h}</span></div>`; }).join("")}</section>
     <section class="card stack-s"><b>Ajustes</b>
       <span class="small muted">Horário de cada dia</span>
@@ -480,17 +603,25 @@ function parseRoute() {
   if (p[0] === "encontro") return { name: p[2] || "aquecimento", args: [p[1]] };
   return { name: p[0], args: p.slice(1) };
 }
-const NAV = [["hoje", "Hoje"], ["turne", "Turnê"], ["pulseira", "Pulseira"], ["ingressos", "Ingressos"]];
+const NAV = [["hoje", "Hoje"], ["turne", "Turnê"], ["pulseira", "Pulseira"], ["mapas", "Mapas"], ["ingressos", "Ingressos"]];
 function navHtml() {
   const items = [...NAV, ...(isPai() ?[["bastidores", "Bastidores"]] : [])];
-  const active = ["aquecimento", "foco", "concluido"].includes(route.name) ? "hoje" : route.name === "era" ? "turne" : route.name;
+  const active = ["aquecimento", "foco", "concluido"].includes(route.name) ? "hoje" : route.name === "era" ? "turne" : route.name === "mapa" ? "mapas" : route.name;
   return items.map(([k, n]) => `<a href="#/${k}" class="${active === k ? "on" : ""}" ${active === k ? 'aria-current="page"' : ""}>${I[k]}<span>${n}</span></a>`).join("");
 }
+let keepScroll = false;
 function render() {
   route = parseRoute();
+  // Prêmio novo desde a última visita? Comemora na tela Hoje.
+  if (route.name === "hoje") hoje.fresh = [];
+  if (route.name === "hoje" && !isPai()) {
+    const now = unlocked(metrics()), seen = seenUnlock();
+    if (seen === null) setSeenUnlock(now);
+    else { const fresh = now.filter((x) => !seen.includes(x)); if (fresh.length) { hoje.fresh = fresh; setSeenUnlock(now); setTimeout(() => { confetti(); toast("Ingresso destravado!"); }, 300); } }
+  }
   const V = {
     hoje: viewHoje, aquecimento: () => viewAquecimento(route.args[0]), foco: () => viewFoco(route.args[0]), concluido: () => viewConcluido(route.args[0]),
-    pulseira: viewPulseira, ingressos: viewIngressos, turne: viewTurne, era: () => viewEra(+route.args[0]), bastidores: viewBastidores,
+    pulseira: viewPulseira, ingressos: viewIngressos, turne: viewTurne, era: () => viewEra(+route.args[0]), bastidores: viewBastidores, mapas: viewMapas, mapa: () => viewMapa(route.args[0]),
   }[route.name] || viewNotFound;
   $("#view").innerHTML = V();
   $("#view").dataset.route = route.name;
@@ -498,8 +629,9 @@ function render() {
   $("#nav-bottom").innerHTML = navHtml();
   document.body.classList.toggle("in-session", ["aquecimento", "foco", "concluido"].includes(route.name));
   if (route.name === "foco") paintTimer();
-  if (route.name === "concluido" && lastUnlock.length) { confetti(); lastUnlock = []; }
-  window.scrollTo(0, 0);
+  hydrate();
+  if (!keepScroll) window.scrollTo(0, 0);
+  keepScroll = false;
 }
 
 // ---------- ações ----------
@@ -520,13 +652,21 @@ document.addEventListener("click", async (ev) => {
     const acc = Math.min(TOTAL, el + blk.left);
     timerSet({ acc, running: Boolean(t.running), startedAt: Date.now() }); paintTimer();
   } else if (a === "concluir") {
-    const before = unlocked(metrics());
     await store.saveEncontro(d, { feito: true });
-    lastUnlock = unlocked(metrics()).filter((x) => !before.includes(x));
     timerSet(null); lastBlock = -1;
     location.hash = `#/encontro/${d}/concluido`;
-    toast(lastUnlock.length ? "Ingresso destravado!" : "Mais uma miçanga!");
-    if (!lastUnlock.length) confetti();
+    toast("Encontro feito! Agora o mapa mental.");
+    confetti();
+  } else if (a === "aprovar") {
+    const before = unlocked(metrics());
+    await store.decide(d, "aprovado");
+    const fresh = REWARDS.filter((r) => unlocked(metrics()).includes(r.id) && !before.includes(r.id));
+    toast(fresh.length ? `Aprovado! Ela destravou: ${fresh.map((r) => r.titulo).join(", ")}` : "Aprovado! A miçanga ganhou cor.");
+    keepScroll = route.name === "bastidores"; render();
+  } else if (a === "refazer") {
+    const txt = ($("#c-" + d) || {}).value || "";
+    await store.decide(d, "refazer", txt.trim());
+    toast("Pedido enviado para ela."); keepScroll = route.name === "bastidores"; render();
   } else if (a === "humor") { await store.saveEncontro(d, { humor: b.dataset.v }); render(); }
   else if (a === "claim") { await store.claimIngresso(b.dataset.id); toast("Aproveitem!"); render(); }
   else if (a === "undo") { await store.undoEncontro(d); render(); }
@@ -535,6 +675,13 @@ document.addEventListener("click", async (ev) => {
 document.addEventListener("change", async (ev) => {
   const b = ev.target.closest("[data-act]"); if (!b) return;
   const a = b.dataset.act;
+  if (a === "upload") {
+    const f = b.files && b.files[0]; if (!f) return;
+    toast("Enviando o mapa…");
+    try { await store.uploadMapa(b.dataset.d, f); toast("Mapa enviado! Agora é com o pai."); confetti(); }
+    catch (e) { toast(e.message || "Não consegui enviar. Tente de novo."); }
+    keepScroll = true; render(); return;
+  }
   if (a === "rot") { const e = enc(b.dataset.d); await store.saveEncontro(b.dataset.d, { roteiro: { ...(e.roteiro || {}), [b.dataset.k]: b.checked } }); }
   else if (a === "hor") { await store.setAjuste("horario", { ...(st().ajustes.horario || {}), [b.dataset.w]: b.value }); toast("Horário salvo"); }
   else if (a === "env") { await store.setAjuste("envelope", b.value); toast("Envelope salvo"); }
@@ -557,6 +704,13 @@ document.addEventListener("toggle", (ev) => {
   const h = ev.target.querySelector(".howto-hint"); if (h) h.textContent = `toque para ${ev.target.open ? "recolher" : "abrir"}`;
 }, true);
 window.addEventListener("hashchange", render);
+// Quando o app volta para a tela, busca novidades (mapa novo, aprovação do pai).
+document.addEventListener("visibilitychange", async () => {
+  if (document.visibilityState !== "visible") return;
+  const changed = await store.refresh();
+  const typing = document.activeElement && ["TEXTAREA", "INPUT"].includes(document.activeElement.tagName);
+  if (changed && !typing && !document.body.classList.contains("in-session")) { keepScroll = true; render(); }
+});
 
 // ---------- início ----------
 async function boot() {

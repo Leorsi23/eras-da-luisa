@@ -63,9 +63,17 @@ Neste ponto o site já funciona em **modo local**: o progresso fica salvo só no
 
 Depois de editar arquivos, se o site parecer não atualizar, recarregue a página duas vezes (o app guarda uma cópia para funcionar offline). Se mudar muita coisa, aumente a versão em `sw.js` (`eras-v1` para `eras-v2`).
 
+## Mapas mentais e aprovação
+
+No fim de cada encontro ela faz um mapa mental no papel, sem olhar o material, e envia a foto **pelo celular** (o pedido aparece na tela Hoje do app no celular). A miçanga fica contornada até o pai aprovar em **Bastidores**; aprovada, ganha cor e conta para os prêmios. O pai também pode "pedir para completar" com um comentário. Todos os mapas ficam na aba **Mapas** e voltam no aquecimento das revisões.
+
+Para isso funcionar, rode também o `supabase/002_mapas.sql` no SQL Editor (uma vez).
+
+Os prêmios caem nas miçangas aprovadas 6, 12, 20, 30, 44, 60, 75 e 88 (editável em `js/config.js`).
+
 ## Como funciona a revisão
 
-Ao final de cada encontro ela escreve 3 frases sobre o tema. Uma semana, um mês e três meses depois, o tema volta no aquecimento: ela escreve no papel o que lembra, depois abre as 3 frases para conferir e marca se lembrou. A taxa de "lembrou" aparece em Bastidores. Se uma matéria for marcada como "puxado" duas vezes ou mais no último mês, aparece um alerta.
+Uma semana, um mês e três meses depois de cada encontro, o tema volta no aquecimento: ela escreve no papel o que lembra, depois abre o próprio mapa mental daquele dia para conferir e marca se lembrou. A taxa de "lembrou" aparece em Bastidores. Se uma matéria for marcada como "puxado" duas vezes ou mais no último mês, aparece um alerta.
 
 ## Direitos autorais
 
