@@ -132,6 +132,7 @@ const I = {
   circle: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>',
 };
 
+const tx = (c) => `color-mix(in srgb, ${c} 62%, #2d1f3d)`;
 const chip = (a) => `<span class="chip" style="--c:${AREAS[a].cor}">${esc(AREAS[a].nome)}</span>`;
 const steps = (i) => `<ol class="steps" aria-label="Passo ${i} de 3">${["Aquecimento", "Foco", "Miçanga"].map((n, k) => `<li class="${k + 1 < i ? "ok" : k + 1 === i ? "on" : ""}">${k + 1} · ${n}${k + 1 < i ? " ✓" : ""}</li>`).join("")}</ol>`;
 
@@ -188,38 +189,73 @@ function viewLogin(msg = "") {
     </form></section>`;
 }
 
+function weekLabel(iso) {
+  const ref = todayISO() < REAL[0].d ? REAL[0].d : todayISO();
+  const diff = Math.round((dt(weekKey(iso)) - dt(weekKey(ref))) / (7 * 864e5));
+  if (diff <= 0) return "Esta semana";
+  if (diff === 1) return "Semana que vem";
+  return `Semana de ${weekKey(iso).slice(8)}/${weekKey(iso).slice(5, 7)}`;
+}
+const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+const WD_LONG = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
+function dateTile(iso) {
+  return `<span class="dtile"><span>${WD[dt(iso).getDay()]}</span><b>${+iso.slice(8)}</b><span>${MES_C[monthOf(iso)].toLowerCase()}</span></span>`;
+}
+function howtoOpen() { try { return localStorage.getItem("eras-howto") !== "fechado"; } catch (e) { return true; } }
+
 function viewHoje() {
   const m = metrics(), nx = nextSession(), era = currentEra(), E = ERAS[era];
   const beads = REAL.slice(Math.max(0, m.n - 4), Math.max(0, m.n - 4) + 12).map((s) => isDone(s.d) ? `<span class="bead" style="--c:${AREAS[s.a].cor}"></span>` : s.d === nx?.d ? `<span class="bead next"></span>` : `<span class="bead empty"></span>`).join("");
   const nr = REWARDS.map((r) => ({ r, p: rewardProgress(r, m) })).find(({ p }) => p[0] < p[1]);
-  const agenda = REAL.filter((s) => !isDone(s.d) && s.d >= todayISO()).slice(1, 4);
+  const upcoming = REAL.filter((s) => !isDone(s.d) && s.d >= todayISO() && s.d !== nx?.d).slice(0, 6);
   const tr = trilhaUrl(era);
+  const preStart = todayISO() < REAL[0].d;
+  const daysToStart = Math.ceil((dt(REAL[0].d) - dt(todayISO())) / 864e5);
+  let lastWeek = "";
+  const agenda = upcoming.map((s) => {
+    const wl = weekLabel(s.d), head = wl !== lastWeek ? `<li class="wk">${wl}</li>` : "";
+    lastWeek = wl;
+    return `${head}<li class="up">${dateTile(s.d)}<span class="stack-xs grow"><span class="up-time">${cap(WD_LONG[dt(s.d).getDay()])} · ${horario(s.d)}</span><span class="up-t">${esc(s.t)}</span><span>${chip(s.a)}</span></span></li>`;
+  }).join("");
+  const nav = [["hoje", "Hoje", "o próximo encontro e o que vem pela frente"], ["turne", "Turnê", "o calendário completo, mês a mês"], ["pulseira", "Pulseira", "cada encontro feito vira uma miçanga"], ["ingressos", "Ingressos", "as recompensas e quanto falta"]];
   return `<div class="hoje">
-    <div class="row between">
-      <div class="stack-xs"><span class="eyebrow" style="color:${E.cor}">Era ${esc(E.nome)}</span><h1 class="display xl">Oi, Luísa</h1></div>
-      <div class="count"><b>${daysToOnc()}</b><span>dias p/ ONC</span></div>
+    <div class="hello row between">
+      <div class="stack-xs"><span class="eyebrow" style="color:${tx(E.cor)}">Era ${esc(E.nome)}</span><h1 class="display xl">Oi, Luísa!</h1></div>
+      <div class="count"><b>${daysToOnc()}</b><span>dias para a ONC</span></div>
     </div>
     ${nx ? `<article class="card hero">
-      <div class="row between"><span class="mono muted">${dLabel(nx.d).toUpperCase()} · ${horario(nx.d)}</span>${chip(nx.a)}</div>
+      <span class="eyebrow">${preStart ? `A turnê começa em ${daysToStart} dias` : "Próximo encontro"}</span>
+      <div class="hero-when">${dateTile(nx.d)}<span class="stack-xs"><b class="hero-day">${cap(WD_LONG[dt(nx.d).getDay()])}, ${+nx.d.slice(8)} de ${MES[monthOf(nx.d)]}</b><span class="hero-time">às ${horario(nx.d)} · 1h30</span></span></div>
+      <div class="row">${chip(nx.a)}</div>
       <h2 class="display lg">${esc(nx.t)}</h2>
-      <div class="grid3">
-        <div class="mini"><span class="mono">1 · 15 MIN</span><b>Aquecimento</b></div>
-        <div class="mini"><span class="mono">2 · ${CONFIG.blocos.reduce((a, b) => a + b.min, 0)} MIN</span><b>Foco + trilha</b></div>
-        <div class="mini"><span class="mono">3 · FIM</span><b>Miçanga</b></div>
-      </div>
       <a class="btn primary big" href="#/encontro/${nx.d}/aquecimento">${I.play} Começar encontro</a>
     </article>` : `<article class="card hero"><h2 class="display lg">Turnê completa!</h2><p>Todos os encontros feitos. Agora é o grande show.</p></article>`}
-    <section class="stack-s">
-      <div class="row between"><b>Sua pulseira</b><a href="#/pulseira">${m.n} de ${REAL.length} · ver tudo</a></div>
-      <div class="strip">${beads}</div>
-      <span class="muted small">Semana: ${m.weekDone} de ${m.weekTotal}${nx ? " · a pontilhada é a próxima" : ""}</span>
+    <section class="card stack-s up-card">
+      <div class="row between"><h2 class="display md">Próximas sessões</h2><a href="#/turne" class="small">calendário completo</a></div>
+      <p class="small muted">Segunda, quarta e sexta. Para mudar um horário, fale com o pai.</p>
+      <ol class="uplist">${agenda || '<li class="muted">Nenhuma outra sessão marcada.</li>'}</ol>
     </section>
+    <details class="card howto" ${howtoOpen() ? "open" : ""}>
+      <summary><span class="display md">Como funciona</span><span class="small muted howto-hint">toque para ${howtoOpen() ? "recolher" : "abrir"}</span></summary>
+      <ol class="howto-steps">
+        <li><b>Aquecimento · 15 min.</b> Aparecem temas de semanas atrás. Escreva no papel o que lembra, sem olhar nada, e depois confira.</li>
+        <li><b>Foco · 75 min.</b> Vídeo, simulação ou exercício do dia, com timer de 35 + 5 + 35 minutos e a trilha da era tocando.</li>
+        <li><b>Miçanga.</b> Escreva 3 frases sobre o tema, diga como foi e ganhe uma miçanga na pulseira.</li>
+      </ol>
+      <p class="small b">No menu</p>
+      <ul class="howto-nav">${nav.map(([k, n, d]) => `<li>${I[k]}<span><b>${n}:</b> ${d}</span></li>`).join("")}</ul>
+      <p class="small muted">Celular fora do quarto durante o encontro. Os ingressos valem pelo esforço, nunca pela nota.</p>
+    </details>
+    <section class="card stack-s">
+      <div class="row between"><h2 class="display md">Sua pulseira</h2><a href="#/pulseira" class="small">${m.n} de ${REAL.length} · ver</a></div>
+      <div class="strip">${beads}</div>
+      <span class="muted small">Esta semana: ${m.weekDone} de ${m.weekTotal}${nx ? " · a pontilhada é a próxima" : ""}</span>
+    </section>
+    ${nr ? `<a class="ticket-mini" href="#/ingressos"><span class="stack-xs grow"><span class="mono pink">PRÓXIMO INGRESSO</span><b>${esc(nr.r.titulo)} · faltam ${nr.p[1] - nr.p[0]}</b><span class="bar"><i style="width:${(100 * nr.p[0]) / nr.p[1]}%"></i></span></span>${I.chev}</a>` : ""}
     <a class="card row tune" href="${esc(tr || spotifySearch(era))}" target="_blank" rel="noopener">
       <span class="tune-ic" style="--c:${E.cor}">${I.music}</span>
       <span class="stack-xs grow"><b>Trilha da era: ${esc(E.nome)}</b><span class="muted small">Abre no Spotify · no computador toca dentro do modo foco</span></span>${I.ext}
     </a>
-    ${nr ? `<a class="ticket-mini" href="#/ingressos"><span class="stack-xs grow"><span class="mono pink">PRÓXIMO INGRESSO</span><b>${esc(nr.r.titulo)} · faltam ${nr.p[1] - nr.p[0]}</b><span class="bar"><i style="width:${(100 * nr.p[0]) / nr.p[1]}%"></i></span></span>${I.chev}</a>` : ""}
-    ${agenda.length ? `<section class="stack-s"><b>Próximos encontros</b>${agenda.map((s) => `<div class="agenda"><span class="mono muted">${dLabel(s.d)} · ${horario(s.d)}</span><span>${esc(s.t)}</span></div>`).join("")}</section>` : ""}
   </div>`;
 }
 
@@ -274,7 +310,7 @@ function viewFoco(d) {
     <div class="topbar">${back(`#/encontro/${d}/aquecimento`)}${steps(2)}<span class="phone-off">${I.phone} Celular fora do quarto</span></div>
     <div class="split">
       <main class="stack">
-        <header class="stack-xs"><span class="eyebrow" style="color:${AREAS[s.a].cor}">ERA ${esc(E.nome.toUpperCase())} · ${esc(AREAS[s.a].nome.toUpperCase())} · ${dLabel(d).toUpperCase()}</span><h1 class="display xl">${esc(s.t)}</h1></header>
+        <header class="stack-xs"><span class="eyebrow" style="color:${tx(AREAS[s.a].cor)}">ERA ${esc(E.nome.toUpperCase())} · ${esc(AREAS[s.a].nome.toUpperCase())} · ${dLabel(d).toUpperCase()}</span><h1 class="display xl">${esc(s.t)}</h1></header>
         ${stage}
         <div class="tabs" role="tablist" aria-label="Material de hoje">${mats.map((x, i) => `<button type="button" role="tab" aria-selected="${i === foco.tab}" class="tab ${i === foco.tab ? "sel" : ""}" data-act="tab" data-i="${i}"><span class="mono">${esc(x[0].toUpperCase())}</span><span>${esc(x[1])}</span></button>`).join("")}</div>
       </main>
@@ -314,7 +350,7 @@ function viewConcluido(d) {
         ${[304, 346, 388, 428, 464].map((x, i) => `<circle cx="${x}" cy="${[303, 297, 285, 266, 240][i]}" r="15" fill="var(--line)"/>`).join("")}</svg>
       </div>
       <div class="stack">
-        <span class="eyebrow" style="color:${c}">MIÇANGA Nº ${idx} DE ${REAL.length}</span>
+        <span class="eyebrow" style="color:${tx(c)}">MIÇANGA Nº ${idx} DE ${REAL.length}</span>
         <h1 class="display xxl">Encontro feito!</h1>
         <p class="muted lead">${esc(s.t)} entra para a pulseira. Volta no aquecimento daqui a 1 semana, 1 mês e 3 meses.</p>
         ${fresh.map((r) => `<a class="ticket-mini open" href="#/ingressos"><span class="stack-xs grow"><span class="mono pink">INGRESSO DESTRAVADO</span><b>${esc(r.titulo)}</b><span class="small">Mostre ao pai para combinar.</span></span>${I.chev}</a>`).join("")}
@@ -340,7 +376,7 @@ function viewPulseira() {
       svg += `<circle cx="${(cx + R * Math.cos(a)).toFixed(1)}" cy="${(cy + R * Math.sin(a)).toFixed(1)}" r="5.4" fill="${isDone(s.d) ? AREAS[s.a].cor : "var(--line)"}"><title>${esc(dLabel(s.d) + " · " + s.t)}</title></circle>`;
     });
     const a = ang(slot++);
-    svg += `<rect x="${(cx + R * Math.cos(a) - 8).toFixed(1)}" y="${(cy + R * Math.sin(a) - 8).toFixed(1)}" width="16" height="16" rx="4" fill="${m.eraDone(mo) ? "var(--ink)" : "var(--line)"}" stroke="var(--bg)" stroke-width="2"><title>Era ${esc(ERAS[mo].nome)}</title></rect>`;
+    svg += `<rect x="${(cx + R * Math.cos(a) - 8).toFixed(1)}" y="${(cy + R * Math.sin(a) - 8).toFixed(1)}" width="16" height="16" rx="4" fill="${m.eraDone(mo) ? "#f2b705" : "var(--line)"}" stroke="#fff" stroke-width="2"><title>Era ${esc(ERAS[mo].nome)}</title></rect>`;
   }
   const erasDone = [1, 2, 3, 4, 5, 6, 7, 8].filter((x) => m.eraDone(x)).length;
   return `<div class="page">
@@ -380,7 +416,7 @@ function viewTurne() {
   const rows = Object.entries(ERAS).map(([k, E]) => {
     const mo = +k, done = m.eraDone(mo), stt = done ? "done" : mo === now ? "now" : mo < now ? "late" : "next";
     const badge = { done: "ESGOTADO", now: "EM CARTAZ", late: "PENDENTE", next: "EM BREVE" }[stt];
-    return `<li><a class="stop ${stt}" href="#/era/${mo}"><span class="mono muted">${MES_C[mo]}</span><span class="stack-xs grow"><b class="display md" style="color:${E.cor}">${esc(E.nome)}</b><span class="small muted">${esc(E.sub)} · ${m.eraDoneN(mo)}/${m.eraTotal(mo)}</span></span><span class="badge">${badge}</span></a></li>`;
+    return `<li><a class="stop ${stt}" href="#/era/${mo}"><span class="mono muted">${MES_C[mo]}</span><span class="stack-xs grow"><b class="display md" style="color:${tx(E.cor)}">${esc(E.nome)}</b><span class="small muted">${esc(E.sub)} · ${m.eraDoneN(mo)}/${m.eraTotal(mo)}</span></span><span class="badge">${badge}</span></a></li>`;
   }).join("");
   return `<div class="page"><header class="tour-h"><span class="mono muted">LUÍSA · 2027</span><h1 class="display xxl">THE STUDY TOUR</h1><span class="mono muted">8 ERAS · ${REAL.length} ENCONTROS · 1 GRANDE SHOW</span></header>
     <ol class="tour">${rows}</ol>
@@ -396,7 +432,7 @@ function viewEra(mo) {
       <a class="grow" href="#/encontro/${s.d}/${done ? "concluido" : "aquecimento"}"><span class="area-dot" style="--c:${AREAS[s.a].cor}"></span>${esc(s.t)}</a>
       ${done ? `<span class="ok-ic">${I.check}</span>${isPai() ? `<button type="button" class="link" data-act="undo" data-d="${s.d}">desfazer</button>` : ""}` : ""}</li>`;
   }).join("");
-  return `<div class="page">${back("#/turne")}<span class="eyebrow">${MES[mo].toUpperCase()} 2027</span><h1 class="display xl" style="color:${E.cor}">Era ${esc(E.nome)}</h1><p class="muted">${esc(E.sub)}</p>
+  return `<div class="page">${back("#/turne")}<span class="eyebrow">${MES[mo].toUpperCase()} 2027</span><h1 class="display xl" style="color:${tx(E.cor)}">Era ${esc(E.nome)}</h1><p class="muted">${esc(E.sub)}</p>
     <a class="btn ghost" href="${esc(trilhaUrl(mo) || spotifySearch(mo))}" target="_blank" rel="noopener">${I.music} Trilha da era</a>
     <ol class="sessions">${rows}</ol></div>`;
 }
@@ -515,6 +551,11 @@ document.addEventListener("submit", async (ev) => {
   try { await store.login($("#l-email").value.trim(), $("#l-senha").value); boot(); }
   catch (e) { $("#view").innerHTML = viewLogin(e.message); }
 });
+document.addEventListener("toggle", (ev) => {
+  if (!ev.target.classList || !ev.target.classList.contains("howto")) return;
+  try { localStorage.setItem("eras-howto", ev.target.open ? "aberto" : "fechado"); } catch (e) { /* ignora */ }
+  const h = ev.target.querySelector(".howto-hint"); if (h) h.textContent = `toque para ${ev.target.open ? "recolher" : "abrir"}`;
+}, true);
 window.addEventListener("hashchange", render);
 
 // ---------- início ----------

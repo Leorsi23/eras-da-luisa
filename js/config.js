@@ -25,26 +25,26 @@ export const CONFIG = {
 };
 
 export const AREAS = {
-  ast: { nome: "Astronomia", cor: "#a9a7ff" },
-  qui: { nome: "Química", cor: "#5fd7b3" },
-  fis: { nome: "Física", cor: "#ffad6b" },
-  bio: { nome: "Biologia", cor: "#93d97e" },
-  his: { nome: "História", cor: "#ff8fae" },
-  rev: { nome: "Revisão", cor: "#b8c3dc" },
+  ast: { nome: "Astronomia", cor: "#7b61ff" },
+  qui: { nome: "Química", cor: "#17a884" },
+  fis: { nome: "Física", cor: "#f07a2a" },
+  bio: { nome: "Biologia", cor: "#5aa832" },
+  his: { nome: "História", cor: "#e8508a" },
+  rev: { nome: "Revisão", cor: "#8a94b0" },
 };
 
 // Uma era por mês. "trilha": link de álbum ou playlist do Spotify
 // (open.spotify.com/album/... ou /playlist/...). Vazio = botão de busca.
 // O pai também pode colar os links pela tela Bastidores.
 export const ERAS = {
-  1: { nome: "Midnights", sub: "Astronomia: o céu à noite", cor: "#a9a7ff", trilha: "" },
-  2: { nome: "Fearless", sub: "Química I: matéria e misturas", cor: "#f2c55c", trilha: "" },
-  3: { nome: "Red", sub: "Química II: átomo e reações", cor: "#ff7b8a", trilha: "" },
-  4: { nome: "1989", sub: "Matemática da Física · Paris", cor: "#7cc8ef", trilha: "" },
-  5: { nome: "Reputation", sub: "Física e OBA", cor: "#d6d6e4", trilha: "" },
-  6: { nome: "Folklore", sub: "Biologia", cor: "#b9c9a6", trilha: "" },
-  7: { nome: "Evermore", sub: "História e simulados", cor: "#e0a273", trilha: "" },
-  8: { nome: "The Life of a Showgirl", sub: "Reta final", cor: "#ffa868", trilha: "" },
+  1: { nome: "Midnights", sub: "Astronomia: o céu à noite", cor: "#6c4cf0", trilha: "" },
+  2: { nome: "Fearless", sub: "Química I: matéria e misturas", cor: "#e0a400", trilha: "" },
+  3: { nome: "Red", sub: "Química II: átomo e reações", cor: "#e0364e", trilha: "" },
+  4: { nome: "1989", sub: "Matemática da Física · Paris", cor: "#2b9bd8", trilha: "" },
+  5: { nome: "Reputation", sub: "Física e OBA", cor: "#55556b", trilha: "" },
+  6: { nome: "Folklore", sub: "Biologia", cor: "#7d9466", trilha: "" },
+  7: { nome: "Evermore", sub: "História e simulados", cor: "#b8723a", trilha: "" },
+  8: { nome: "The Life of a Showgirl", sub: "Reta final", cor: "#f2662f", trilha: "" },
 };
 
 // Recompensas. tipo:
