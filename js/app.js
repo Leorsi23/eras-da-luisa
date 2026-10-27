@@ -47,6 +47,11 @@ function spotifyEmbed(url) {
   const x = /open\.spotify\.com\/(?:intl-[a-z]+\/)?(album|playlist)\/([A-Za-z0-9]+)/.exec(url || "");
   return x ? `https://open.spotify.com/embed/${x[1]}/${x[2]}?theme=0` : "";
 }
+// Link que abre o aplicativo do Spotify instalado no computador (pergunta "Abrir Spotify?").
+function spotifyApp(m) {
+  const x = /open\.spotify\.com\/(?:intl-[a-z]+\/)?(album|playlist)\/([A-Za-z0-9]+)/.exec(trilhaUrl(m) || "");
+  return x ? `spotify:${x[1]}:${x[2]}` : `spotify:search:${encodeURIComponent("Taylor Swift " + ERAS[m].nome)}`;
+}
 function spotifySearch(m) { return `https://open.spotify.com/search/${encodeURIComponent("Taylor Swift " + ERAS[m].nome)}`; }
 function phetEmbed(url) {
   const x = /phet\.colorado\.edu\/[a-zA-Z_]+\/simulations\/([a-z0-9-]+)/.exec(url || "");
@@ -304,9 +309,9 @@ function viewHoje() {
       <span class="muted small">Esta semana: ${m.weekDone} de ${m.weekTotal} encontros · contorno = esperando o pai aprovar</span>
     </section>
     ${nrw ? `<a class="ticket-mini" href="#/ingressos"><span class="stack-xs grow"><span class="mono pink">PRÓXIMO PRÊMIO · MIÇANGA ${nrw.alvo}</span><b>${esc(nrw.titulo)} · faltam ${nrw.alvo - m.n}</b><span class="bar"><i style="width:${(100 * m.n) / nrw.alvo}%"></i></span></span>${I.chev}</a>` : ""}
-    <a class="card row tune" href="${esc(tr || spotifySearch(era))}" target="_blank" rel="noopener">
+    <a class="card row tune" href="${esc(isPhone() ? tr || spotifySearch(era) : spotifyApp(era))}" ${isPhone() ? 'target="_blank" rel="noopener"' : ""}>
       <span class="tune-ic" style="--c:${E.cor}">${I.music}</span>
-      <span class="stack-xs grow"><b>Trilha da era: ${esc(E.nome)}</b><span class="muted small">Abre no Spotify · no computador toca dentro do modo foco</span></span>${I.ext}
+      <span class="stack-xs grow"><b>Trilha da era: ${esc(E.nome)}</b><span class="muted small">Abre o app do Spotify · no modo foco toca aqui dentro, se o pai colar o link</span></span>${I.ext}
     </a>
   </div>`;
 }
@@ -376,7 +381,8 @@ function viewFoco(d) {
         <div class="card stack-s">
           <span class="muted small">Trilha da era · ${esc(E.nome)}</span>
           ${emb ? `<iframe class="spotify" src="${esc(emb)}" title="Trilha da era ${esc(E.nome)} no Spotify" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
-            : `<a class="btn ghost" href="${esc(spotifySearch(m))}" target="_blank" rel="noopener">${I.music} Abrir no Spotify</a><span class="muted small">Para tocar aqui dentro, o pai cola o link do álbum ou da playlist em Bastidores.</span>`}
+            : `<a class="btn primary" href="${esc(spotifyApp(m))}">${I.music} Abrir no app do Spotify</a><a class="small" href="${esc(spotifySearch(m))}" target="_blank" rel="noopener">ou abrir no navegador</a><span class="muted small">Para tocar aqui dentro, o pai cola o link do álbum ou da playlist em Bastidores.</span>`}
+          ${emb ? `<a class="small" href="${esc(spotifyApp(m))}">abrir no app do Spotify</a>` : ""}
         </div>
         <div class="card stack-s"><b>Roteiro de hoje</b>
           ${items.map(([k, n]) => `<label class="check"><input type="checkbox" data-act="rot" data-d="${d}" data-k="${k}" ${rk(k) ? "checked" : ""}> <span>${esc(n)}</span></label>`).join("")}
@@ -587,7 +593,7 @@ function viewBastidores() {
       <span class="small muted">Horário de cada dia</span>
       <div class="grid3">${[[1, "Segunda"], [3, "Quarta"], [5, "Sexta"]].map(([w, n]) => `<label class="stack-xs small">${n}<input type="time" data-act="hor" data-w="${w}" value="${esc(hor[w] || CONFIG.horarioPadrao[w])}"></label>`).join("")}</div>
       <label class="stack-xs small" for="env">O que vai dentro do envelope surpresa (ela só vê depois de resgatado)<input id="env" type="text" data-act="env" value="${esc(aj.envelope || "")}" placeholder="Ex.: ingresso de cinema com uma amiga"></label>
-      <span class="small muted">Trilhas: cole o link do álbum ou da playlist do Spotify de cada era</span>
+      <span class="small muted">Trilhas: no Spotify, abra o álbum (ou playlist), toque em ··· → Compartilhar → Copiar link e cole aqui. Com o link, a música toca dentro do modo foco.</span>
       ${Object.entries(ERAS).map(([k, Er]) => `<label class="stack-xs small">${esc(Er.nome)}<input type="url" data-act="trilha" data-m="${k}" value="${esc(tr[k] || Er.trilha || "")}" placeholder="https://open.spotify.com/album/..."></label>`).join("")}
     </section>
     ${store.isCloud() ? `<button type="button" class="btn ghost" data-act="logout">Sair</button>` : ""}
