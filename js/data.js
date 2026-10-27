@@ -132,7 +132,7 @@ export const SESSIONS = [
 {
 "d": "2027-01-18",
 "a": "ast",
-"t": "Terra: origem, estrutura interna, marés, bússola; eclíptica",
+"t": "Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
 "m": [
 [
 "Aula",
@@ -225,7 +225,7 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Terra: origem, estrutura interna, marés, bússola; eclíptica",
+"Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
 "2027-01-18"
 ]
 ]
@@ -465,7 +465,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Terra: origem, estrutura interna, marés, bússola; eclíptica",
+"Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
 "2027-01-18"
 ]
 ]
@@ -530,18 +530,23 @@ export const SESSIONS = [
 },
 {
 "d": "2027-02-24",
-"a": "qui",
-"t": "Exercícios de Química I (provas antigas)",
+"a": "his",
+"t": "História: como ler uma fonte histórica (teoria, método e historiografia)",
 "m": [
 [
-"Prova",
-"Provas antigas ONC (Nível B)",
-"https://www.onciencias.org/exames"
+"Aula",
+"Débora Aladim: o que é fonte histórica",
+"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+o+que+%C3%A9+fonte+hist%C3%B3rica"
 ],
 [
-"Gabarito",
-"NOIC: gabaritos comentados ONC",
-"https://noic.com.br/olimpiadas/ciencias/"
+"Prova",
+"Provas antigas da ONHB (História)",
+"https://www.olimpiadadehistoria.com.br/"
+],
+[
+"Atividade",
+"Resolver 3 questões de História de provas antigas sublinhando o que o documento diz",
+""
 ]
 ],
 "r": [
@@ -560,7 +565,7 @@ export const SESSIONS = [
 {
 "d": "2027-02-26",
 "a": "qui",
-"t": "Prova antiga do mês + correção",
+"t": "Exercícios de Química I e prova antiga do mês + correção",
 "m": [
 [
 "Prova",
@@ -622,6 +627,11 @@ export const SESSIONS = [
 ]
 ],
 "r": [
+[
+"1 semana",
+"História: como ler uma fonte histórica (teoria, método e historiografia)",
+"2027-02-24"
+],
 [
 "1 mês",
 "Matéria: corpo, objeto e substância; propriedades gerais",
@@ -713,13 +723,23 @@ export const SESSIONS = [
 },
 {
 "d": "2027-03-12",
-"a": "qui",
-"t": "Energia: conceito e aplicações",
+"a": "his",
+"t": "História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
 "m": [
 [
-"Simulação",
-"PhET: Formas e transformações de energia",
-"https://phet.colorado.edu/pt_BR/simulations/energy-forms-and-changes"
+"Aula",
+"Débora Aladim: independência da América espanhola",
+"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+independ%C3%AAncia+da+Am%C3%A9rica+espanhola"
+],
+[
+"Aula",
+"Débora Aladim: imperialismo neocolonialismo",
+"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+imperialismo+neocolonialismo"
+],
+[
+"Resumo",
+"Toda Matéria: imperialismo",
+"https://www.todamateria.com.br/?s=imperialismo"
 ]
 ],
 "r": [
@@ -738,17 +758,12 @@ export const SESSIONS = [
 {
 "d": "2027-03-15",
 "a": "qui",
-"t": "Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
+"t": "Energia: conceito e aplicações",
 "m": [
 [
-"Exercícios",
-"Khan Academy: nutrientes",
-"https://pt.khanacademy.org/search?page_search_query=nutrientes"
-],
-[
-"Atividade",
-"Ler os rótulos da despensa e montar uma tabela",
-""
+"Simulação",
+"PhET: Formas e transformações de energia",
+"https://phet.colorado.edu/pt_BR/simulations/energy-forms-and-changes"
 ]
 ],
 "r": [
@@ -767,17 +782,17 @@ export const SESSIONS = [
 {
 "d": "2027-03-17",
 "a": "qui",
-"t": "Ambiente, química verde e sustentabilidade",
+"t": "Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
 "m": [
 [
-"Resumo",
-"Toda Matéria: química verde",
-"https://www.todamateria.com.br/?s=qu%C3%ADmica+verde"
+"Exercícios",
+"Khan Academy: nutrientes",
+"https://pt.khanacademy.org/search?page_search_query=nutrientes"
 ],
 [
-"Aula",
-"Manual do Mundo: sustentabilidade química",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+sustentabilidade+qu%C3%ADmica"
+"Atividade",
+"Ler os rótulos da despensa e montar uma tabela",
+""
 ]
 ],
 "r": [
@@ -796,6 +811,35 @@ export const SESSIONS = [
 {
 "d": "2027-03-19",
 "a": "qui",
+"t": "Ambiente, química verde e sustentabilidade",
+"m": [
+[
+"Resumo",
+"Toda Matéria: química verde",
+"https://www.todamateria.com.br/?s=qu%C3%ADmica+verde"
+],
+[
+"Aula",
+"Manual do Mundo: sustentabilidade química",
+"https://www.youtube.com/results?search_query=Manual+do+Mundo+sustentabilidade+qu%C3%ADmica"
+]
+],
+"r": [
+[
+"1 semana",
+"História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
+"2027-03-12"
+],
+[
+"1 mês",
+"Separação de misturas (2): destilação, evaporação, centrifugação",
+"2027-02-19"
+]
+]
+},
+{
+"d": "2027-03-22",
+"a": "qui",
 "t": "Laboratório: segurança, vidrarias, reagentes e equipamentos",
 "m": [
 [
@@ -813,35 +857,6 @@ export const SESSIONS = [
 [
 "1 semana",
 "Energia: conceito e aplicações",
-"2027-03-12"
-],
-[
-"1 mês",
-"Separação de misturas (2): destilação, evaporação, centrifugação",
-"2027-02-19"
-]
-]
-},
-{
-"d": "2027-03-22",
-"a": "qui",
-"t": "Exercícios de Química II (provas antigas)",
-"m": [
-[
-"Prova",
-"Provas antigas ONC (Nível B)",
-"https://www.onciencias.org/exames"
-],
-[
-"Gabarito",
-"NOIC: gabaritos comentados ONC",
-"https://noic.com.br/olimpiadas/ciencias/"
-]
-],
-"r": [
-[
-"1 semana",
-"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
 "2027-03-15"
 ],
 [
@@ -853,20 +868,35 @@ export const SESSIONS = [
 },
 {
 "d": "2027-03-24",
-"a": "qui",
-"t": "Revisão geral de Química",
+"a": "his",
+"t": "História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
 "m": [
 [
-"Exercícios",
-"Khan Academy: química",
-"https://pt.khanacademy.org/search?page_search_query=qu%C3%ADmica"
+"Aula",
+"Débora Aladim: darwinismo social",
+"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+darwinismo+social"
+],
+[
+"Resumo",
+"Toda Matéria: darwinismo social",
+"https://www.todamateria.com.br/?s=darwinismo+social"
+],
+[
+"Prova",
+"Provas antigas da ONHB (História)",
+"https://www.olimpiadadehistoria.com.br/"
 ]
 ],
 "r": [
 [
 "1 semana",
-"Ambiente, química verde e sustentabilidade",
+"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
 "2027-03-17"
+],
+[
+"1 mês",
+"História: como ler uma fonte histórica (teoria, método e historiografia)",
+"2027-02-24"
 ]
 ]
 },
@@ -877,18 +907,28 @@ export const SESSIONS = [
 {
 "d": "2027-03-29",
 "a": "qui",
-"t": "Exercícios mistos de Química I e II",
+"t": "Exercícios de Química II e revisão geral",
 "m": [
 [
 "Prova",
 "Provas antigas ONC (Nível B)",
 "https://www.onciencias.org/exames"
+],
+[
+"Gabarito",
+"NOIC: gabaritos comentados ONC",
+"https://noic.com.br/olimpiadas/ciencias/"
+],
+[
+"Exercícios",
+"Khan Academy: química",
+"https://pt.khanacademy.org/search?page_search_query=qu%C3%ADmica"
 ]
 ],
 "r": [
 [
 "1 semana",
-"Laboratório: segurança, vidrarias, reagentes e equipamentos",
+"Ambiente, química verde e sustentabilidade",
 "2027-03-19"
 ]
 ]
@@ -896,7 +936,7 @@ export const SESSIONS = [
 {
 "d": "2027-03-31",
 "a": "qui",
-"t": "Prova antiga do mês + correção",
+"t": "Exercícios mistos de Química e prova antiga do mês + correção",
 "m": [
 [
 "Prova",
@@ -910,6 +950,11 @@ export const SESSIONS = [
 ]
 ],
 "r": [
+[
+"1 semana",
+"Laboratório: segurança, vidrarias, reagentes e equipamentos",
+"2027-03-22"
+],
 [
 "1 mês",
 "Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
@@ -934,6 +979,11 @@ export const SESSIONS = [
 ]
 ],
 "r": [
+[
+"1 semana",
+"História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
+"2027-03-24"
+],
 [
 "1 mês",
 "Número atômico, número de massa, prótons, nêutrons e elétrons",
@@ -1052,7 +1102,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Energia: conceito e aplicações",
+"História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
 "2027-03-12"
 ],
 [
@@ -1086,7 +1136,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
+"Energia: conceito e aplicações",
 "2027-03-15"
 ],
 [
@@ -1135,12 +1185,12 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Ambiente, química verde e sustentabilidade",
+"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
 "2027-03-17"
 ],
 [
 "3 meses",
-"Terra: origem, estrutura interna, marés, bússola; eclíptica",
+"Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
 "2027-01-18"
 ]
 ]
@@ -1169,7 +1219,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Laboratório: segurança, vidrarias, reagentes e equipamentos",
+"Ambiente, química verde e sustentabilidade",
 "2027-03-19"
 ],
 [
@@ -1202,6 +1252,11 @@ export const SESSIONS = [
 "2027-04-14"
 ],
 [
+"1 mês",
+"Laboratório: segurança, vidrarias, reagentes e equipamentos",
+"2027-03-22"
+],
+[
 "3 meses",
 "Estrelas, galáxias, origem do Universo; geocentrismo × heliocentrismo",
 "2027-01-22"
@@ -1225,6 +1280,11 @@ export const SESSIONS = [
 ]
 ],
 "r": [
+[
+"1 mês",
+"História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
+"2027-03-24"
+],
 [
 "3 meses",
 "Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
@@ -1316,18 +1376,23 @@ export const SESSIONS = [
 },
 {
 "d": "2027-05-14",
-"a": "fis",
-"t": "Leis de Newton: inércia e massa",
+"a": "his",
+"t": "História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
 "m": [
 [
-"Simulação",
-"PhET: Forças e movimento",
-"https://phet.colorado.edu/pt_BR/simulations/forces-and-motion-basics"
+"Aula",
+"Débora Aladim: revoltas da primeira república",
+"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+revoltas+da+primeira+rep%C3%BAblica"
 ],
 [
-"Aula",
-"Física Total: primeira lei de Newton inércia",
-"https://www.youtube.com/results?search_query=F%C3%ADsica+Total+primeira+lei+de+Newton+in%C3%A9rcia"
+"Resumo",
+"Toda Matéria: coronelismo",
+"https://www.todamateria.com.br/?s=coronelismo"
+],
+[
+"Resumo",
+"Toda Matéria: revolta da vacina",
+"https://www.todamateria.com.br/?s=revolta+da+vacina"
 ]
 ],
 "r": [
@@ -1351,17 +1416,17 @@ export const SESSIONS = [
 {
 "d": "2027-05-17",
 "a": "fis",
-"t": "Força, velocidade e equilíbrio; ação e reação",
+"t": "Leis de Newton: inércia e massa",
 "m": [
 [
-"Aula",
-"Física Total: terceira lei de Newton",
-"https://www.youtube.com/results?search_query=F%C3%ADsica+Total+terceira+lei+de+Newton"
+"Simulação",
+"PhET: Forças e movimento",
+"https://phet.colorado.edu/pt_BR/simulations/forces-and-motion-basics"
 ],
 [
 "Aula",
-"Manual do Mundo: ação e reação experimento",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+a%C3%A7%C3%A3o+e+rea%C3%A7%C3%A3o+experimento"
+"Física Total: primeira lei de Newton inércia",
+"https://www.youtube.com/results?search_query=F%C3%ADsica+Total+primeira+lei+de+Newton+in%C3%A9rcia"
 ]
 ],
 "r": [
@@ -1419,23 +1484,23 @@ export const SESSIONS = [
 {
 "d": "2027-05-21",
 "a": "fis",
-"t": "Calor, temperatura e escalas termométricas",
+"t": "Força, velocidade e equilíbrio; ação e reação",
 "m": [
 [
 "Aula",
-"Física Total: escalas termométricas",
-"https://www.youtube.com/results?search_query=F%C3%ADsica+Total+escalas+termom%C3%A9tricas"
+"Física Total: terceira lei de Newton",
+"https://www.youtube.com/results?search_query=F%C3%ADsica+Total+terceira+lei+de+Newton"
 ],
 [
-"Simulação",
-"PhET: Estados da matéria",
-"https://phet.colorado.edu/pt_BR/simulations/states-of-matter-basics"
+"Aula",
+"Manual do Mundo: ação e reação experimento",
+"https://www.youtube.com/results?search_query=Manual+do+Mundo+a%C3%A7%C3%A3o+e+rea%C3%A7%C3%A3o+experimento"
 ]
 ],
 "r": [
 [
 "1 semana",
-"Leis de Newton: inércia e massa",
+"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
 "2027-05-14"
 ],
 [
@@ -1453,23 +1518,23 @@ export const SESSIONS = [
 {
 "d": "2027-05-24",
 "a": "fis",
-"t": "Luz e cor: RGB e CMYK; espectro eletromagnético",
+"t": "Calor, temperatura e escalas termométricas",
 "m": [
 [
-"Simulação",
-"PhET: Visão de cores",
-"https://phet.colorado.edu/pt_BR/simulations/color-vision"
+"Aula",
+"Física Total: escalas termométricas",
+"https://www.youtube.com/results?search_query=F%C3%ADsica+Total+escalas+termom%C3%A9tricas"
 ],
 [
-"Aula",
-"Ciência Todo Dia: espectro eletromagnético",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+espectro+eletromagn%C3%A9tico"
+"Simulação",
+"PhET: Estados da matéria",
+"https://phet.colorado.edu/pt_BR/simulations/states-of-matter-basics"
 ]
 ],
 "r": [
 [
 "1 semana",
-"Força, velocidade e equilíbrio; ação e reação",
+"Leis de Newton: inércia e massa",
 "2027-05-17"
 ],
 [
@@ -1487,12 +1552,17 @@ export const SESSIONS = [
 {
 "d": "2027-05-26",
 "a": "fis",
-"t": "Viagens interplanetárias: aspectos e dificuldades",
+"t": "Luz e cor: RGB e CMYK; espectro eletromagnético",
 "m": [
 [
+"Simulação",
+"PhET: Visão de cores",
+"https://phet.colorado.edu/pt_BR/simulations/color-vision"
+],
+[
 "Aula",
-"Ciência Todo Dia: viagem interestelar",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+viagem+interestelar"
+"Ciência Todo Dia: espectro eletromagnético",
+"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+espectro+eletromagn%C3%A9tico"
 ]
 ],
 "r": [
@@ -1506,7 +1576,31 @@ export const SESSIONS = [
 {
 "d": "2027-05-28",
 "a": "fis",
-"t": "Exercícios de Física (provas antigas)",
+"t": "Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"m": [
+[
+"Aula",
+"Ciência Todo Dia: viagem interestelar",
+"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+viagem+interestelar"
+]
+],
+"r": [
+[
+"1 semana",
+"Força, velocidade e equilíbrio; ação e reação",
+"2027-05-21"
+],
+[
+"3 meses",
+"Separação de misturas (2): destilação, evaporação, centrifugação",
+"2027-02-19"
+]
+]
+},
+{
+"d": "2027-05-31",
+"a": "fis",
+"t": "Exercícios de Física e prova antiga do mês + correção",
 "m": [
 [
 "Prova",
@@ -1523,35 +1617,6 @@ export const SESSIONS = [
 [
 "1 semana",
 "Calor, temperatura e escalas termométricas",
-"2027-05-21"
-],
-[
-"3 meses",
-"Separação de misturas (2): destilação, evaporação, centrifugação",
-"2027-02-19"
-]
-]
-},
-{
-"d": "2027-05-31",
-"a": "fis",
-"t": "Prova antiga do mês + correção",
-"m": [
-[
-"Prova",
-"Provas antigas ONC (Nível B)",
-"https://www.onciencias.org/exames"
-],
-[
-"Gabarito",
-"NOIC: gabaritos comentados ONC",
-"https://noic.com.br/olimpiadas/ciencias/"
-]
-],
-"r": [
-[
-"1 semana",
-"Luz e cor: RGB e CMYK; espectro eletromagnético",
 "2027-05-24"
 ],
 [
@@ -1585,13 +1650,18 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Viagens interplanetárias: aspectos e dificuldades",
+"Luz e cor: RGB e CMYK; espectro eletromagnético",
 "2027-05-26"
 ],
 [
 "1 mês",
 "Fontes renováveis e não renováveis",
 "2027-05-05"
+],
+[
+"3 meses",
+"História: como ler uma fonte histórica (teoria, método e historiografia)",
+"2027-02-24"
 ]
 ]
 },
@@ -1607,6 +1677,11 @@ export const SESSIONS = [
 ]
 ],
 "r": [
+[
+"1 semana",
+"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"2027-05-28"
+],
 [
 "1 mês",
 "Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
@@ -1696,7 +1771,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Leis de Newton: inércia e massa",
+"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
 "2027-05-14"
 ],
 [
@@ -1730,7 +1805,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Força, velocidade e equilíbrio; ação e reação",
+"Leis de Newton: inércia e massa",
 "2027-05-17"
 ],
 [
@@ -1788,12 +1863,12 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Calor, temperatura e escalas termométricas",
+"Força, velocidade e equilíbrio; ação e reação",
 "2027-05-21"
 ],
 [
 "3 meses",
-"Energia: conceito e aplicações",
+"História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
 "2027-03-12"
 ]
 ]
@@ -1822,12 +1897,12 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Luz e cor: RGB e CMYK; espectro eletromagnético",
+"Calor, temperatura e escalas termométricas",
 "2027-05-24"
 ],
 [
 "3 meses",
-"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
+"Energia: conceito e aplicações",
 "2027-03-15"
 ]
 ]
@@ -1856,12 +1931,12 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Viagens interplanetárias: aspectos e dificuldades",
+"Luz e cor: RGB e CMYK; espectro eletromagnético",
 "2027-05-26"
 ],
 [
 "3 meses",
-"Ambiente, química verde e sustentabilidade",
+"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
 "2027-03-17"
 ]
 ]
@@ -1884,8 +1959,13 @@ export const SESSIONS = [
 "2027-06-18"
 ],
 [
+"1 mês",
+"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"2027-05-28"
+],
+[
 "3 meses",
-"Laboratório: segurança, vidrarias, reagentes e equipamentos",
+"Ambiente, química verde e sustentabilidade",
 "2027-03-19"
 ]
 ]
@@ -1911,6 +1991,11 @@ export const SESSIONS = [
 "1 semana",
 "Sistemas locomotor e nervoso (a ponte com a Psicologia)",
 "2027-06-21"
+],
+[
+"3 meses",
+"Laboratório: segurança, vidrarias, reagentes e equipamentos",
+"2027-03-22"
 ]
 ]
 },
@@ -1940,6 +2025,11 @@ export const SESSIONS = [
 "1 mês",
 "Célula como unidade da vida",
 "2027-06-02"
+],
+[
+"3 meses",
+"História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
+"2027-03-24"
 ]
 ]
 },
@@ -2072,7 +2162,7 @@ export const SESSIONS = [
 {
 "d": "2027-07-12",
 "a": "his",
-"t": "História das Mulheres na ciência e na sociedade (séculos XVIII a XXI)",
+"t": "História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
 "m": [
 [
 "Livro",
@@ -2106,7 +2196,7 @@ export const SESSIONS = [
 {
 "d": "2027-07-14",
 "a": "his",
-"t": "Brasil República: República Velha, Era Vargas, Ditadura e redemocratização",
+"t": "Brasil República: Era Vargas, anos 1945–1964 (Dutra, JK, Jango), Ditadura, redemocratização e Constituição de 1988",
 "m": [
 [
 "Aula",
@@ -2140,7 +2230,7 @@ export const SESSIONS = [
 {
 "d": "2027-07-16",
 "a": "his",
-"t": "Século XX: Guerras Mundiais, Guerra Fria, globalização",
+"t": "Século XX: Guerras Mundiais, socialismo e Guerra Fria, descolonização da Ásia e da África, globalização",
 "m": [
 [
 "Aula",
@@ -2185,7 +2275,7 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI)",
+"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
 "2027-07-12"
 ],
 [
@@ -2232,7 +2322,7 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Século XX: Guerras Mundiais, Guerra Fria, globalização",
+"Século XX: Guerras Mundiais, socialismo e Guerra Fria, descolonização da Ásia e da África, globalização",
 "2027-07-16"
 ],
 [
@@ -2384,7 +2474,7 @@ export const SESSIONS = [
 ],
 [
 "3 meses",
-"Leis de Newton: inércia e massa",
+"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
 "2027-05-14"
 ]
 ]
@@ -2408,12 +2498,12 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI)",
+"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
 "2027-07-12"
 ],
 [
 "3 meses",
-"Força, velocidade e equilíbrio; ação e reação",
+"Leis de Newton: inércia e massa",
 "2027-05-17"
 ]
 ]
