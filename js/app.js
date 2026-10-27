@@ -220,6 +220,41 @@ function viewLogin(msg = "") {
     </form></section>`;
 }
 
+// ---------- portão da turnê (quiz antes do primeiro login) ----------
+const PORTAO = [
+  { q: "Em que cidade a Eras Tour começou, em 17 de março de 2023?", o: ["Nashville", "Glendale, no Arizona", "Los Angeles", "Nova York"], c: 1 },
+  { q: "Qual era abre o show?", o: ["Fearless", "Midnights", "Lover", "Reputation"], c: 2 },
+  { q: "Quantos shows a turnê teve ao todo, até o último em Vancouver?", o: ["89", "112", "149", "201"], c: 2 },
+  { q: "Em que estádio foram os shows de São Paulo, em novembro de 2023?", o: ["Morumbi", "Allianz Parque", "Pacaembu", "Neo Química Arena"], c: 1 },
+  { q: "Qual era entrou no show em 2024, a partir de Paris?", o: ["Speak Now", "Folklore", "The Tortured Poets Department", "The Life of a Showgirl"], c: 2 },
+];
+const portao = { i: 0, wrong: -1 };
+function portaoOk() { try { return localStorage.getItem("eras-portao") === "ok"; } catch (e) { return true; } }
+function viewPortao() {
+  if (portao.i >= PORTAO.length) {
+    return `<section class="portao done-p card">
+      <span class="eyebrow pink">Portão ${PORTAO.length} de ${PORTAO.length} · completo</span>
+      <h1 class="display xxl">Acesso liberado.</h1>
+      <p class="lead">Só uma verdadeira Swiftie passaria por aqui. A turnê de 2027 é sua: 8 eras, 88 encontros e um grande show em agosto.</p>
+      <p class="small muted">Use o e-mail e a senha que vieram na mensagem do pai.</p>
+      <button type="button" class="btn primary big" data-act="portao-entrar">Entrar na turnê ${I.arrow}</button>
+    </section>`;
+  }
+  const P = PORTAO[portao.i];
+  return `<section class="portao card">
+    <div class="row between"><span class="eyebrow">Portão ${portao.i + 1} de ${PORTAO.length}</span><span class="dots">${PORTAO.map((_, k) => `<i class="${k < portao.i ? "ok" : k === portao.i ? "on" : ""}"></i>`).join("")}</span></div>
+    ${portao.i === 0 ? `<p class="small muted">Esta porta só abre para quem conhece as Eras. Acerte as ${PORTAO.length} perguntas.</p>` : ""}
+    <h1 class="display lg">${esc(P.q)}</h1>
+    <div class="p-opts">${P.o.map((o, k) => `<button type="button" class="opt p-opt ${portao.wrong === k ? "no" : ""}" data-act="portao" data-v="${k}">${esc(o)}</button>`).join("")}</div>
+    <p class="small p-msg" aria-live="polite">${portao.wrong >= 0 ? "Quase! Essa não. Tente de novo." : "&nbsp;"}</p>
+  </section>
+  <p class="center small"><button type="button" class="link" data-act="portao-pular">Já passei pelo portão em outro aparelho</button></p>`;
+}
+function showGateOrLogin(msg = "") {
+  document.body.classList.add("logged-out");
+  $("#view").innerHTML = portaoOk() || msg ? viewLogin(msg) : viewPortao();
+}
+
 function weekLabel(iso) {
   const ref = todayISO() < REAL[0].d ? REAL[0].d : todayISO();
   const diff = Math.round((dt(weekKey(iso)) - dt(weekKey(ref))) / (7 * 864e5));
@@ -645,6 +680,15 @@ let saveT = null;
 document.addEventListener("click", async (ev) => {
   const b = ev.target.closest("[data-act]"); if (!b) return;
   const a = b.dataset.act, d = b.dataset.d;
+  if (a === "portao") {
+    if (+b.dataset.v === PORTAO[portao.i].c) { portao.i++; portao.wrong = -1; if (portao.i >= PORTAO.length) confetti(); }
+    else portao.wrong = +b.dataset.v;
+    $("#view").innerHTML = viewPortao(); return;
+  }
+  if (a === "portao-entrar" || a === "portao-pular") {
+    try { localStorage.setItem("eras-portao", "ok"); } catch (e) { /* ignora */ }
+    $("#view").innerHTML = viewLogin(); return;
+  }
   if (a === "revela") { viewAquecimento.shown[b.dataset.k] = true; render(); }
   else if (a === "lembra") { const e = enc(d); await store.saveEncontro(d, { lembranca: { ...(e.lembranca || {}), [b.dataset.src]: b.dataset.v } }); render(); }
   else if (a === "tab") { foco.tab = +b.dataset.i; render(); }
@@ -722,7 +766,7 @@ document.addEventListener("visibilitychange", async () => {
 async function boot() {
   try {
     const r = await store.init();
-    if (r === "login") { $("#view").innerHTML = viewLogin(); document.body.classList.add("logged-out"); return; }
+    if (r === "login") { showGateOrLogin(); return; }
   } catch (e) {
     $("#view").innerHTML = viewLogin(e.message); document.body.classList.add("logged-out"); return;
   }

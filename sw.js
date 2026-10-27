@@ -1,6 +1,6 @@
 // Cache simples: o app abre mesmo sem internet. Os dados vêm da rede quando há.
 // Ao mudar arquivos, aumente a versão abaixo para forçar a atualização.
-const CACHE = "eras-v4";
+const CACHE = "eras-v5";
 const FILES = ["./", "index.html", "css/app.css", "js/app.js", "js/config.js", "js/data.js", "js/store.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", (e) => {
