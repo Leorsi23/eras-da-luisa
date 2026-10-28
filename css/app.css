@@ -328,3 +328,9 @@ a.pend-card { text-decoration: none; color: var(--ink); flex-wrap: nowrap; }
 .dots i.on { border-color: var(--pink); }
 .done-p { text-align: left; }
 @keyframes shake { 0%, 100% { transform: none; } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+
+/* avaliação de material */
+.rate { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.rate-b { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line2); background: var(--surface); cursor: pointer; font-weight: 700; color: var(--muted); }
+.rate-b.sel.up { border-color: var(--ok); color: var(--ok); background: #eafaf1; }
+.rate-b.sel.down { border-color: var(--warn); color: var(--warn); background: #fff3e8; }

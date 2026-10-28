@@ -53,6 +53,10 @@ function spotifyApp(m) {
   return x ? `spotify:${x[1]}:${x[2]}` : `spotify:search:${encodeURIComponent("Taylor Swift " + ERAS[m].nome)}`;
 }
 function spotifySearch(m) { return `https://open.spotify.com/search/${encodeURIComponent("Taylor Swift " + ERAS[m].nome)}`; }
+function ytEmbed(url) {
+  const x = /(?:youtube\.com\/watch\?(?:[^#]*&)?v=|youtu\.be\/|youtube\.com\/embed\/)([A-Za-z0-9_-]{11})/.exec(url || "");
+  return x ? `https://www.youtube-nocookie.com/embed/${x[1]}?rel=0` : "";
+}
 function phetEmbed(url) {
   const x = /phet\.colorado\.edu\/[a-zA-Z_]+\/simulations\/([a-z0-9-]+)/.exec(url || "");
   return x ? `https://phet.colorado.edu/sims/html/${x[1]}/latest/${x[1]}_all.html?locale=pt_BR` : "";
@@ -138,6 +142,8 @@ const I = {
   mapas: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M6 6l4 4M18 6l-4 4M6 18l4-4M18 18l-4-4"/></svg>',
   camera: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
   clock: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  up: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11v9H4v-9zM7 11l4-7a2 2 0 013 2l-1 4h6a2 2 0 012 2.3l-1.3 6A2 2 0 0117.7 20H7"/></svg>',
+  down: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 13V4h3v9zM17 13l-4 7a2 2 0 01-3-2l1-4H5a2 2 0 01-2-2.3l1.3-6A2 2 0 016.3 4H17"/></svg>',
   circle: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>',
 };
 
@@ -383,17 +389,17 @@ function viewFoco(d) {
   const s = BY_DATE[d]; if (!s) return viewNotFound();
   const e = enc(d), m = monthOf(d), E = ERAS[m];
   const mats = s.m || [];
-  if (foco.date !== d) foco = { date: d, tab: Math.max(0, mats.findIndex((x) => x[0] === "Simulação")) };
+  if (foco.date !== d) foco = { date: d, tab: 0 };
   if (foco.tab >= mats.length) foco.tab = 0;
   const cur = mats[foco.tab];
   let stage = "";
   if (cur) {
-    const ph = cur[0] === "Simulação" ? phetEmbed(cur[2]) : "";
+    const ph = cur[0] === "Simulação" ? phetEmbed(cur[2]) : ytEmbed(cur[2]);
     stage = ph
-      ? `<div class="stage"><iframe src="${esc(ph)}" title="${esc(cur[1])}" allowfullscreen loading="lazy"></iframe></div>`
+      ? `<div class="stage"><iframe src="${esc(ph)}" title="${esc(cur[1])}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div>`
       : `<div class="stage placeholder"><div class="stack-s center">
           <span class="mono accent">${esc(cur[0].toUpperCase())}</span><b class="big-t">${esc(cur[1])}</b>
-          ${cur[2] ? `<a class="btn primary" href="${esc(cur[2])}" target="_blank" rel="noopener">Abrir ${I.ext}</a><span class="muted small">${cur[0] === "Aula" ? "Abre a busca no YouTube já filtrada pelo canal e pelo tema. Escolha o vídeo mais recente e com boa avaliação." : "Abre em outra aba. Volte aqui quando terminar."}</span>` : `<span class="muted">Atividade fora da tela. Faça e marque no roteiro.</span>`}
+          ${cur[2] ? `<a class="btn primary" href="${esc(cur[2])}" target="_blank" rel="noopener">Abrir ${I.ext}</a><span class="muted small">${/youtube\.com\/results/.test(cur[2]) ? "Abre a busca no YouTube já filtrada pelo canal e pelo tema. Escolha um vídeo e volte aqui." : "Abre em outra aba. Volte aqui quando terminar."}</span>` : `<span class="muted">Atividade fora da tela. Faça e marque no roteiro.</span>`}
         </div></div>`;
   }
   const rk = (k) => (e.roteiro || {})[k];
@@ -405,6 +411,9 @@ function viewFoco(d) {
       <main class="stack">
         <header class="stack-xs"><span class="eyebrow" style="color:${tx(AREAS[s.a].cor)}">ERA ${esc(E.nome.toUpperCase())} · ${esc(AREAS[s.a].nome.toUpperCase())} · ${dLabel(d).toUpperCase()}</span><h1 class="display xl">${esc(s.t)}</h1></header>
         ${stage}
+        ${cur ? (() => { const v = (e.roteiro || {})["av:" + cur[1]]; return `<div class="rate"><span class="small">Este material valeu a pena?</span>
+          <button type="button" class="rate-b ${v === "up" ? "sel up" : ""}" data-act="rate" data-d="${d}" data-k="${esc(cur[1])}" data-v="up" aria-pressed="${v === "up"}">${I.up} Valeu</button>
+          <button type="button" class="rate-b ${v === "down" ? "sel down" : ""}" data-act="rate" data-d="${d}" data-k="${esc(cur[1])}" data-v="down" aria-pressed="${v === "down"}">${I.down} Não ajudou</button></div>`; })() : ""}
         <div class="tabs" role="tablist" aria-label="Material de hoje">${mats.map((x, i) => `<button type="button" role="tab" aria-selected="${i === foco.tab}" class="tab ${i === foco.tab ? "sel" : ""}" data-act="tab" data-i="${i}"><span class="mono">${esc(x[0].toUpperCase())}</span><span>${esc(x[1])}</span></button>`).join("")}</div>
       </main>
       <aside class="stack">
@@ -616,6 +625,17 @@ function viewBastidores() {
         ${decideHtml(s.d)}</article>`).join("") : `<p class="small muted">Nada esperando. Quando ela enviar um mapa, ele aparece aqui.</p>`}
       ${semMapa.length ? `<p class="small">Feitos sem mapa enviado: ${semMapa.map((s) => dLabel(s.d)).join(", ")}${semMapa.some((s) => beadState(s.d) === "refazer") ? " (inclui pedidos para completar)" : ""}.</p>` : ""}
     </section>
+    ${(() => {
+      const rows = [];
+      Object.entries(E).forEach(([dd, e]) => Object.entries(e.roteiro || {}).forEach(([k, v]) => { if (k.startsWith("av:") && v === "down") rows.push([dd, k.slice(3)]); }));
+      const ups = Object.values(E).reduce((n, e) => n + Object.entries(e.roteiro || {}).filter(([k, v]) => k.startsWith("av:") && v === "up").length, 0);
+      if (!rows.length && !ups) return "";
+      rows.sort((x, y) => (x[0] < y[0] ? 1 : -1));
+      return `<section class="stack-s"><h2 class="display md">Materiais que ela avaliou</h2>
+        <p class="small muted">${ups} ${ups === 1 ? "material aprovado" : "materiais aprovados"} · ${rows.length} reprovado${rows.length === 1 ? "" : "s"}. Os reprovados valem trocar: me mande a lista.</p>
+        ${rows.map(([dd, lab]) => { const mt = ((BY_DATE[dd] || {}).m || []).find((x) => x[1] === lab); return `<div class="agenda"><span class="mono muted">${dLabel(dd)}</span><span class="grow">${mt && mt[2] ? `<a href="${esc(mt[2])}" target="_blank" rel="noopener">${esc(lab)}</a>` : esc(lab)}</span><span class="hum puxado">Não ajudou</span></div>`; }).join("")}
+      </section>`;
+    })()}
     <div class="grid3">
       <div class="mini"><b class="mono n">${m.weekDone} de ${m.weekTotal}</b><span class="muted small">nesta semana</span></div>
       <div class="mini"><b class="mono n">${m.n}/${REAL.length}</b><span class="muted small">aprovadas no ano</span></div>
@@ -707,6 +727,10 @@ document.addEventListener("click", async (ev) => {
     location.hash = `#/encontro/${d}/concluido`;
     toast("Encontro feito! Agora o mapa mental.");
     confetti();
+  } else if (a === "rate") {
+    const e = enc(d), k = "av:" + b.dataset.k, cur = (e.roteiro || {})[k];
+    await store.saveEncontro(d, { roteiro: { ...(e.roteiro || {}), [k]: cur === b.dataset.v ? null : b.dataset.v } });
+    keepScroll = true; render();
   } else if (a === "aprovar") {
     const before = unlocked(metrics());
     await store.decide(d, "aprovado");
