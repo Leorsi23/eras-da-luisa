@@ -7,7 +7,7 @@ export const SESSIONS = [
 "m": [
 [
 "Prova",
-"Provas antigas ONC (Nível B)",
+"ONC: provas antigas (Nível B)",
 "https://www.onciencias.org/exames"
 ],
 [
@@ -25,7 +25,7 @@ export const SESSIONS = [
 "m": [
 [
 "Gabarito",
-"NOIC: gabaritos comentados ONC",
+"NOIC: gabaritos extraoficiais ONC 2023 e 2024",
 "https://noic.com.br/olimpiadas/ciencias/"
 ],
 [
@@ -42,14 +42,19 @@ export const SESSIONS = [
 "t": "Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Movimentos da Terra (translação e rotação)",
+"https://www.todamateria.com.br/movimentos-terra/"
+],
+[
 "Aula",
-"Ciência Todo Dia: rotação da Terra dia e noite",
+"Ciência Todo Dia: rotação da Terra, dia e noite (busca)",
 "https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+rota%C3%A7%C3%A3o+da+Terra+dia+e+noite"
 ],
 [
-"Resumo",
-"Toda Matéria: movimento de rotação",
-"https://www.todamateria.com.br/?s=movimento+de+rota%C3%A7%C3%A3o"
+"Exercícios",
+"Toda Matéria: Exercícios sobre movimentos da Terra",
+"https://www.todamateria.com.br/exercicios-sobre-movimentos-da-terra/"
 ],
 [
 "Atividade",
@@ -65,14 +70,19 @@ export const SESSIONS = [
 "t": "Lua: fases, mês lunar e eclipses",
 "m": [
 [
-"Aula",
-"Ciência Todo Dia: fases da Lua eclipse",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+fases+da+Lua+eclipse"
+"Leitura",
+"CDCC-USP: Fases da Lua e Eclipses (série Terra e Universo)",
+"https://cdcc.usp.br/wp-content/uploads/sites/512/2024/04/Fases-da-lua-e-eclipses-versao-final-22-10-2022.pdf"
 ],
 [
-"Simulação",
-"PhET: Gravidade e órbitas",
-"https://phet.colorado.edu/pt_BR/simulations/gravity-and-orbits"
+"Leitura",
+"Caderno do Aluno SEE-SP Ciências 8º ano vol. 3, p. 33-40",
+"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
+],
+[
+"Exercícios",
+"Seduc-GO: Atividade 17, 8º ano, Sistema Sol-Terra-Lua",
+"https://portal.educacao.go.gov.br/wp-content/uploads/2021/10/Atividade-17-8o-CIE-Sistema-Sol-Terra-e-Lua.pdf"
 ],
 [
 "Atividade",
@@ -88,14 +98,24 @@ export const SESSIONS = [
 "t": "Sol: translação, ano e estações; solstício e equinócio",
 "m": [
 [
-"Aula",
-"Ciência Todo Dia: estações do ano",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+esta%C3%A7%C3%B5es+do+ano"
+"Leitura",
+"Caderno do Aluno SEE-SP Ciências 8º ano vol. 3, p. 3-27",
+"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
 ],
 [
-"Resumo",
-"Toda Matéria: solstício e equinócio",
-"https://www.todamateria.com.br/?s=solst%C3%ADcio+e+equin%C3%B3cio"
+"Aula",
+"MultiRio (Rioeduca na TV, 8º ano): Como ocorrem as estações do ano?",
+"https://www.youtube.com/watch?v=ESvXGN0t9nI"
+],
+[
+"Leitura",
+"PrePara ENEM (Brasil Escola): Solstício e equinócio",
+"https://www.preparaenem.com/geografia/solsticios--equinocios-----------.htm"
+],
+[
+"Atividade",
+"USP (IB): roteiro prático das estações com bola e lanterna",
+"https://iec.ib.usp.br/wp-content/uploads/2013/07/roteiro_estacoes_do_ano_i.pdf"
 ]
 ],
 "r": []
@@ -106,14 +126,19 @@ export const SESSIONS = [
 "t": "Coordenadas geográficas, zonas térmicas, fusos horários e horário de verão",
 "m": [
 [
-"Aula",
-"Ciência Todo Dia: fusos horários",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+fusos+hor%C3%A1rios"
+"Leitura",
+"Toda Matéria: Fusos horários, explicação e cálculo",
+"https://www.todamateria.com.br/fusos-horarios/"
 ],
 [
-"Resumo",
-"Toda Matéria: coordenadas geográficas",
-"https://www.todamateria.com.br/?s=coordenadas+geogr%C3%A1ficas"
+"Exercícios",
+"Toda Matéria: Exercícios sobre fusos horários do Brasil",
+"https://www.todamateria.com.br/exercicios-sobre-fusos-horarios-do-brasil-com-gabarito/"
+],
+[
+"Leitura",
+"Caderno do Aluno SEE-SP 8º ano vol. 3, p. 20-24 (horário de verão)",
+"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
 ],
 [
 "Atividade",
@@ -135,19 +160,24 @@ export const SESSIONS = [
 "t": "Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
 "m": [
 [
+"Leitura",
+"Caderno do Aluno SEE-SP 8º ano vol. 3, p. 5-9 (plano da eclíptica)",
+"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
+],
+[
 "Aula",
-"Ciência Todo Dia: estrutura interna da Terra",
+"Ciência Todo Dia: estrutura interna da Terra (busca)",
 "https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+estrutura+interna+da+Terra"
 ],
 [
 "Aula",
-"Ciência Todo Dia: marés Lua",
+"Ciência Todo Dia: marés e a Lua (busca)",
 "https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+mar%C3%A9s+Lua"
 ],
 [
-"Resumo",
-"Toda Matéria: eclíptica",
-"https://www.todamateria.com.br/?s=ecl%C3%ADptica"
+"Atividade",
+"Bússola caseira: agulha imantada na rolha boiando na água",
+""
 ]
 ],
 "r": [
@@ -165,13 +195,18 @@ export const SESSIONS = [
 "m": [
 [
 "Aula",
-"Ciência Todo Dia: sistema solar formação",
+"Ciência Todo Dia: formação do Sistema Solar (busca)",
 "https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+sistema+solar+forma%C3%A7%C3%A3o"
 ],
 [
 "Simulação",
 "PhET: Meu sistema solar",
 "https://phet.colorado.edu/pt_BR/simulations/my-solar-system"
+],
+[
+"Atividade",
+"Sistema Solar em escala no rolo de papel higiênico",
+""
 ]
 ],
 "r": [
@@ -188,8 +223,13 @@ export const SESSIONS = [
 "t": "Estrelas, galáxias, origem do Universo; geocentrismo × heliocentrismo",
 "m": [
 [
+"Leitura",
+"Caderno do Aluno SEE-SP 8º ano vol. 3, p. 41-46 (Nossa vizinhança cósmica)",
+"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
+],
+[
 "Aula",
-"Ciência Todo Dia: origem do universo Big Bang",
+"Ciência Todo Dia: origem do Universo, Big Bang (busca)",
 "https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+origem+do+universo+Big+Bang"
 ],
 [
@@ -212,14 +252,24 @@ export const SESSIONS = [
 "t": "Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
 "m": [
 [
+"Leitura",
+"Caderno do Aluno SEE-SP 8º ano vol. 3, p. 43-46 (distâncias, ano-luz)",
+"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
+],
+[
 "Aula",
-"Ciência Todo Dia: ano-luz distâncias no universo",
+"Ciência Todo Dia: ano-luz e distâncias no Universo (busca)",
 "https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+ano-luz+dist%C3%A2ncias+no+universo"
 ],
 [
 "Exercícios",
-"Khan Academy: notação científica",
+"Khan Academy: notação científica (busca)",
 "https://pt.khanacademy.org/search?page_search_query=nota%C3%A7%C3%A3o+cient%C3%ADfica"
+],
+[
+"Atividade",
+"Calcular segundo-luz, minuto-luz e ano-luz em km",
+""
 ]
 ],
 "r": [
@@ -239,6 +289,11 @@ export const SESSIONS = [
 "App",
 "Stellarium Web (céu ao vivo)",
 "https://stellarium-web.org/"
+],
+[
+"Prova",
+"OBA 2006, nível 3 (Cruzeiro do Sul, Órion, bandeira)",
+"https://sistema.oba.org.br/sisglob/sisglob_arquivos/Prova%20nivel%203%20da%20IX%20OBA_2006.pdf"
 ],
 [
 "Atividade",
@@ -261,12 +316,17 @@ export const SESSIONS = [
 "m": [
 [
 "Prova",
-"Provas antigas da OBA",
+"OBA 2010, nível 3, com gabarito",
+"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
+],
+[
+"Prova",
+"Provas antigas da OBA (site oficial)",
 "https://site.oba.org.br/"
 ],
 [
 "Prova",
-"Provas antigas ONC (Nível B)",
+"ONC: provas antigas (Nível B)",
 "https://www.onciencias.org/exames"
 ]
 ],
@@ -284,14 +344,24 @@ export const SESSIONS = [
 "t": "Matéria: corpo, objeto e substância; propriedades gerais",
 "m": [
 [
-"Aula",
-"Manual do Mundo: densidade experimento",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+densidade+experimento"
+"Leitura",
+"Toda Matéria: Propriedades da Matéria",
+"https://www.todamateria.com.br/propriedades-da-materia/"
 ],
 [
-"Resumo",
-"Toda Matéria: propriedades gerais da matéria",
-"https://www.todamateria.com.br/?s=propriedades+gerais+da+mat%C3%A9ria"
+"Leitura",
+"Manual da Química: Matéria (corpo, objeto, propriedades)",
+"https://www.manualdaquimica.com/quimica-geral/materia.htm"
+],
+[
+"Aula",
+"Brasil Escola: Conceitos Fundamentais em Química",
+"https://www.youtube.com/watch?v=I-9VdAtBG-s"
+],
+[
+"Simulação",
+"PhET: Densidade",
+"https://phet.colorado.edu/pt_BR/simulations/density"
 ]
 ],
 "r": [
@@ -308,14 +378,19 @@ export const SESSIONS = [
 "t": "Propriedades específicas: organolépticas, físicas e químicas",
 "m": [
 [
+"Leitura",
+"Manual da Química: Propriedades da matéria",
+"https://www.manualdaquimica.com/amp/quimica-geral/propriedades-materia.htm"
+],
+[
+"Aula",
+"Brasil Escola: Propriedades gerais e específicas da matéria",
+"https://www.youtube.com/watch?v=TMQGLstE7BQ"
+],
+[
 "Simulação",
 "PhET: Densidade",
 "https://phet.colorado.edu/pt_BR/simulations/density"
-],
-[
-"Resumo",
-"Toda Matéria: propriedades específicas da matéria",
-"https://www.todamateria.com.br/?s=propriedades+espec%C3%ADficas+da+mat%C3%A9ria"
 ]
 ],
 "r": [
@@ -332,14 +407,19 @@ export const SESSIONS = [
 "t": "Estados físicos e mudanças de estado",
 "m": [
 [
-"Simulação",
-"PhET: Estados da matéria",
-"https://phet.colorado.edu/pt_BR/simulations/states-of-matter-basics"
+"Leitura",
+"Manual da Química: Mudanças de estado físico",
+"https://www.manualdaquimica.com/quimica-geral/mudancas-estado-fisico.htm"
 ],
 [
 "Aula",
-"Manual do Mundo: mudança de estado físico",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+mudan%C3%A7a+de+estado+f%C3%ADsico"
+"Brasil Escola: Mudanças de Estado Físico",
+"https://www.youtube.com/watch?v=NurgtpqrUzU"
+],
+[
+"Simulação",
+"PhET: Estados da matéria",
+"https://phet.colorado.edu/pt_BR/simulations/states-of-matter-basics"
 ]
 ],
 "r": [
@@ -360,14 +440,24 @@ export const SESSIONS = [
 "t": "Fenômenos físicos e químicos",
 "m": [
 [
-"Aula",
-"Manual do Mundo: reação química caseira",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+rea%C3%A7%C3%A3o+qu%C3%ADmica+caseira"
+"Leitura",
+"Manual da Química: Fenômenos físicos e químicos",
+"https://www.manualdaquimica.com/quimica-geral/fenomenos-fisicos-quimicos.htm"
 ],
 [
-"Resumo",
-"Toda Matéria: fenômenos físicos e químicos",
-"https://www.todamateria.com.br/?s=fen%C3%B4menos+f%C3%ADsicos+e+qu%C3%ADmicos"
+"Aula",
+"Brasil Escola: Fenômenos Físicos e Químicos",
+"https://www.youtube.com/watch?v=wO65r7J-BbM"
+],
+[
+"Exercícios",
+"Khan Academy: Reações e transformações químicas (prática)",
+"https://pt.khanacademy.org/science/6-ano/matria-e-energia-transformaes-e-reaes-qumicas/transformacoes-e-reacoes-quimicas/e/reacoes-e-transformacoes-quimicas"
+],
+[
+"Atividade",
+"Vinagre + bicarbonato vs. gelo derretendo: classificar e listar evidências",
+""
 ]
 ],
 "r": [
@@ -389,14 +479,24 @@ export const SESSIONS = [
 "t": "Substâncias simples e compostas; alotropia",
 "m": [
 [
-"Exercícios",
-"Khan Academy: substâncias simples e compostas",
-"https://pt.khanacademy.org/search?page_search_query=subst%C3%A2ncias+simples+e+compostas"
+"Leitura",
+"Toda Matéria: Substâncias simples e compostas",
+"https://www.todamateria.com.br/substancias-simples-compostas/"
 ],
 [
-"Resumo",
-"Toda Matéria: alotropia",
-"https://www.todamateria.com.br/?s=alotropia"
+"Leitura",
+"Manual da Química: Alotropia",
+"https://www.manualdaquimica.com/quimica-geral/alotropia.htm"
+],
+[
+"Aula",
+"Brasil Escola: Substâncias Simples e Compostas",
+"https://www.youtube.com/watch?v=zO0V4PRpAtY"
+],
+[
+"Exercícios",
+"Toda Matéria: exercícios sobre substâncias simples e compostas",
+"https://www.todamateria.com.br/exercicios-sobre-substancias-simples-e-compostas-com-gabarito-explicado/"
 ]
 ],
 "r": [
@@ -418,14 +518,19 @@ export const SESSIONS = [
 "t": "Misturas homogêneas e heterogêneas",
 "m": [
 [
-"Exercícios",
-"Khan Academy: misturas homogêneas e heterogêneas",
-"https://pt.khanacademy.org/search?page_search_query=misturas+homog%C3%AAneas+e+heterog%C3%AAneas"
+"Leitura",
+"Manual da Química: Tipos de misturas",
+"https://www.manualdaquimica.com/quimica-geral/tipos-misturas.htm"
 ],
 [
 "Aula",
-"Manual do Mundo: misturas",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+misturas"
+"Brasil Escola: Substâncias e Misturas",
+"https://www.youtube.com/watch?v=hbwKwNhIFM4"
+],
+[
+"Atividade",
+"Montar 6 misturas na cozinha e contar as fases",
+""
 ]
 ],
 "r": [
@@ -447,9 +552,14 @@ export const SESSIONS = [
 "t": "Separação de misturas (1): filtração, decantação, peneiração",
 "m": [
 [
+"Leitura",
+"Manual da Química: Separação de misturas",
+"https://www.manualdaquimica.com/quimica-geral/metodos-separacao-misturas.htm"
+],
+[
 "Aula",
-"Manual do Mundo: separação de misturas",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+separa%C3%A7%C3%A3o+de+misturas"
+"Brasil Escola: Separação de Misturas Heterogêneas",
+"https://www.youtube.com/watch?v=0OZ-tu7QnVc"
 ],
 [
 "Atividade",
@@ -476,14 +586,19 @@ export const SESSIONS = [
 "t": "Separação de misturas (2): destilação, evaporação, centrifugação",
 "m": [
 [
-"Aula",
-"Manual do Mundo: destilação caseira",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+destila%C3%A7%C3%A3o+caseira"
+"Leitura",
+"Manual da Química: Destilação (simples e fracionada)",
+"https://www.manualdaquimica.com/quimica-geral/destilacao.htm"
 ],
 [
-"Resumo",
-"Toda Matéria: destilação",
-"https://www.todamateria.com.br/?s=destila%C3%A7%C3%A3o"
+"Aula",
+"Brasil Escola: Separação de Misturas Homogêneas",
+"https://www.youtube.com/watch?v=kj0DTbbvOlE"
+],
+[
+"Atividade",
+"Evaporar água salgada num pires ao sol e observar o sal",
+""
 ]
 ],
 "r": [
@@ -505,14 +620,19 @@ export const SESSIONS = [
 "t": "A água e o ar na natureza",
 "m": [
 [
-"Resumo",
-"Toda Matéria: ciclo da água",
-"https://www.todamateria.com.br/?s=ciclo+da+%C3%A1gua"
+"Leitura",
+"Toda Matéria: Ciclo da Água",
+"https://www.todamateria.com.br/ciclo-da-agua/"
 ],
 [
-"Resumo",
-"Toda Matéria: composição do ar",
-"https://www.todamateria.com.br/?s=composi%C3%A7%C3%A3o+do+ar"
+"Leitura",
+"Toda Matéria: Composição do ar",
+"https://www.todamateria.com.br/composicao-do-ar/"
+],
+[
+"Exercícios",
+"Toda Matéria: questões sobre o ciclo da água",
+"https://www.todamateria.com.br/exercicios-sobre-o-ciclo-da-agua/"
 ]
 ],
 "r": [
@@ -534,14 +654,19 @@ export const SESSIONS = [
 "t": "História: como ler uma fonte histórica (teoria, método e historiografia)",
 "m": [
 [
+"Leitura",
+"Toda Matéria: O que são fontes históricas",
+"https://www.todamateria.com.br/fontes-historicas/"
+],
+[
 "Aula",
-"Débora Aladim: o que é fonte histórica",
+"Débora Aladim: o que é fonte histórica (busca)",
 "https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+o+que+%C3%A9+fonte+hist%C3%B3rica"
 ],
 [
 "Prova",
-"Provas antigas da ONHB (História)",
-"https://www.olimpiadadehistoria.com.br/"
+"Colégio CCP: provas anteriores da ONHB (2020–2024)",
+"https://sistemas.colegioccp.com.br/provas-edicoes-anteriores-onhb/"
 ],
 [
 "Atividade",
@@ -574,7 +699,7 @@ export const SESSIONS = [
 ],
 [
 "Gabarito",
-"NOIC: gabaritos comentados ONC",
+"NOIC: gabaritos extraoficiais ONC",
 "https://noic.com.br/olimpiadas/ciencias/"
 ]
 ],
@@ -597,14 +722,24 @@ export const SESSIONS = [
 "t": "Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
 "m": [
 [
-"Exercícios",
-"Khan Academy: modelos atômicos",
-"https://pt.khanacademy.org/search?page_search_query=modelos+at%C3%B4micos"
+"Leitura",
+"Manual da Química: Evolução dos modelos atômicos",
+"https://www.manualdaquimica.com/quimica-geral/evolucao-dos-modelos-atomicos.htm"
 ],
 [
-"Resumo",
-"Toda Matéria: modelos atômicos",
-"https://www.todamateria.com.br/?s=modelos+at%C3%B4micos"
+"Aula",
+"Khan Academy: O experimento de Rutherford",
+"https://pt.khanacademy.org/science/quimica-ensino-medio/x57f96b935ba57f4b:modelos-atomicos/x57f96b935ba57f4b:introducao-modelos-atomicos/v/o-experimento-de-rutherford"
+],
+[
+"Aula",
+"Khan Academy: A história da química atômica",
+"https://pt.khanacademy.org/science/chemistry/electronic-structure-of-atoms/history-of-atomic-structure/v/chem37-history-of-atomic-chemistry"
+],
+[
+"Atividade",
+"Linha do tempo dos 4 modelos com desenho e experimento-chave",
+""
 ]
 ],
 "r": [
@@ -620,6 +755,16 @@ export const SESSIONS = [
 "a": "qui",
 "t": "Número atômico, número de massa, prótons, nêutrons e elétrons",
 "m": [
+[
+"Leitura",
+"Manual da Química: Cálculo das partículas atômicas",
+"https://www.manualdaquimica.com/quimica-geral/calculo-das-particulas-atomicas.htm"
+],
+[
+"Aula",
+"Khan Academy: Número atômico, número de massa e isótopos",
+"https://pt.khanacademy.org/science/quimica-ensino-medio/x57f96b935ba57f4b:os-atomos/x57f96b935ba57f4b:isotopos-e-isotonos/v/atomic-number-mass-number-and-isotopes"
+],
 [
 "Simulação",
 "PhET: Monte um átomo",
@@ -645,14 +790,24 @@ export const SESSIONS = [
 "t": "Isótopos, isóbaros e isótonos",
 "m": [
 [
+"Leitura",
+"Manual da Química: Isótonos, isóbaros e isoeletrônicos",
+"https://www.manualdaquimica.com/quimica-geral/isotonos-isobaros-isoeletronicos.htm"
+],
+[
+"Leitura",
+"Manual da Química: Isótopos",
+"https://www.manualdaquimica.com/quimica-geral/isotopos.htm"
+],
+[
+"Aula",
+"Khan Academy: Isótopos",
+"https://pt.khanacademy.org/science/chemistry/x822131fc:more-about-atoms-compounds-and-mixtures/x822131fc:isotopes/v/isotopes"
+],
+[
 "Simulação",
 "PhET: Isótopos e massa atômica",
 "https://phet.colorado.edu/pt_BR/simulations/isotopes-and-atomic-mass"
-],
-[
-"Resumo",
-"Toda Matéria: isótopos isóbaros e isótonos",
-"https://www.todamateria.com.br/?s=is%C3%B3topos+is%C3%B3baros+e+is%C3%B3tonos"
 ]
 ],
 "r": [
@@ -669,8 +824,13 @@ export const SESSIONS = [
 "t": "Elementos químicos e sua origem nas estrelas",
 "m": [
 [
+"Leitura",
+"CREF/UFRGS: Elementos químicos e as estrelas",
+"https://cref.if.ufrgs.br/?contact-pergunta=elementos-quimicos-e-as-estrelas"
+],
+[
 "Aula",
-"Ciência Todo Dia: origem dos elementos químicos estrelas",
+"Ciência Todo Dia: origem dos elementos químicos (busca)",
 "https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+origem+dos+elementos+qu%C3%ADmicos+estrelas"
 ],
 [
@@ -698,14 +858,24 @@ export const SESSIONS = [
 "t": "Reações e equações químicas: conceitos básicos",
 "m": [
 [
+"Leitura",
+"Manual da Química: Equação química",
+"https://www.manualdaquimica.com/quimica-geral/equacao-quimica.htm"
+],
+[
+"Aula",
+"Brasil Escola: Reações Químicas",
+"https://www.youtube.com/watch?v=VrUvy1N66U0"
+],
+[
+"Aula",
+"Khan Academy: Balanceamento de equações químicas",
+"https://pt.khanacademy.org/v/balancing-chemical-equations-introduction"
+],
+[
 "Simulação",
 "PhET: Balanceamento de equações",
 "https://phet.colorado.edu/pt_BR/simulations/balancing-chemical-equations"
-],
-[
-"Exercícios",
-"Khan Academy: equações químicas",
-"https://pt.khanacademy.org/search?page_search_query=equa%C3%A7%C3%B5es+qu%C3%ADmicas"
 ]
 ],
 "r": [
@@ -727,19 +897,24 @@ export const SESSIONS = [
 "t": "História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
 "m": [
 [
-"Aula",
-"Débora Aladim: independência da América espanhola",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+independ%C3%AAncia+da+Am%C3%A9rica+espanhola"
+"Leitura",
+"História do Mundo: Independência da América Espanhola",
+"https://www.historiadomundo.com.br/idade-contemporanea/independencia-da-america-espanhola.htm"
+],
+[
+"Leitura",
+"Toda Matéria: Neocolonialismo",
+"https://www.todamateria.com.br/neocolonialismo/"
 ],
 [
 "Aula",
-"Débora Aladim: imperialismo neocolonialismo",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+imperialismo+neocolonialismo"
+"Débora Aladim: Resumo de História: IMPERIALISMO",
+"https://www.youtube.com/watch?v=8OZhwSCp_Z8"
 ],
 [
-"Resumo",
-"Toda Matéria: imperialismo",
-"https://www.todamateria.com.br/?s=imperialismo"
+"Aula",
+"Brasil Escola: Independência da América Espanhola",
+"https://www.youtube.com/watch?v=t9Xlntk-2Dg"
 ]
 ],
 "r": [
@@ -761,9 +936,19 @@ export const SESSIONS = [
 "t": "Energia: conceito e aplicações",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Energia (origem, conservação e tipos)",
+"https://www.todamateria.com.br/energia/"
+],
+[
 "Simulação",
 "PhET: Formas e transformações de energia",
 "https://phet.colorado.edu/pt_BR/simulations/energy-forms-and-changes"
+],
+[
+"Atividade",
+"Cadeia de energia: do Sol ao lanche ao movimento (desenhar)",
+""
 ]
 ],
 "r": [
@@ -785,9 +970,14 @@ export const SESSIONS = [
 "t": "Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Nutrientes",
+"https://www.todamateria.com.br/nutrientes/"
+],
+[
 "Exercícios",
-"Khan Academy: nutrientes",
-"https://pt.khanacademy.org/search?page_search_query=nutrientes"
+"Toda Matéria: exercícios sobre alimentos e nutrientes",
+"https://www.todamateria.com.br/exercicios-sobre-alimentos-e-nutrientes-com-gabarito-explicado/"
 ],
 [
 "Atividade",
@@ -814,13 +1004,18 @@ export const SESSIONS = [
 "t": "Ambiente, química verde e sustentabilidade",
 "m": [
 [
-"Resumo",
-"Toda Matéria: química verde",
-"https://www.todamateria.com.br/?s=qu%C3%ADmica+verde"
+"Leitura",
+"Manual da Química: Química verde",
+"https://www.manualdaquimica.com/quimica-ambiental/quimica-verde.htm"
+],
+[
+"Exercícios",
+"Toda Matéria: Química verde (com exercício)",
+"https://www.todamateria.com.br/quimica-verde-o-que-e-principios-e-exemplos-com-exercicio/"
 ],
 [
 "Aula",
-"Manual do Mundo: sustentabilidade química",
+"Manual do Mundo: sustentabilidade química (busca)",
 "https://www.youtube.com/results?search_query=Manual+do+Mundo+sustentabilidade+qu%C3%ADmica"
 ]
 ],
@@ -843,13 +1038,23 @@ export const SESSIONS = [
 "t": "Laboratório: segurança, vidrarias, reagentes e equipamentos",
 "m": [
 [
-"Resumo",
-"Toda Matéria: vidrarias de laboratório",
-"https://www.todamateria.com.br/?s=vidrarias+de+laborat%C3%B3rio"
+"Leitura",
+"Manual da Química: Vidrarias de laboratório",
+"https://www.manualdaquimica.com/quimica-geral/vidrarias-laboratorio.htm"
+],
+[
+"Leitura",
+"Toda Matéria: Materiais utilizados no laboratório",
+"https://www.todamateria.com.br/materiais-laboratorio/"
+],
+[
+"Atividade",
+"Achar símbolos de perigo em rótulos de produtos de limpeza e listar 10 regras de laboratório",
+""
 ],
 [
 "Aula",
-"Manual do Mundo: segurança no laboratório",
+"Manual do Mundo: segurança no laboratório (busca)",
 "https://www.youtube.com/results?search_query=Manual+do+Mundo+seguran%C3%A7a+no+laborat%C3%B3rio"
 ]
 ],
@@ -872,19 +1077,24 @@ export const SESSIONS = [
 "t": "História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Darwinismo Social",
+"https://www.todamateria.com.br/darwinismo-social/"
+],
+[
 "Aula",
-"Débora Aladim: darwinismo social",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+darwinismo+social"
+"Brasil Escola: Darwinismo social",
+"https://www.youtube.com/watch?v=_3cHuinzLh4"
 ],
 [
-"Resumo",
-"Toda Matéria: darwinismo social",
-"https://www.todamateria.com.br/?s=darwinismo+social"
+"Exercícios",
+"Toda Matéria: Questões sobre darwinismo social",
+"https://www.todamateria.com.br/questoes-sobre-darwinismo-social/"
 ],
 [
-"Prova",
-"Provas antigas da ONHB (História)",
-"https://www.olimpiadadehistoria.com.br/"
+"Atividade",
+"Ler trecho de \"O fardo do homem branco\" (Kipling, 1899) e listar os argumentos usados",
+""
 ]
 ],
 "r": [
@@ -916,13 +1126,13 @@ export const SESSIONS = [
 ],
 [
 "Gabarito",
-"NOIC: gabaritos comentados ONC",
+"NOIC: gabaritos extraoficiais ONC",
 "https://noic.com.br/olimpiadas/ciencias/"
 ],
 [
 "Exercícios",
-"Khan Academy: química",
-"https://pt.khanacademy.org/search?page_search_query=qu%C3%ADmica"
+"Toda Matéria: exercícios sobre reações químicas",
+"https://www.todamateria.com.br/exercicio-sobre-reacoes-quimicas-com-gabarito-resolvido/"
 ]
 ],
 "r": [
@@ -945,7 +1155,7 @@ export const SESSIONS = [
 ],
 [
 "Gabarito",
-"NOIC: gabaritos comentados ONC",
+"NOIC: gabaritos extraoficiais ONC",
 "https://noic.com.br/olimpiadas/ciencias/"
 ]
 ],
@@ -968,14 +1178,19 @@ export const SESSIONS = [
 "t": "Notação científica; Sistema Internacional e prefixos",
 "m": [
 [
-"Exercícios",
-"Khan Academy: notação científica",
-"https://pt.khanacademy.org/search?page_search_query=nota%C3%A7%C3%A3o+cient%C3%ADfica"
+"Leitura",
+"Toda Matéria: Notação científica: como transformar e fazer cálculos",
+"https://www.todamateria.com.br/notacao-cientifica/"
 ],
 [
-"Resumo",
-"Toda Matéria: prefixos do sistema internacional",
-"https://www.todamateria.com.br/?s=prefixos+do+sistema+internacional"
+"Leitura",
+"InfoEscola: Prefixos métricos",
+"https://www.infoescola.com/ciencias/prefixos-metricos/"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios de notação científica",
+"https://www.todamateria.com.br/notacao-cientifica-exercicios/"
 ]
 ],
 "r": [
@@ -997,9 +1212,9 @@ export const SESSIONS = [
 "t": "Medidas: valor mais provável, desvio e erro",
 "m": [
 [
-"Resumo",
-"Toda Matéria: erro e desvio em medidas",
-"https://www.todamateria.com.br/?s=erro+e+desvio+em+medidas"
+"Leitura",
+"UFOP (Física): Medidas e erros",
+"https://fisica.ufop.br/sites/default/files/defis/files/medidas_e_erros.pdf?m=1525725089"
 ],
 [
 "Atividade",
@@ -1021,9 +1236,19 @@ export const SESSIONS = [
 "t": "Plano cartesiano: reta e equação do 1º grau; sistemas de equações",
 "m": [
 [
-"Exercícios",
-"Khan Academy: equação da reta",
-"https://pt.khanacademy.org/search?page_search_query=equa%C3%A7%C3%A3o+da+reta"
+"Leitura",
+"Toda Matéria: Função afim (função do 1º grau)",
+"https://www.todamateria.com.br/funcao-afim/"
+],
+[
+"Leitura",
+"Toda Matéria: Sistemas de equações",
+"https://www.todamateria.com.br/sistemas-de-equacoes/"
+],
+[
+"Aula",
+"Khan Academy: Sistemas de equações com gráficos (vídeo, 8º ano)",
+"https://pt.khanacademy.org/math/pt-8-ano/algebra-equacoes-8ano/introducao-ao-sistema-de-equacoes/v/solving-systems-graphically-examples"
 ],
 [
 "Simulação",
@@ -1050,14 +1275,19 @@ export const SESSIONS = [
 "t": "Grandezas diretamente e inversamente proporcionais no gráfico",
 "m": [
 [
-"Exercícios",
-"Khan Academy: grandezas diretamente e inversamente proporcionais",
-"https://pt.khanacademy.org/search?page_search_query=grandezas+diretamente+e+inversamente+proporcionais"
+"Leitura",
+"Toda Matéria: Grandezas diretamente e inversamente proporcionais",
+"https://www.todamateria.com.br/grandezas-proporcionais-grandezas-diretamente-inversamente-proporcionais/"
 ],
 [
-"Exercícios",
-"Portal da OBMEP: 9º ano",
-"https://portaldaobmep.impa.br/"
+"Leitura",
+"UEL Matemática Essencial: Razões e proporções",
+"https://www.uel.br/projetos/matessencial/basico/fundamental/proporcoes.html"
+],
+[
+"Atividade",
+"Fazer 2 gráficos: pães × preço e velocidade × tempo (60 km)",
+""
 ]
 ],
 "r": [
@@ -1084,14 +1314,24 @@ export const SESSIONS = [
 "t": "Equações do 2º grau",
 "m": [
 [
-"Exercícios",
-"Khan Academy: equação do segundo grau",
-"https://pt.khanacademy.org/search?page_search_query=equa%C3%A7%C3%A3o+do+segundo+grau"
+"Leitura",
+"Toda Matéria: Equação do 2º grau: como resolver",
+"https://www.todamateria.com.br/equacao-do-segundo-grau/"
 ],
 [
 "Exercícios",
-"Portal da OBMEP: 9º ano",
-"https://portaldaobmep.impa.br/"
+"Khan Academy: Equações do segundo grau por fatoração (9º ano)",
+"https://pt.khanacademy.org/math/pt-9-ano/algebra-expressoes-algebricas-9ano/resolucao-de-equacoes-do-segundo-grau-por-fatoracao/e/solving_quadratics_by_factoring_2"
+],
+[
+"Exercícios",
+"Khan Academy: Número de soluções de equações do 2º grau",
+"https://pt.khanacademy.org/math/pt-mat-prep-em-todo-conteudo/xc940e6c2768299b1:resolucao-de-equacoes-do-segundo-grau/xc940e6c2768299b1:a-formula-de-bhaskara/e/determine-the-number-of-solutions-of-a-quadratic-equation"
+],
+[
+"Exercícios",
+"POTI/OBMEP: Funções quadráticas – Parte 1 (Álgebra N2)",
+"https://poti.obmep.org.br/uploads/material_teorico/8175ftvcqvk84.pdf"
 ]
 ],
 "r": [
@@ -1118,14 +1358,24 @@ export const SESSIONS = [
 "t": "Triângulo retângulo; área do círculo, volume do cilindro, litro e m³",
 "m": [
 [
-"Exercícios",
-"Khan Academy: teorema de Pitágoras",
-"https://pt.khanacademy.org/search?page_search_query=teorema+de+Pit%C3%A1goras"
+"Leitura",
+"Khan Academy: Introdução ao Teorema de Pitágoras (artigo, EF09MA14)",
+"https://pt.khanacademy.org/math/1-serie-em-mat-sp/x82b03a9b6c8af113:3-bimestre-2025/x82b03a9b6c8af113:ef09ma14-teorema-de-pitagoras/a/pythagorean-theorem-intro"
+],
+[
+"Aula",
+"Khan Academy: Introdução ao teorema de Pitágoras (vídeo)",
+"https://pt.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/geo-pythagorean-theorem/v/the-pythagorean-theorem"
 ],
 [
 "Exercícios",
-"Khan Academy: volume do cilindro",
-"https://pt.khanacademy.org/search?page_search_query=volume+do+cilindro"
+"Khan Academy: Problemas com Teorema de Pitágoras",
+"https://pt.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/pythagorean-theorem-app/e/pythagorean-theorem-word-problems--basic"
+],
+[
+"Leitura",
+"Matemática Básica: Volume do cilindro",
+"https://matematicabasica.net/volume-do-cilindro/"
 ]
 ],
 "r": [
@@ -1175,6 +1425,16 @@ export const SESSIONS = [
 "Exercícios",
 "Portal da OBMEP: 9º ano",
 "https://portaldaobmep.impa.br/"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios de notação científica",
+"https://www.todamateria.com.br/notacao-cientifica-exercicios/"
+],
+[
+"Exercícios",
+"POTI/OBMEP: Teorema de Pitágoras (Geometria N1, aula 6)",
+"https://poti.obmep.org.br/uploads/material_teorico/s01vdbx53hck8.pdf"
 ]
 ],
 "r": [
@@ -1207,7 +1467,7 @@ export const SESSIONS = [
 ],
 [
 "Gabarito",
-"NOIC: gabaritos comentados ONC",
+"NOIC: gabaritos extraoficiais ONC",
 "https://noic.com.br/olimpiadas/ciencias/"
 ]
 ],
@@ -1234,6 +1494,16 @@ export const SESSIONS = [
 "a": "fis",
 "t": "Tipos de energia e conservação da energia",
 "m": [
+[
+"Leitura",
+"Toda Matéria: Tipos de energia",
+"https://www.todamateria.com.br/tipos-de-energia/"
+],
+[
+"Leitura",
+"PrePara Enem: Energia mecânica: fórmulas, tipos, conservação",
+"https://www.preparaenem.com/fisica/energia-mecanica.htm"
+],
 [
 "Simulação",
 "PhET: Pista de skate: energia",
@@ -1269,14 +1539,19 @@ export const SESSIONS = [
 "t": "Fontes renováveis e não renováveis",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Fontes de energia (renováveis e não renováveis)",
+"https://www.todamateria.com.br/fontes-de-energia/"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios de fontes de energia",
+"https://www.todamateria.com.br/exercicios-de-fontes-de-energia/"
+],
+[
 "Aula",
 "Ciência Todo Dia: energia renovável",
 "https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+energia+renov%C3%A1vel"
-],
-[
-"Resumo",
-"Toda Matéria: fontes de energia renováveis",
-"https://www.todamateria.com.br/?s=fontes+de+energia+renov%C3%A1veis"
 ]
 ],
 "r": [
@@ -1297,6 +1572,16 @@ export const SESSIONS = [
 "a": "fis",
 "t": "Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
 "m": [
+[
+"Leitura",
+"Conexão Escola SME Goiânia: Circuitos elétricos (8º ano)",
+"https://sme.goiania.go.gov.br/conexaoescola/ensino_fundamental/ciencias-da-natureza-circuitos-eletricos/"
+],
+[
+"Leitura",
+"Toda Matéria: Circuito elétrico: o que é, elementos e tipos",
+"https://www.todamateria.com.br/circuito-eletrico/"
+],
 [
 "Simulação",
 "PhET: Kit de circuito elétrico",
@@ -1322,6 +1607,16 @@ export const SESSIONS = [
 "t": "Consumo de energia: potência × tempo (usar a conta de luz de casa)",
 "m": [
 [
+"Leitura",
+"Descomplica: Conta de luz: calcule consumo e corte desperdício",
+"https://descomplica.com.br/blog/conta-de-luz-escolar-calcule-consumo-corte-desperdicio-2/"
+],
+[
+"Leitura",
+"CEMIRIM: Tabela Procel/Eletrobras de consumo de aparelhos",
+"https://cemirim.com.br/analise-o-seu-consumo-de-energia-tabela-proceleletrobras/"
+],
+[
 "Aula",
 "Física Total: consumo de energia elétrica kWh",
 "https://www.youtube.com/results?search_query=F%C3%ADsica+Total+consumo+de+energia+el%C3%A9trica+kWh"
@@ -1346,9 +1641,14 @@ export const SESSIONS = [
 "t": "Uso racional e eficiência energética",
 "m": [
 [
-"Resumo",
-"Toda Matéria: eficiência energética",
-"https://www.todamateria.com.br/?s=efici%C3%AAncia+energ%C3%A9tica"
+"Leitura",
+"AGEMS-MS: Selo Procel e Etiqueta de Eficiência",
+"https://www.agems.ms.gov.br/consumo-de-energia-fique-de-olho-no-selo-procel-e-na-etiqueta-de-eficiencia-dos-equipamentos/"
+],
+[
+"Atividade",
+"Ler a etiqueta do Inmetro da geladeira/chuveiro de casa",
+""
 ],
 [
 "Atividade",
@@ -1380,19 +1680,24 @@ export const SESSIONS = [
 "t": "História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Primeira República",
+"https://www.todamateria.com.br/primeira-republica/"
+],
+[
 "Aula",
-"Débora Aladim: revoltas da primeira república",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+revoltas+da+primeira+rep%C3%BAblica"
+"Débora Aladim: Resumo de História: REPÚBLICA OLIGÁRQUICA",
+"https://www.youtube.com/watch?v=FmGVa7W--mg"
 ],
 [
-"Resumo",
-"Toda Matéria: coronelismo",
-"https://www.todamateria.com.br/?s=coronelismo"
+"Prova",
+"Colégio CCP: provas anteriores da ONHB (2020–2024)",
+"https://sistemas.colegioccp.com.br/provas-edicoes-anteriores-onhb/"
 ],
 [
-"Resumo",
-"Toda Matéria: revolta da vacina",
-"https://www.todamateria.com.br/?s=revolta+da+vacina"
+"Atividade",
+"Tabela das 4 revoltas: onde, quando, quem, por quê, como terminou",
+""
 ]
 ],
 "r": [
@@ -1427,6 +1732,16 @@ export const SESSIONS = [
 "Aula",
 "Física Total: primeira lei de Newton inércia",
 "https://www.youtube.com/results?search_query=F%C3%ADsica+Total+primeira+lei+de+Newton+in%C3%A9rcia"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios de Leis de Newton",
+"https://www.todamateria.com.br/leis-de-newton-exercicios/"
+],
+[
+"Atividade",
+"Moeda sobre cartão no copo: puxar o cartão rápido",
+""
 ]
 ],
 "r": [
@@ -1454,8 +1769,13 @@ export const SESSIONS = [
 "m": [
 [
 "Prova",
-"Provas antigas da OBA",
+"Provas antigas da OBA (site oficial)",
 "https://site.oba.org.br/"
+],
+[
+"Prova",
+"OBA 2010, nível 3, com gabarito",
+"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
 ],
 [
 "App",
@@ -1487,6 +1807,11 @@ export const SESSIONS = [
 "t": "Força, velocidade e equilíbrio; ação e reação",
 "m": [
 [
+"Simulação",
+"PhET: Forças e movimento (aba Cabo de guerra)",
+"https://phet.colorado.edu/pt_BR/simulations/forces-and-motion-basics"
+],
+[
 "Aula",
 "Física Total: terceira lei de Newton",
 "https://www.youtube.com/results?search_query=F%C3%ADsica+Total+terceira+lei+de+Newton"
@@ -1495,6 +1820,11 @@ export const SESSIONS = [
 "Aula",
 "Manual do Mundo: ação e reação experimento",
 "https://www.youtube.com/results?search_query=Manual+do+Mundo+a%C3%A7%C3%A3o+e+rea%C3%A7%C3%A3o+experimento"
+],
+[
+"Atividade",
+"Balão-foguete num barbante esticado com canudo",
+""
 ]
 ],
 "r": [
@@ -1527,8 +1857,18 @@ export const SESSIONS = [
 ],
 [
 "Simulação",
-"PhET: Estados da matéria",
-"https://phet.colorado.edu/pt_BR/simulations/states-of-matter-basics"
+"PhET: Formas de energia e transformações",
+"https://phet.colorado.edu/pt_BR/simulations/energy-forms-and-changes"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre escalas termométricas",
+"https://www.todamateria.com.br/escalas-termometricas-exercicios/"
+],
+[
+"Atividade",
+"Converter a previsão do tempo de hoje para °F e K",
+""
 ]
 ],
 "r": [
@@ -1555,6 +1895,11 @@ export const SESSIONS = [
 "t": "Luz e cor: RGB e CMYK; espectro eletromagnético",
 "m": [
 [
+"Leitura",
+"PrePara Enem: O espectro eletromagnético",
+"https://www.preparaenem.com/amp/fisica/o-espectro-eletromagnetico-.htm"
+],
+[
 "Simulação",
 "PhET: Visão de cores",
 "https://phet.colorado.edu/pt_BR/simulations/color-vision"
@@ -1563,6 +1908,11 @@ export const SESSIONS = [
 "Aula",
 "Ciência Todo Dia: espectro eletromagnético",
 "https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+espectro+eletromagn%C3%A9tico"
+],
+[
+"Atividade",
+"Lupa ou zoom da câmera na tela branca do celular",
+""
 ]
 ],
 "r": [
@@ -1580,8 +1930,18 @@ export const SESSIONS = [
 "m": [
 [
 "Aula",
-"Ciência Todo Dia: viagem interestelar",
+"Ciência Todo Dia: viagem interestelar (busca)",
 "https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+viagem+interestelar"
+],
+[
+"Prova",
+"OBA 2010, nível 3: questões de astronáutica (foguete VS-30, satélites)",
+"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
+],
+[
+"Atividade",
+"Listar 5 dificuldades de ir a Marte e uma solução para cada",
+""
 ]
 ],
 "r": [
@@ -1609,7 +1969,7 @@ export const SESSIONS = [
 ],
 [
 "Gabarito",
-"NOIC: gabaritos comentados ONC",
+"NOIC: gabaritos extraoficiais ONC",
 "https://noic.com.br/olimpiadas/ciencias/"
 ]
 ],
@@ -1637,14 +1997,24 @@ export const SESSIONS = [
 "t": "Célula como unidade da vida",
 "m": [
 [
-"Aula",
-"Biologia com Samuel Cunha: citologia célula",
-"https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+citologia+c%C3%A9lula"
+"Leitura",
+"Toda Matéria: Citologia — células e organelas",
+"https://www.todamateria.com.br/citologia/"
 ],
 [
-"Exercícios",
-"Khan Academy: célula",
-"https://pt.khanacademy.org/search?page_search_query=c%C3%A9lula"
+"Aula",
+"Biologia com Samuel Cunha: Introdução à Citologia",
+"https://www.youtube.com/watch?v=N33jWXzV8RU"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Células eucariontes e procariontes",
+"https://www.youtube.com/watch?v=C5wehaJMyjE"
+],
+[
+"Atividade",
+"Desenhar lado a lado célula animal e vegetal",
+""
 ]
 ],
 "r": [
@@ -1671,9 +2041,24 @@ export const SESSIONS = [
 "t": "Microrganismos",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Microbiologia — vírus, bactérias, fungos, protozoários",
+"https://www.todamateria.com.br/microbiologia/"
+],
+[
 "Aula",
-"Biologia com Samuel Cunha: microbiologia vírus bactérias",
-"https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+microbiologia+v%C3%ADrus+bact%C3%A9rias"
+"Biologia com Samuel Cunha: Introdução à Microbiologia",
+"https://www.youtube.com/watch?v=4-xzdCHok2o"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Resumo sobre vírus",
+"https://www.youtube.com/watch?v=RYzuuPC0sGc"
+],
+[
+"Atividade",
+"Pão úmido num saco fechado: observar o bolor por 5 dias",
+""
 ]
 ],
 "r": [
@@ -1695,9 +2080,19 @@ export const SESSIONS = [
 "t": "Plantas",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Plantas — características, funções e os 4 tipos",
+"https://www.todamateria.com.br/plantas/"
+],
+[
 "Aula",
 "Biologia com Samuel Cunha: botânica plantas",
 "https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+bot%C3%A2nica+plantas"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre Reino Plantae",
+"https://www.todamateria.com.br/exercicios-sobre-reino-plantae/"
 ]
 ],
 "r": [
@@ -1719,9 +2114,19 @@ export const SESSIONS = [
 "t": "Características e desenvolvimento dos animais; biodiversidade",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Animais — classificação, características e exemplos",
+"https://www.todamateria.com.br/animais-classificacao/"
+],
+[
 "Aula",
 "Biologia Total: características dos animais",
 "https://www.youtube.com/results?search_query=Biologia+Total+caracter%C3%ADsticas+dos+animais"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre reino animal",
+"https://www.todamateria.com.br/exercicios-sobre-reino-animal-com-gabarito-e-respostas-comentadas/"
 ],
 [
 "Simulação",
@@ -1753,14 +2158,24 @@ export const SESSIONS = [
 "t": "Cadeias alimentares, fluxo de energia e ciclo da matéria",
 "m": [
 [
-"Aula",
-"Biologia com Samuel Cunha: cadeia alimentar fluxo de energia",
-"https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+cadeia+alimentar+fluxo+de+energia"
+"Leitura",
+"Toda Matéria: Cadeia e teia alimentar",
+"https://www.todamateria.com.br/cadeia-e-teia-alimentar/"
 ],
 [
-"Resumo",
-"Toda Matéria: ciclos biogeoquímicos",
-"https://www.todamateria.com.br/?s=ciclos+biogeoqu%C3%ADmicos"
+"Leitura",
+"Toda Matéria: Ciclos biogeoquímicos",
+"https://www.todamateria.com.br/ciclos-biogeoquimicos/"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Cadeia alimentar e teia alimentar",
+"https://www.youtube.com/watch?v=QQAqN7qL8Yg"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre cadeia alimentar",
+"https://www.todamateria.com.br/exercicios-sobre-cadeia-alimentar/"
 ]
 ],
 "r": [
@@ -1787,14 +2202,19 @@ export const SESSIONS = [
 "t": "Ecossistemas, impactos ambientais e preservação",
 "m": [
 [
-"Aula",
-"Biologia com Samuel Cunha: ecossistemas brasileiros",
-"https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+ecossistemas+brasileiros"
+"Leitura",
+"Toda Matéria: Impactos ambientais",
+"https://www.todamateria.com.br/impactos-ambientais/"
 ],
 [
-"Resumo",
-"Toda Matéria: impactos ambientais",
-"https://www.todamateria.com.br/?s=impactos+ambientais"
+"Aula",
+"Biologia com Samuel Cunha: Fatores bióticos e abióticos do ecossistema",
+"https://www.youtube.com/watch?v=tJdb1To5D2E"
+],
+[
+"Atividade",
+"Mapa: 1 impacto por bioma brasileiro e 1 forma de preservar",
+""
 ]
 ],
 "r": [
@@ -1821,9 +2241,24 @@ export const SESSIONS = [
 "t": "Corpo humano: digestório, respiratório e circulatório integrados",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Sistemas do corpo humano",
+"https://www.todamateria.com.br/sistemas-do-corpo-humano/"
+],
+[
 "Aula",
-"Biologia com Samuel Cunha: sistema digestório respiratório circulatório",
-"https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+sistema+digest%C3%B3rio+respirat%C3%B3rio+circulat%C3%B3rio"
+"Biologia com Samuel Cunha: Sistema digestório — fisiologia",
+"https://www.youtube.com/watch?v=ccxiObyUGRA"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre o corpo humano",
+"https://www.todamateria.com.br/exercicios-sobre-o-corpo-humano-com-gabarito-e-comentarios/"
+],
+[
+"Atividade",
+"Desenhar o caminho do O2 e da glicose até a célula do músculo",
+""
 ]
 ],
 "r": [
@@ -1845,14 +2280,24 @@ export const SESSIONS = [
 "t": "Nutrição, hábitos alimentares e saúde pública",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Saúde pública no Brasil",
+"https://www.todamateria.com.br/saude-publica-no-brasil/"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre sistema digestório",
+"https://www.todamateria.com.br/exercicios-sistema-digestorio/"
+],
+[
+"Atividade",
+"Ler 5 rótulos de casa: açúcar, sódio, gordura, ultraprocessado?",
+""
+],
+[
 "Exercícios",
 "Khan Academy: nutrição",
 "https://pt.khanacademy.org/search?page_search_query=nutri%C3%A7%C3%A3o"
-],
-[
-"Resumo",
-"Toda Matéria: indicadores de saúde pública",
-"https://www.todamateria.com.br/?s=indicadores+de+sa%C3%BAde+p%C3%BAblica"
 ]
 ],
 "r": [
@@ -1879,14 +2324,24 @@ export const SESSIONS = [
 "t": "Sistemas locomotor e nervoso (a ponte com a Psicologia)",
 "m": [
 [
-"Aula",
-"Biologia com Samuel Cunha: sistema nervoso",
-"https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+sistema+nervoso"
+"Leitura",
+"Toda Matéria: Sistema nervoso",
+"https://www.todamateria.com.br/sistema-nervoso/"
 ],
 [
-"Livro",
-"O cérebro nosso de cada dia, Suzana Herculano-Houzel",
-""
+"Leitura",
+"Toda Matéria: Sistema locomotor",
+"https://www.todamateria.com.br/sistema-locomotor/"
+],
+[
+"Aula",
+"TED: Suzana Herculano-Houzel — O que há de especial no cérebro humano?",
+"https://www.ted.com/talks/suzana_herculano_houzel_what_is_so_special_about_the_human_brain"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre o sistema nervoso",
+"https://www.todamateria.com.br/exercicios-sistema-nervoso/"
 ]
 ],
 "r": [
@@ -1913,14 +2368,19 @@ export const SESSIONS = [
 "t": "Lentes corretivas e visão",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Olho humano — anatomia e como funciona",
+"https://www.todamateria.com.br/olhos/"
+],
+[
 "Simulação",
 "PhET: Óptica geométrica (lentes)",
 "https://phet.colorado.edu/pt_BR/simulations/geometric-optics"
 ],
 [
-"Resumo",
-"Toda Matéria: miopia e hipermetropia",
-"https://www.todamateria.com.br/?s=miopia+e+hipermetropia"
+"Atividade",
+"Óculos de míope x de leitura: ver se a lente aumenta ou diminui",
+""
 ]
 ],
 "r": [
@@ -1947,9 +2407,24 @@ export const SESSIONS = [
 "t": "Mecanismos reprodutivos e sexualidade",
 "m": [
 [
-"Aula",
-"Biologia com Samuel Cunha: reprodução humana",
-"https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+reprodu%C3%A7%C3%A3o+humana"
+"Leitura",
+"Toda Matéria: Sistema reprodutor feminino",
+"https://www.todamateria.com.br/sistema-reprodutor-feminino/"
+],
+[
+"Leitura",
+"Toda Matéria: Sistema reprodutor masculino",
+"https://www.todamateria.com.br/sistema-reprodutor-masculino/"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre sistema reprodutor",
+"https://www.todamateria.com.br/exercicios-sobre-sistema-reprodutor-masculino-e-feminino/"
+],
+[
+"Atividade",
+"Caderneta de Saúde de Adolescentes (Ministério da Saúde) na UBS",
+""
 ]
 ],
 "r": [
@@ -1976,14 +2451,24 @@ export const SESSIONS = [
 "t": "Hereditariedade",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Genética — resumo e conceitos básicos",
+"https://www.todamateria.com.br/introducao-a-genetica/"
+],
+[
 "Aula",
 "Biologia com Samuel Cunha: genética leis de Mendel",
 "https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+gen%C3%A9tica+leis+de+Mendel"
 ],
 [
 "Exercícios",
-"Khan Academy: hereditariedade",
-"https://pt.khanacademy.org/search?page_search_query=hereditariedade"
+"Toda Matéria: Primeira Lei de Mendel",
+"https://www.todamateria.com.br/primeira-lei-de-mendel/"
+],
+[
+"Atividade",
+"Duas moedas (A/a): 40 lançamentos e conferir a proporção 1:2:1",
+""
 ]
 ],
 "r": [
@@ -2005,6 +2490,11 @@ export const SESSIONS = [
 "t": "Ideias evolucionistas",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Teoria da evolução",
+"https://www.todamateria.com.br/teoria-da-evolucao/"
+],
+[
 "Aula",
 "Biologia com Samuel Cunha: evolução Darwin Lamarck",
 "https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+evolu%C3%A7%C3%A3o+Darwin+Lamarck"
@@ -2013,6 +2503,11 @@ export const SESSIONS = [
 "Simulação",
 "PhET: Seleção natural",
 "https://phet.colorado.edu/pt_BR/simulations/natural-selection"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre evolução",
+"https://www.todamateria.com.br/exercicios-sobre-evolucao/"
 ]
 ],
 "r": [
@@ -2049,6 +2544,11 @@ export const SESSIONS = [
 "https://www.olimpiadadehistoria.com.br/"
 ],
 [
+"Prova",
+"Colégio CCP: provas anteriores da ONHB (2020–2024)",
+"https://sistemas.colegioccp.com.br/provas-edicoes-anteriores-onhb/"
+],
+[
 "Atividade",
 "Listar os temas de História que mais aparecem",
 ""
@@ -2073,14 +2573,24 @@ export const SESSIONS = [
 "t": "Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
 "m": [
 [
-"Aula",
-"Débora Aladim: Iluminismo Revolução Francesa",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+Iluminismo+Revolu%C3%A7%C3%A3o+Francesa"
+"Leitura",
+"Toda Matéria: Revolução Francesa (Resumo)",
+"https://www.todamateria.com.br/revolucao-francesa-resumo/"
 ],
 [
 "Aula",
-"Débora Aladim: Revolução Industrial",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+Revolu%C3%A7%C3%A3o+Industrial"
+"Débora Aladim: REVOLUÇÃO FRANCESA: TUDO QUE VOCÊ PRECISA SABER!",
+"https://www.youtube.com/watch?v=ceCcZooYDBo"
+],
+[
+"Leitura",
+"Toda Matéria: Revolução Industrial",
+"https://www.todamateria.com.br/revolucao-industrial/"
+],
+[
+"Aula",
+"Débora Aladim: Resumo de História: Revolução Industrial",
+"https://www.youtube.com/watch?v=t6nJNv-pNr8"
 ]
 ],
 "r": [
@@ -2102,14 +2612,24 @@ export const SESSIONS = [
 "t": "Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
 "m": [
 [
-"Aula",
-"Débora Aladim: Período Joanino Independência do Brasil",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+Per%C3%ADodo+Joanino+Independ%C3%AAncia+do+Brasil"
+"Leitura",
+"História do Mundo: Período Joanino",
+"https://www.historiadomundo.com.br/idade-moderna/periodo-joanino.htm"
+],
+[
+"Leitura",
+"Toda Matéria: Segundo Reinado",
+"https://www.todamateria.com.br/segundo-reinado/"
 ],
 [
 "Aula",
-"Débora Aladim: Segundo Reinado abolição",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+Segundo+Reinado+aboli%C3%A7%C3%A3o"
+"Débora Aladim: INDEPENDÊNCIA DO BRASIL EM 1822 (História do Brasil pelo Brasil ep. 9)",
+"https://www.youtube.com/watch?v=Fr9lurVLNyo"
+],
+[
+"Aula",
+"Débora Aladim: Resumo de História: SEGUNDO REINADO",
+"https://www.youtube.com/watch?v=Nir4-ql0U6s"
 ]
 ],
 "r": [
@@ -2136,14 +2656,24 @@ export const SESSIONS = [
 "t": "História da Ciência: Europa e povos não europeus",
 "m": [
 [
+"Leitura",
+"Toda Matéria: Renascimento Científico",
+"https://www.todamateria.com.br/renascimento-cientifico/"
+],
+[
+"Leitura",
+"ICArabe: Os árabes e suas contribuições para a ciência e medicina",
+"https://icarabe.org/artigos/os-arabes-e-suas-contribuicoes-para-a-ciencia-e-medicina/"
+],
+[
 "Livro",
 "Breve história de quase tudo, Bill Bryson",
 ""
 ],
 [
-"Resumo",
-"Toda Matéria: revolução científica",
-"https://www.todamateria.com.br/?s=revolu%C3%A7%C3%A3o+cient%C3%ADfica"
+"Atividade",
+"Linha do tempo: 5 descobertas não europeias (zero indiano, álgebra, papel chinês...) e como chegaram à Europa",
+""
 ]
 ],
 "r": [
@@ -2170,9 +2700,19 @@ export const SESSIONS = [
 ""
 ],
 [
-"Resumo",
-"Toda Matéria: mulheres na ciência",
-"https://www.todamateria.com.br/?s=mulheres+na+ci%C3%AAncia"
+"Leitura",
+"eBiografia: Mulheres na ciência: 10 cientistas",
+"https://www.ebiografia.com/mulheres_na_ciencia/"
+],
+[
+"Leitura",
+"Toda Matéria: Feminismo",
+"https://www.todamateria.com.br/feminismo/"
+],
+[
+"Atividade",
+"Linha do tempo: Olympe de Gouges (1791), sufragistas, voto feminino no Brasil (1932), hoje",
+""
 ]
 ],
 "r": [
@@ -2200,13 +2740,23 @@ export const SESSIONS = [
 "m": [
 [
 "Aula",
-"Débora Aladim: Era Vargas",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+Era+Vargas"
+"Débora Aladim: ERA VARGAS: RESUMO EM 5 MINUTOS",
+"https://www.youtube.com/watch?v=rkF8jDLS2Xc"
 ],
 [
 "Aula",
-"Débora Aladim: Ditadura militar redemocratização",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+Ditadura+militar+redemocratiza%C3%A7%C3%A3o"
+"Débora Aladim: 50 minutos em 5: DITADURA MILITAR",
+"https://www.youtube.com/watch?v=_h31-55wuEw"
+],
+[
+"Aula",
+"Débora Aladim: TUDO SOBRE TODAS AS CONSTITUIÇÕES DA HISTÓRIA DO BRASIL",
+"https://www.youtube.com/watch?v=r7Uf2x_agjk"
+],
+[
+"Leitura",
+"Toda Matéria: Era Vargas (busca)",
+"https://www.todamateria.com.br/?s=era+vargas"
 ]
 ],
 "r": [
@@ -2234,13 +2784,23 @@ export const SESSIONS = [
 "m": [
 [
 "Aula",
-"Débora Aladim: Guerra Fria",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+Guerra+Fria"
+"Débora Aladim: Resumo de História: 1ª PRIMEIRA GUERRA MUNDIAL",
+"https://www.youtube.com/watch?v=EEOYAN2CWwM"
 ],
 [
-"Resumo",
-"Toda Matéria: globalização",
-"https://www.todamateria.com.br/?s=globaliza%C3%A7%C3%A3o"
+"Aula",
+"Débora Aladim: Resumo de História: NAZISMO e FASCISMO - Período entre Guerras",
+"https://www.youtube.com/watch?v=Mzb-TIfKeW0"
+],
+[
+"Aula",
+"Débora Aladim: Resumo de História: GUERRA FRIA",
+"https://www.youtube.com/watch?v=eQ08AS5ZHQQ"
+],
+[
+"Leitura",
+"Toda Matéria: descolonização e globalização (busca)",
+"https://www.todamateria.com.br/?s=descoloniza%C3%A7%C3%A3o"
 ]
 ],
 "r": [
@@ -2315,7 +2875,7 @@ export const SESSIONS = [
 "m": [
 [
 "Gabarito",
-"NOIC: gabaritos comentados ONC",
+"NOIC: gabaritos extraoficiais ONC",
 "https://noic.com.br/olimpiadas/ciencias/"
 ]
 ],
@@ -2381,7 +2941,7 @@ export const SESSIONS = [
 "m": [
 [
 "Gabarito",
-"NOIC: gabaritos comentados ONC",
+"NOIC: gabaritos extraoficiais ONC",
 "https://noic.com.br/olimpiadas/ciencias/"
 ],
 [
@@ -2423,7 +2983,7 @@ export const SESSIONS = [
 "m": [
 [
 "Gabarito",
-"NOIC: gabaritos comentados ONC",
+"NOIC: gabaritos extraoficiais ONC",
 "https://noic.com.br/olimpiadas/ciencias/"
 ],
 [
@@ -2452,7 +3012,7 @@ export const SESSIONS = [
 "m": [
 [
 "Gabarito",
-"NOIC: gabaritos comentados ONC",
+"NOIC: gabaritos extraoficiais ONC",
 "https://noic.com.br/olimpiadas/ciencias/"
 ],
 [
@@ -2486,7 +3046,7 @@ export const SESSIONS = [
 "m": [
 [
 "Prova",
-"Provas antigas da OBA",
+"Provas antigas da OBA (site oficial)",
 "https://site.oba.org.br/"
 ],
 [
