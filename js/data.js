@@ -48,8 +48,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Ciência Todo Dia: rotação da Terra, dia e noite (busca)",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+rota%C3%A7%C3%A3o+da+Terra+dia+e+noite"
+"Khan Academy Brasil: A rotação da Terra e o dia e a noite",
+"https://www.youtube.com/watch?v=gHMPQC84ALg"
 ],
 [
 "Exercícios",
@@ -166,13 +166,13 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Ciência Todo Dia: estrutura interna da Terra (busca)",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+estrutura+interna+da+Terra"
+"geo ilustrada: Estrutura geológica da Terra (interna e externa)",
+"https://www.youtube.com/watch?v=QRR3QtaISOs"
 ],
 [
 "Aula",
-"Ciência Todo Dia: marés e a Lua (busca)",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+mar%C3%A9s+Lua"
+"Nexo Jornal: Como funciona a influência da Lua nas marés",
+"https://www.youtube.com/watch?v=sYss-N7EnEw"
 ],
 [
 "Atividade",
@@ -195,8 +195,13 @@ export const SESSIONS = [
 "m": [
 [
 "Aula",
-"Ciência Todo Dia: formação do Sistema Solar (busca)",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+sistema+solar+forma%C3%A7%C3%A3o"
+"Ciência Todo Dia: Um tour pelo Sistema Solar",
+"https://www.youtube.com/watch?v=SpcPB_lzCxc"
+],
+[
+"Aula",
+"PIPA: O surgimento do Sistema Solar",
+"https://www.youtube.com/watch?v=vyoB2KP6MGM"
 ],
 [
 "Simulação",
@@ -229,8 +234,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Ciência Todo Dia: origem do Universo, Big Bang (busca)",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+origem+do+universo+Big+Bang"
+"Ciência Todo Dia: O Big Bang explicado",
+"https://www.youtube.com/watch?v=nNAuuTIf3LE"
 ],
 [
 "Livro",
@@ -258,13 +263,13 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Ciência Todo Dia: ano-luz e distâncias no Universo (busca)",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+ano-luz+dist%C3%A2ncias+no+universo"
+"Universo da Ciência: O que é e quantos km tem um ano-luz",
+"https://www.youtube.com/watch?v=r4BZmgi-ARM"
 ],
 [
-"Exercícios",
-"Khan Academy: notação científica (busca)",
-"https://pt.khanacademy.org/search?page_search_query=nota%C3%A7%C3%A3o+cient%C3%ADfica"
+"Aula",
+"Professora Angela Matemática: Notação científica",
+"https://www.youtube.com/watch?v=EFYYKpy3Qwg"
 ],
 [
 "Atividade",
@@ -660,8 +665,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Débora Aladim: o que é fonte histórica (busca)",
-"https://www.youtube.com/results?search_query=D%C3%A9bora+Aladim+o+que+%C3%A9+fonte+hist%C3%B3rica"
+"Brasil Escola: Fontes históricas",
+"https://www.youtube.com/watch?v=G_WmELJlags"
 ],
 [
 "Prova",
@@ -830,8 +835,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Ciência Todo Dia: origem dos elementos químicos (busca)",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+origem+dos+elementos+qu%C3%ADmicos+estrelas"
+"Ciência Todo Dia: Como os átomos surgiram no Universo?",
+"https://www.youtube.com/watch?v=R97mutTFrJs"
 ],
 [
 "Livro",
@@ -1015,8 +1020,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Manual do Mundo: sustentabilidade química (busca)",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+sustentabilidade+qu%C3%ADmica"
+"Pesquisa FAPESP: Química verde",
+"https://www.youtube.com/watch?v=I-MmIL0DaaM"
 ]
 ],
 "r": [
@@ -1054,8 +1059,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Manual do Mundo: segurança no laboratório (busca)",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+seguran%C3%A7a+no+laborat%C3%B3rio"
+"Uma Química Vegana na Cozinha: Normas de segurança em laboratório",
+"https://www.youtube.com/watch?v=saDGPH3RHUc"
 ]
 ],
 "r": [
@@ -1511,8 +1516,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Física Total: conservação da energia",
-"https://www.youtube.com/results?search_query=F%C3%ADsica+Total+conserva%C3%A7%C3%A3o+da+energia"
+"Brasil Escola: Conservação da energia mecânica (parte 1)",
+"https://www.youtube.com/watch?v=bRFpdJeF1gU"
 ]
 ],
 "r": [
@@ -1550,8 +1555,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Ciência Todo Dia: energia renovável",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+energia+renov%C3%A1vel"
+"Descomplica (Quer que desenhe?): Fontes de energia renováveis e não renováveis",
+"https://www.youtube.com/watch?v=bdgYTLW4ec4"
 ]
 ],
 "r": [
@@ -1589,8 +1594,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Manual do Mundo: circuito elétrico simples",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+circuito+el%C3%A9trico+simples"
+"Canal Futura: Circuitos elétricos no cotidiano (Ciências, 8º ano)",
+"https://www.youtube.com/watch?v=N0DnSlhijOU"
 ]
 ],
 "r": [
@@ -1618,8 +1623,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Física Total: consumo de energia elétrica kWh",
-"https://www.youtube.com/results?search_query=F%C3%ADsica+Total+consumo+de+energia+el%C3%A9trica+kWh"
+"Canal Futura: Cálculo de consumo de energia elétrica (Ciências, 8º ano)",
+"https://www.youtube.com/watch?v=GDT1uVbethI"
 ],
 [
 "Atividade",
@@ -1730,8 +1735,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Física Total: primeira lei de Newton inércia",
-"https://www.youtube.com/results?search_query=F%C3%ADsica+Total+primeira+lei+de+Newton+in%C3%A9rcia"
+"Ciência Todo Dia: A primeira lei de Newton (inércia) explicada",
+"https://www.youtube.com/watch?v=RoyecFxgwTs"
 ],
 [
 "Exercícios",
@@ -1813,13 +1818,13 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Física Total: terceira lei de Newton",
-"https://www.youtube.com/results?search_query=F%C3%ADsica+Total+terceira+lei+de+Newton"
+"Ciência Todo Dia: A terceira lei de Newton explicada",
+"https://www.youtube.com/watch?v=Ei6DcLyNuyI"
 ],
 [
 "Aula",
-"Manual do Mundo: ação e reação experimento",
-"https://www.youtube.com/results?search_query=Manual+do+Mundo+a%C3%A7%C3%A3o+e+rea%C3%A7%C3%A3o+experimento"
+"Brasil Escola: Terceira lei de Newton, ação e reação",
+"https://www.youtube.com/watch?v=5nwKWnxPgoQ"
 ],
 [
 "Atividade",
@@ -1852,8 +1857,8 @@ export const SESSIONS = [
 "m": [
 [
 "Aula",
-"Física Total: escalas termométricas",
-"https://www.youtube.com/results?search_query=F%C3%ADsica+Total+escalas+termom%C3%A9tricas"
+"Matemática no Papel: Escalas termométricas",
+"https://www.youtube.com/watch?v=Vw83NddQh7E"
 ],
 [
 "Simulação",
@@ -1906,8 +1911,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Ciência Todo Dia: espectro eletromagnético",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+espectro+eletromagn%C3%A9tico"
+"Quer que desenhe?: Espectro eletromagnético",
+"https://www.youtube.com/watch?v=3po0Ek5aPKE"
 ],
 [
 "Atividade",
@@ -1930,8 +1935,8 @@ export const SESSIONS = [
 "m": [
 [
 "Aula",
-"Ciência Todo Dia: viagem interestelar (busca)",
-"https://www.youtube.com/results?search_query=Ci%C3%AAncia+Todo+Dia+viagem+interestelar"
+"Nerdologia: Corrida espacial",
+"https://www.youtube.com/watch?v=urAy6BRsMTE"
 ],
 [
 "Prova",
@@ -2086,8 +2091,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Biologia com Samuel Cunha: botânica plantas",
-"https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+bot%C3%A2nica+plantas"
+"Biologia com Samuel Cunha: Reino vegetal, introdução à botânica",
+"https://www.youtube.com/watch?v=EAVhBfwLUhk"
 ],
 [
 "Exercícios",
@@ -2120,8 +2125,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Biologia Total: características dos animais",
-"https://www.youtube.com/results?search_query=Biologia+Total+caracter%C3%ADsticas+dos+animais"
+"Biologia com Samuel Cunha: Reino Animalia, introdução à zoologia",
+"https://www.youtube.com/watch?v=wX2T2CaVmaA"
 ],
 [
 "Exercícios",
@@ -2295,9 +2300,9 @@ export const SESSIONS = [
 ""
 ],
 [
-"Exercícios",
-"Khan Academy: nutrição",
-"https://pt.khanacademy.org/search?page_search_query=nutri%C3%A7%C3%A3o"
+"Aula",
+"Drauzio Varella: O que é um alimento ultraprocessado?",
+"https://www.youtube.com/watch?v=5gyTL7vqwMA"
 ]
 ],
 "r": [
@@ -2457,8 +2462,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Biologia com Samuel Cunha: genética leis de Mendel",
-"https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+gen%C3%A9tica+leis+de+Mendel"
+"Me Gusta Bio: 1ª Lei de Mendel (resumo)",
+"https://www.youtube.com/watch?v=UGj4x0uAuio"
 ],
 [
 "Exercícios",
@@ -2496,8 +2501,8 @@ export const SESSIONS = [
 ],
 [
 "Aula",
-"Biologia com Samuel Cunha: evolução Darwin Lamarck",
-"https://www.youtube.com/results?search_query=Biologia+com+Samuel+Cunha+evolu%C3%A7%C3%A3o+Darwin+Lamarck"
+"Descomplica (Quer que desenhe?): Resumo sobre evolução",
+"https://www.youtube.com/watch?v=4WO-A_GaA1o"
 ],
 [
 "Simulação",
@@ -2754,9 +2759,9 @@ export const SESSIONS = [
 "https://www.youtube.com/watch?v=r7Uf2x_agjk"
 ],
 [
-"Leitura",
-"Toda Matéria: Era Vargas (busca)",
-"https://www.todamateria.com.br/?s=era+vargas"
+"Aula",
+"Professor Ferrari: República \"Populista\" (1945–1964), resumo",
+"https://www.youtube.com/watch?v=bm13wedJ8hM"
 ]
 ],
 "r": [
@@ -2798,9 +2803,9 @@ export const SESSIONS = [
 "https://www.youtube.com/watch?v=eQ08AS5ZHQQ"
 ],
 [
-"Leitura",
-"Toda Matéria: descolonização e globalização (busca)",
-"https://www.todamateria.com.br/?s=descoloniza%C3%A7%C3%A3o"
+"Aula",
+"Parabólica: Descolonização da África e da Ásia",
+"https://www.youtube.com/watch?v=47DL0DVy28M"
 ]
 ],
 "r": [
