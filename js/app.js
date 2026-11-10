@@ -327,7 +327,7 @@ function viewHoje() {
     </article>` : `<article class="card hero"><h2 class="display lg">Turnê completa!</h2><p>Todos os encontros feitos. Agora é o grande show.</p></article>`}
     <section class="card stack-s up-card">
       <div class="row between"><h2 class="display md">Próximas sessões</h2><a href="#/turne" class="small">calendário completo</a></div>
-      <p class="small muted">Segunda, quarta e sexta. Para mudar um horário, fale com o pai.</p>
+      <p class="small muted">Terça, quarta e sexta. Para mudar um horário, fale com o pai.</p>
       <ol class="uplist">${agenda || '<li class="muted">Nenhuma outra sessão marcada.</li>'}</ol>
     </section>
     <details class="card howto" ${howtoOpen() ? "open" : ""}>
@@ -646,7 +646,7 @@ function viewBastidores() {
     <section class="stack-s"><b>Últimos encontros</b>${recent.map((s) => { const e = E[s.d] || {}; const h = { facil: "Fácil", medida: "Na medida", puxado: "Puxado" }[e.humor] || (e.feito ? "Feito" : "Não feito"); return `<div class="agenda"><span class="mono muted">${dLabel(s.d)}</span><span class="grow">${esc(s.t)}</span><span class="hum ${e.humor || (e.feito ? "" : "no")}">${h}</span></div>`; }).join("")}</section>
     <section class="card stack-s"><b>Ajustes</b>
       <span class="small muted">Horário de cada dia</span>
-      <div class="grid3">${[[1, "Segunda"], [3, "Quarta"], [5, "Sexta"]].map(([w, n]) => `<label class="stack-xs small">${n}<input type="time" data-act="hor" data-w="${w}" value="${esc(hor[w] || CONFIG.horarioPadrao[w])}"></label>`).join("")}</div>
+      <div class="grid3">${[[2, "Terça"], [3, "Quarta"], [5, "Sexta"]].map(([w, n]) => `<label class="stack-xs small">${n}<input type="time" data-act="hor" data-w="${w}" value="${esc(hor[w] || CONFIG.horarioPadrao[w])}"></label>`).join("")}</div>
       <label class="stack-xs small" for="env">O que vai dentro do envelope surpresa (ela só vê depois de resgatado)<input id="env" type="text" data-act="env" value="${esc(aj.envelope || "")}" placeholder="Ex.: ingresso de cinema com uma amiga"></label>
       <span class="small muted">Trilhas: no Spotify, abra o álbum (ou playlist), toque em ··· → Compartilhar → Copiar link e cole aqui. Com o link, a música toca dentro do modo foco.</span>
       ${Object.entries(ERAS).map(([k, Er]) => `<label class="stack-xs small">${esc(Er.nome)}<input type="url" data-act="trilha" data-m="${k}" value="${esc(tr[k] || Er.trilha || "")}" placeholder="https://open.spotify.com/album/..."></label>`).join("")}

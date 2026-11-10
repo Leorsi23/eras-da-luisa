@@ -1,7 +1,7 @@
 // Gerado a partir do plano de estudos. Cada item: d=data, a=área, t=tema, m=materiais [formato, rótulo, link], r=revisões [intervalo, tema, data do tema].
 export const SESSIONS = [
 {
-"d": "2027-01-04",
+"d": "2027-01-05",
 "a": "ast",
 "t": "Diagnóstico: prova antiga ONC Nível B, sem cronômetro",
 "m": [
@@ -65,7 +65,7 @@ export const SESSIONS = [
 "r": []
 },
 {
-"d": "2027-01-11",
+"d": "2027-01-12",
 "a": "ast",
 "t": "Lua: fases, mês lunar e eclipses",
 "m": [
@@ -90,7 +90,13 @@ export const SESSIONS = [
 ""
 ]
 ],
-"r": []
+"r": [
+[
+"1 semana",
+"Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
+"2027-01-08"
+]
+]
 },
 {
 "d": "2027-01-13",
@@ -146,16 +152,10 @@ export const SESSIONS = [
 ""
 ]
 ],
-"r": [
-[
-"1 semana",
-"Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
-"2027-01-08"
-]
-]
+"r": []
 },
 {
-"d": "2027-01-18",
+"d": "2027-01-19",
 "a": "ast",
 "t": "Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
 "m": [
@@ -184,7 +184,7 @@ export const SESSIONS = [
 [
 "1 semana",
 "Lua: fases, mês lunar e eclipses",
-"2027-01-11"
+"2027-01-12"
 ]
 ]
 },
@@ -252,7 +252,7 @@ export const SESSIONS = [
 ]
 },
 {
-"d": "2027-01-25",
+"d": "2027-01-26",
 "a": "ast",
 "t": "Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
 "m": [
@@ -281,7 +281,7 @@ export const SESSIONS = [
 [
 "1 semana",
 "Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
-"2027-01-18"
+"2027-01-19"
 ]
 ]
 },
@@ -344,7 +344,1610 @@ export const SESSIONS = [
 ]
 },
 {
-"d": "2027-02-01",
+"d": "2027-02-02",
+"a": "bio",
+"t": "Célula como unidade da vida",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Citologia — células e organelas",
+"https://www.todamateria.com.br/citologia/"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Introdução à Citologia",
+"https://www.youtube.com/watch?v=N33jWXzV8RU"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Células eucariontes e procariontes",
+"https://www.youtube.com/watch?v=C5wehaJMyjE"
+],
+[
+"Atividade",
+"Desenhar lado a lado célula animal e vegetal",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
+"2027-01-26"
+]
+]
+},
+{
+"d": "2027-02-03",
+"a": "bio",
+"t": "Microrganismos",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Microbiologia — vírus, bactérias, fungos, protozoários",
+"https://www.todamateria.com.br/microbiologia/"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Introdução à Microbiologia",
+"https://www.youtube.com/watch?v=4-xzdCHok2o"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Resumo sobre vírus",
+"https://www.youtube.com/watch?v=RYzuuPC0sGc"
+],
+[
+"Atividade",
+"Pão úmido num saco fechado: observar o bolor por 5 dias",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Constelações e reconhecimento do céu (carta celeste + observação)",
+"2027-01-27"
+]
+]
+},
+{
+"d": "2027-02-05",
+"a": "his",
+"t": "História: como ler uma fonte histórica (teoria, método e historiografia)",
+"m": [
+[
+"Leitura",
+"Toda Matéria: O que são fontes históricas",
+"https://www.todamateria.com.br/fontes-historicas/"
+],
+[
+"Aula",
+"Brasil Escola: Fontes históricas",
+"https://www.youtube.com/watch?v=G_WmELJlags"
+],
+[
+"Prova",
+"Colégio CCP: provas anteriores da ONHB (2020–2024)",
+"https://sistemas.colegioccp.com.br/provas-edicoes-anteriores-onhb/"
+],
+[
+"Atividade",
+"Resolver 3 questões de História de provas antigas sublinhando o que o documento diz",
+""
+]
+],
+"r": [
+[
+"1 mês",
+"Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
+"2027-01-08"
+]
+]
+},
+{
+"d": "2027-02-09",
+"off": "Carnaval"
+},
+{
+"d": "2027-02-10",
+"a": "bio",
+"t": "Plantas",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Plantas — características, funções e os 4 tipos",
+"https://www.todamateria.com.br/plantas/"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Reino vegetal, introdução à botânica",
+"https://www.youtube.com/watch?v=EAVhBfwLUhk"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre Reino Plantae",
+"https://www.todamateria.com.br/exercicios-sobre-reino-plantae/"
+]
+],
+"r": [
+[
+"1 semana",
+"Microrganismos",
+"2027-02-03"
+],
+[
+"1 mês",
+"Lua: fases, mês lunar e eclipses",
+"2027-01-12"
+]
+]
+},
+{
+"d": "2027-02-12",
+"a": "his",
+"t": "Triagem: separar as questões de História das provas antigas e ver o que mais cai",
+"m": [
+[
+"Prova",
+"Provas antigas ONC (Nível B)",
+"https://www.onciencias.org/exames"
+],
+[
+"Prova",
+"Provas antigas da ONHB (História)",
+"https://www.olimpiadadehistoria.com.br/"
+],
+[
+"Prova",
+"Colégio CCP: provas anteriores da ONHB (2020–2024)",
+"https://sistemas.colegioccp.com.br/provas-edicoes-anteriores-onhb/"
+],
+[
+"Atividade",
+"Listar os temas de História que mais aparecem",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"História: como ler uma fonte histórica (teoria, método e historiografia)",
+"2027-02-05"
+],
+[
+"1 mês",
+"Sol: translação, ano e estações; solstício e equinócio",
+"2027-01-13"
+]
+]
+},
+{
+"d": "2027-02-16",
+"a": "bio",
+"t": "Características e desenvolvimento dos animais; biodiversidade",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Animais — classificação, características e exemplos",
+"https://www.todamateria.com.br/animais-classificacao/"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Reino Animalia, introdução à zoologia",
+"https://www.youtube.com/watch?v=wX2T2CaVmaA"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre reino animal",
+"https://www.todamateria.com.br/exercicios-sobre-reino-animal-com-gabarito-e-respostas-comentadas/"
+],
+[
+"Simulação",
+"PhET: Seleção natural",
+"https://phet.colorado.edu/pt_BR/simulations/natural-selection"
+]
+],
+"r": [
+[
+"1 semana",
+"Plantas",
+"2027-02-10"
+],
+[
+"1 mês",
+"Coordenadas geográficas, zonas térmicas, fusos horários e horário de verão",
+"2027-01-15"
+]
+]
+},
+{
+"d": "2027-02-17",
+"a": "bio",
+"t": "Cadeias alimentares, fluxo de energia e ciclo da matéria",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Cadeia e teia alimentar",
+"https://www.todamateria.com.br/cadeia-e-teia-alimentar/"
+],
+[
+"Leitura",
+"Toda Matéria: Ciclos biogeoquímicos",
+"https://www.todamateria.com.br/ciclos-biogeoquimicos/"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Cadeia alimentar e teia alimentar",
+"https://www.youtube.com/watch?v=QQAqN7qL8Yg"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre cadeia alimentar",
+"https://www.todamateria.com.br/exercicios-sobre-cadeia-alimentar/"
+]
+],
+"r": [
+[
+"1 mês",
+"Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
+"2027-01-19"
+]
+]
+},
+{
+"d": "2027-02-19",
+"a": "his",
+"t": "Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Revolução Francesa (Resumo)",
+"https://www.todamateria.com.br/revolucao-francesa-resumo/"
+],
+[
+"Aula",
+"Débora Aladim: REVOLUÇÃO FRANCESA: TUDO QUE VOCÊ PRECISA SABER!",
+"https://www.youtube.com/watch?v=ceCcZooYDBo"
+],
+[
+"Leitura",
+"Toda Matéria: Revolução Industrial",
+"https://www.todamateria.com.br/revolucao-industrial/"
+],
+[
+"Aula",
+"Débora Aladim: Resumo de História: Revolução Industrial",
+"https://www.youtube.com/watch?v=t6nJNv-pNr8"
+]
+],
+"r": [
+[
+"1 mês",
+"Sistema Solar: planetas, satélites, asteroides e cometas; origem do Sistema Solar",
+"2027-01-20"
+]
+]
+},
+{
+"d": "2027-02-23",
+"a": "bio",
+"t": "Ecossistemas, impactos ambientais e preservação",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Impactos ambientais",
+"https://www.todamateria.com.br/impactos-ambientais/"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Fatores bióticos e abióticos do ecossistema",
+"https://www.youtube.com/watch?v=tJdb1To5D2E"
+],
+[
+"Atividade",
+"Mapa: 1 impacto por bioma brasileiro e 1 forma de preservar",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Características e desenvolvimento dos animais; biodiversidade",
+"2027-02-16"
+],
+[
+"1 mês",
+"Estrelas, galáxias, origem do Universo; geocentrismo × heliocentrismo",
+"2027-01-22"
+]
+]
+},
+{
+"d": "2027-02-24",
+"a": "his",
+"t": "Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
+"m": [
+[
+"Leitura",
+"História do Mundo: Período Joanino",
+"https://www.historiadomundo.com.br/idade-moderna/periodo-joanino.htm"
+],
+[
+"Leitura",
+"Toda Matéria: Segundo Reinado",
+"https://www.todamateria.com.br/segundo-reinado/"
+],
+[
+"Aula",
+"Débora Aladim: INDEPENDÊNCIA DO BRASIL EM 1822 (História do Brasil pelo Brasil ep. 9)",
+"https://www.youtube.com/watch?v=Fr9lurVLNyo"
+],
+[
+"Aula",
+"Débora Aladim: Resumo de História: SEGUNDO REINADO",
+"https://www.youtube.com/watch?v=Nir4-ql0U6s"
+]
+],
+"r": [
+[
+"1 semana",
+"Cadeias alimentares, fluxo de energia e ciclo da matéria",
+"2027-02-17"
+],
+[
+"1 mês",
+"Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
+"2027-01-26"
+]
+]
+},
+{
+"d": "2027-02-26",
+"a": "bio",
+"t": "Corpo humano: digestório, respiratório e circulatório integrados",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Sistemas do corpo humano",
+"https://www.todamateria.com.br/sistemas-do-corpo-humano/"
+],
+[
+"Aula",
+"Biologia com Samuel Cunha: Sistema digestório — fisiologia",
+"https://www.youtube.com/watch?v=ccxiObyUGRA"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre o corpo humano",
+"https://www.todamateria.com.br/exercicios-sobre-o-corpo-humano-com-gabarito-e-comentarios/"
+],
+[
+"Atividade",
+"Desenhar o caminho do O2 e da glicose até a célula do músculo",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
+"2027-02-19"
+],
+[
+"1 mês",
+"Constelações e reconhecimento do céu (carta celeste + observação)",
+"2027-01-27"
+]
+]
+},
+{
+"d": "2027-03-02",
+"a": "his",
+"t": "História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
+"m": [
+[
+"Leitura",
+"História do Mundo: Independência da América Espanhola",
+"https://www.historiadomundo.com.br/idade-contemporanea/independencia-da-america-espanhola.htm"
+],
+[
+"Leitura",
+"Toda Matéria: Neocolonialismo",
+"https://www.todamateria.com.br/neocolonialismo/"
+],
+[
+"Aula",
+"Débora Aladim: Resumo de História: IMPERIALISMO",
+"https://www.youtube.com/watch?v=8OZhwSCp_Z8"
+],
+[
+"Aula",
+"Brasil Escola: Independência da América Espanhola",
+"https://www.youtube.com/watch?v=t9Xlntk-2Dg"
+]
+],
+"r": [
+[
+"1 semana",
+"Ecossistemas, impactos ambientais e preservação",
+"2027-02-23"
+],
+[
+"1 mês",
+"Célula como unidade da vida",
+"2027-02-02"
+]
+]
+},
+{
+"d": "2027-03-03",
+"a": "bio",
+"t": "Nutrição, hábitos alimentares e saúde pública",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Saúde pública no Brasil",
+"https://www.todamateria.com.br/saude-publica-no-brasil/"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre sistema digestório",
+"https://www.todamateria.com.br/exercicios-sistema-digestorio/"
+],
+[
+"Atividade",
+"Ler 5 rótulos de casa: açúcar, sódio, gordura, ultraprocessado?",
+""
+],
+[
+"Aula",
+"Drauzio Varella: O que é um alimento ultraprocessado?",
+"https://www.youtube.com/watch?v=5gyTL7vqwMA"
+]
+],
+"r": [
+[
+"1 semana",
+"Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
+"2027-02-24"
+],
+[
+"1 mês",
+"Microrganismos",
+"2027-02-03"
+]
+]
+},
+{
+"d": "2027-03-05",
+"a": "bio",
+"t": "Sistemas locomotor e nervoso (a ponte com a Psicologia)",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Sistema nervoso",
+"https://www.todamateria.com.br/sistema-nervoso/"
+],
+[
+"Leitura",
+"Toda Matéria: Sistema locomotor",
+"https://www.todamateria.com.br/sistema-locomotor/"
+],
+[
+"Aula",
+"TED: Suzana Herculano-Houzel — O que há de especial no cérebro humano?",
+"https://www.ted.com/talks/suzana_herculano_houzel_what_is_so_special_about_the_human_brain"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre o sistema nervoso",
+"https://www.todamateria.com.br/exercicios-sistema-nervoso/"
+]
+],
+"r": [
+[
+"1 semana",
+"Corpo humano: digestório, respiratório e circulatório integrados",
+"2027-02-26"
+],
+[
+"1 mês",
+"História: como ler uma fonte histórica (teoria, método e historiografia)",
+"2027-02-05"
+]
+]
+},
+{
+"d": "2027-03-09",
+"a": "his",
+"t": "História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Darwinismo Social",
+"https://www.todamateria.com.br/darwinismo-social/"
+],
+[
+"Aula",
+"Brasil Escola: Darwinismo social",
+"https://www.youtube.com/watch?v=_3cHuinzLh4"
+],
+[
+"Exercícios",
+"Toda Matéria: Questões sobre darwinismo social",
+"https://www.todamateria.com.br/questoes-sobre-darwinismo-social/"
+],
+[
+"Atividade",
+"Ler trecho de \"O fardo do homem branco\" (Kipling, 1899) e listar os argumentos usados",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
+"2027-03-02"
+],
+[
+"1 mês",
+"Plantas",
+"2027-02-10"
+]
+]
+},
+{
+"d": "2027-03-10",
+"a": "bio",
+"t": "Lentes corretivas e visão",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Olho humano — anatomia e como funciona",
+"https://www.todamateria.com.br/olhos/"
+],
+[
+"Simulação",
+"PhET: Óptica geométrica (lentes)",
+"https://phet.colorado.edu/pt_BR/simulations/geometric-optics"
+],
+[
+"Atividade",
+"Óculos de míope x de leitura: ver se a lente aumenta ou diminui",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Nutrição, hábitos alimentares e saúde pública",
+"2027-03-03"
+]
+]
+},
+{
+"d": "2027-03-12",
+"a": "his",
+"t": "História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Primeira República",
+"https://www.todamateria.com.br/primeira-republica/"
+],
+[
+"Aula",
+"Débora Aladim: Resumo de História: REPÚBLICA OLIGÁRQUICA",
+"https://www.youtube.com/watch?v=FmGVa7W--mg"
+],
+[
+"Prova",
+"Colégio CCP: provas anteriores da ONHB (2020–2024)",
+"https://sistemas.colegioccp.com.br/provas-edicoes-anteriores-onhb/"
+],
+[
+"Atividade",
+"Tabela das 4 revoltas: onde, quando, quem, por quê, como terminou",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Sistemas locomotor e nervoso (a ponte com a Psicologia)",
+"2027-03-05"
+]
+]
+},
+{
+"d": "2027-03-16",
+"a": "bio",
+"t": "Mecanismos reprodutivos e sexualidade",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Sistema reprodutor feminino",
+"https://www.todamateria.com.br/sistema-reprodutor-feminino/"
+],
+[
+"Leitura",
+"Toda Matéria: Sistema reprodutor masculino",
+"https://www.todamateria.com.br/sistema-reprodutor-masculino/"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre sistema reprodutor",
+"https://www.todamateria.com.br/exercicios-sobre-sistema-reprodutor-masculino-e-feminino/"
+],
+[
+"Atividade",
+"Caderneta de Saúde de Adolescentes (Ministério da Saúde) na UBS",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
+"2027-03-09"
+],
+[
+"1 mês",
+"Características e desenvolvimento dos animais; biodiversidade",
+"2027-02-16"
+]
+]
+},
+{
+"d": "2027-03-17",
+"a": "bio",
+"t": "Hereditariedade",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Genética — resumo e conceitos básicos",
+"https://www.todamateria.com.br/introducao-a-genetica/"
+],
+[
+"Aula",
+"Me Gusta Bio: 1ª Lei de Mendel (resumo)",
+"https://www.youtube.com/watch?v=UGj4x0uAuio"
+],
+[
+"Exercícios",
+"Toda Matéria: Primeira Lei de Mendel",
+"https://www.todamateria.com.br/primeira-lei-de-mendel/"
+],
+[
+"Atividade",
+"Duas moedas (A/a): 40 lançamentos e conferir a proporção 1:2:1",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Lentes corretivas e visão",
+"2027-03-10"
+],
+[
+"1 mês",
+"Cadeias alimentares, fluxo de energia e ciclo da matéria",
+"2027-02-17"
+]
+]
+},
+{
+"d": "2027-03-19",
+"a": "his",
+"t": "Brasil República: Era Vargas, anos 1945–1964 (Dutra, JK, Jango), Ditadura, redemocratização e Constituição de 1988",
+"m": [
+[
+"Aula",
+"Débora Aladim: ERA VARGAS: RESUMO EM 5 MINUTOS",
+"https://www.youtube.com/watch?v=rkF8jDLS2Xc"
+],
+[
+"Aula",
+"Débora Aladim: 50 minutos em 5: DITADURA MILITAR",
+"https://www.youtube.com/watch?v=_h31-55wuEw"
+],
+[
+"Aula",
+"Débora Aladim: TUDO SOBRE TODAS AS CONSTITUIÇÕES DA HISTÓRIA DO BRASIL",
+"https://www.youtube.com/watch?v=r7Uf2x_agjk"
+],
+[
+"Aula",
+"Professor Ferrari: República \"Populista\" (1945–1964), resumo",
+"https://www.youtube.com/watch?v=bm13wedJ8hM"
+]
+],
+"r": [
+[
+"1 semana",
+"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
+"2027-03-12"
+],
+[
+"1 mês",
+"Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
+"2027-02-19"
+]
+]
+},
+{
+"d": "2027-03-23",
+"a": "bio",
+"t": "Ideias evolucionistas",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Teoria da evolução",
+"https://www.todamateria.com.br/teoria-da-evolucao/"
+],
+[
+"Aula",
+"Descomplica (Quer que desenhe?): Resumo sobre evolução",
+"https://www.youtube.com/watch?v=4WO-A_GaA1o"
+],
+[
+"Simulação",
+"PhET: Seleção natural",
+"https://phet.colorado.edu/pt_BR/simulations/natural-selection"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre evolução",
+"https://www.todamateria.com.br/exercicios-sobre-evolucao/"
+]
+],
+"r": [
+[
+"1 semana",
+"Mecanismos reprodutivos e sexualidade",
+"2027-03-16"
+],
+[
+"1 mês",
+"Ecossistemas, impactos ambientais e preservação",
+"2027-02-23"
+]
+]
+},
+{
+"d": "2027-03-24",
+"a": "his",
+"t": "Século XX: Guerras Mundiais, socialismo e Guerra Fria, descolonização da Ásia e da África, globalização",
+"m": [
+[
+"Aula",
+"Débora Aladim: Resumo de História: 1ª PRIMEIRA GUERRA MUNDIAL",
+"https://www.youtube.com/watch?v=EEOYAN2CWwM"
+],
+[
+"Aula",
+"Débora Aladim: Resumo de História: NAZISMO e FASCISMO - Período entre Guerras",
+"https://www.youtube.com/watch?v=Mzb-TIfKeW0"
+],
+[
+"Aula",
+"Débora Aladim: Resumo de História: GUERRA FRIA",
+"https://www.youtube.com/watch?v=eQ08AS5ZHQQ"
+],
+[
+"Aula",
+"Parabólica: Descolonização da África e da Ásia",
+"https://www.youtube.com/watch?v=47DL0DVy28M"
+]
+],
+"r": [
+[
+"1 semana",
+"Hereditariedade",
+"2027-03-17"
+],
+[
+"1 mês",
+"Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
+"2027-02-24"
+]
+]
+},
+{
+"d": "2027-03-26",
+"off": "Sexta-feira Santa"
+},
+{
+"d": "2027-03-30",
+"a": "bio",
+"t": "Exercícios de Biologia e prova antiga do mês + correção",
+"m": [
+[
+"Prova",
+"Provas antigas ONC (Nível B)",
+"https://www.onciencias.org/exames"
+],
+[
+"Gabarito",
+"NOIC: gabaritos extraoficiais ONC",
+"https://noic.com.br/olimpiadas/ciencias/"
+],
+[
+"Atividade",
+"Fazer só as questões de Biologia; anotar os erros no caderno",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Ideias evolucionistas",
+"2027-03-23"
+],
+[
+"1 mês",
+"Corpo humano: digestório, respiratório e circulatório integrados",
+"2027-02-26"
+]
+]
+},
+{
+"d": "2027-03-31",
+"a": "his",
+"t": "História da Ciência: Europa e povos não europeus",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Renascimento Científico",
+"https://www.todamateria.com.br/renascimento-cientifico/"
+],
+[
+"Leitura",
+"ICArabe: Os árabes e suas contribuições para a ciência e medicina",
+"https://icarabe.org/artigos/os-arabes-e-suas-contribuicoes-para-a-ciencia-e-medicina/"
+],
+[
+"Livro",
+"Breve história de quase tudo, Bill Bryson",
+""
+],
+[
+"Atividade",
+"Linha do tempo: 5 descobertas não europeias (zero indiano, álgebra, papel chinês...) e como chegaram à Europa",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Século XX: Guerras Mundiais, socialismo e Guerra Fria, descolonização da Ásia e da África, globalização",
+"2027-03-24"
+],
+[
+"1 mês",
+"História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
+"2027-03-02"
+]
+]
+},
+{
+"d": "2027-04-02",
+"a": "fis",
+"t": "Notação científica; Sistema Internacional e prefixos",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Notação científica: como transformar e fazer cálculos",
+"https://www.todamateria.com.br/notacao-cientifica/"
+],
+[
+"Leitura",
+"InfoEscola: Prefixos métricos",
+"https://www.infoescola.com/ciencias/prefixos-metricos/"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios de notação científica",
+"https://www.todamateria.com.br/notacao-cientifica-exercicios/"
+]
+],
+"r": [
+[
+"1 mês",
+"Nutrição, hábitos alimentares e saúde pública",
+"2027-03-03"
+]
+]
+},
+{
+"d": "2027-04-06",
+"a": "fis",
+"t": "Medidas: valor mais provável, desvio e erro",
+"m": [
+[
+"Leitura",
+"UFOP (Física): Medidas e erros",
+"https://fisica.ufop.br/sites/default/files/defis/files/medidas_e_erros.pdf?m=1525725089"
+],
+[
+"Atividade",
+"Medir a mesa 5 vezes e calcular a média e o desvio",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"História da Ciência: Europa e povos não europeus",
+"2027-03-31"
+],
+[
+"1 mês",
+"Sistemas locomotor e nervoso (a ponte com a Psicologia)",
+"2027-03-05"
+],
+[
+"3 meses",
+"Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
+"2027-01-08"
+]
+]
+},
+{
+"d": "2027-04-07",
+"a": "fis",
+"t": "Gráficos: plano cartesiano, reta e leitura de gráficos",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Função afim (função do 1º grau)",
+"https://www.todamateria.com.br/funcao-afim/"
+],
+[
+"Simulação",
+"PhET: Gráficos de retas",
+"https://phet.colorado.edu/pt_BR/simulations/graphing-lines"
+]
+],
+"r": [
+[
+"1 semana",
+"Notação científica; Sistema Internacional e prefixos",
+"2027-04-02"
+],
+[
+"1 mês",
+"História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
+"2027-03-09"
+]
+]
+},
+{
+"d": "2027-04-09",
+"a": "fis",
+"t": "Grandezas diretamente e inversamente proporcionais no gráfico",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Grandezas diretamente e inversamente proporcionais",
+"https://www.todamateria.com.br/grandezas-proporcionais-grandezas-diretamente-inversamente-proporcionais/"
+],
+[
+"Leitura",
+"UEL Matemática Essencial: Razões e proporções",
+"https://www.uel.br/projetos/matessencial/basico/fundamental/proporcoes.html"
+],
+[
+"Atividade",
+"Fazer 2 gráficos: pães × preço e velocidade × tempo (60 km)",
+""
+]
+],
+"r": [
+[
+"1 mês",
+"Lentes corretivas e visão",
+"2027-03-10"
+]
+]
+},
+{
+"d": "2027-04-13",
+"a": "fis",
+"t": "Tipos de energia e conservação da energia",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Tipos de energia",
+"https://www.todamateria.com.br/tipos-de-energia/"
+],
+[
+"Leitura",
+"PrePara Enem: Energia mecânica: fórmulas, tipos, conservação",
+"https://www.preparaenem.com/fisica/energia-mecanica.htm"
+],
+[
+"Simulação",
+"PhET: Pista de skate: energia",
+"https://phet.colorado.edu/pt_BR/simulations/energy-skate-park-basics"
+],
+[
+"Aula",
+"Brasil Escola: Conservação da energia mecânica (parte 1)",
+"https://www.youtube.com/watch?v=bRFpdJeF1gU"
+]
+],
+"r": [
+[
+"1 semana",
+"Medidas: valor mais provável, desvio e erro",
+"2027-04-06"
+],
+[
+"1 mês",
+"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
+"2027-03-12"
+],
+[
+"3 meses",
+"Lua: fases, mês lunar e eclipses",
+"2027-01-12"
+]
+]
+},
+{
+"d": "2027-04-14",
+"a": "fis",
+"t": "Fontes renováveis e não renováveis",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Fontes de energia (renováveis e não renováveis)",
+"https://www.todamateria.com.br/fontes-de-energia/"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios de fontes de energia",
+"https://www.todamateria.com.br/exercicios-de-fontes-de-energia/"
+],
+[
+"Aula",
+"Descomplica (Quer que desenhe?): Fontes de energia renováveis e não renováveis",
+"https://www.youtube.com/watch?v=bdgYTLW4ec4"
+]
+],
+"r": [
+[
+"1 semana",
+"Gráficos: plano cartesiano, reta e leitura de gráficos",
+"2027-04-07"
+],
+[
+"1 mês",
+"Mecanismos reprodutivos e sexualidade",
+"2027-03-16"
+],
+[
+"3 meses",
+"Sol: translação, ano e estações; solstício e equinócio",
+"2027-01-13"
+]
+]
+},
+{
+"d": "2027-04-16",
+"off": "Viagem"
+},
+{
+"d": "2027-04-20",
+"off": "Viagem"
+},
+{
+"d": "2027-04-21",
+"off": "Viagem"
+},
+{
+"d": "2027-04-23",
+"off": "Viagem"
+},
+{
+"d": "2027-04-27",
+"off": "Volta da viagem"
+},
+{
+"d": "2027-04-28",
+"a": "ast",
+"t": "Revisão para a OBA (1): Terra, Lua, Sol e estações",
+"m": [
+[
+"Atividade",
+"Reler os seus mapas mentais de janeiro (Terra, Lua, Sol e estações)",
+""
+],
+[
+"Prova",
+"Provas antigas da OBA (site oficial)",
+"https://site.oba.org.br/"
+],
+[
+"App",
+"Stellarium Web (céu ao vivo)",
+"https://stellarium-web.org/"
+]
+],
+"r": [
+[
+"1 mês",
+"História da Ciência: Europa e povos não europeus",
+"2027-03-31"
+],
+[
+"3 meses",
+"Constelações e reconhecimento do céu (carta celeste + observação)",
+"2027-01-27"
+]
+]
+},
+{
+"d": "2027-04-30",
+"a": "ast",
+"t": "Revisão para a OBA (2): Sistema Solar, estrelas e constelações",
+"m": [
+[
+"Prova",
+"Provas antigas da OBA (site oficial)",
+"https://site.oba.org.br/"
+],
+[
+"Prova",
+"OBA 2010, nível 3, com gabarito",
+"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
+],
+[
+"App",
+"Stellarium Web (céu ao vivo)",
+"https://stellarium-web.org/"
+]
+],
+"r": [
+[
+"1 mês",
+"Notação científica; Sistema Internacional e prefixos",
+"2027-04-02"
+],
+[
+"3 meses",
+"Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
+"2027-01-26"
+]
+]
+},
+{
+"d": "2027-05-04",
+"a": "ast",
+"t": "OBA: prova antiga completa (nível 3) + correção",
+"m": [
+[
+"Prova",
+"OBA 2010, nível 3, com gabarito",
+"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
+],
+[
+"Prova",
+"Provas antigas da OBA (site oficial)",
+"https://site.oba.org.br/"
+],
+[
+"Atividade",
+"Fazer com cronômetro e depois corrigir; anotar os erros no caderno",
+""
+]
+],
+"r": [
+[
+"1 mês",
+"Medidas: valor mais provável, desvio e erro",
+"2027-04-06"
+],
+[
+"3 meses",
+"Célula como unidade da vida",
+"2027-02-02"
+]
+]
+},
+{
+"d": "2027-05-05",
+"a": "fis",
+"t": "Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
+"m": [
+[
+"Leitura",
+"Conexão Escola SME Goiânia: Circuitos elétricos (8º ano)",
+"https://sme.goiania.go.gov.br/conexaoescola/ensino_fundamental/ciencias-da-natureza-circuitos-eletricos/"
+],
+[
+"Leitura",
+"Toda Matéria: Circuito elétrico: o que é, elementos e tipos",
+"https://www.todamateria.com.br/circuito-eletrico/"
+],
+[
+"Simulação",
+"PhET: Kit de circuito elétrico",
+"https://phet.colorado.edu/pt_BR/simulations/circuit-construction-kit-dc"
+],
+[
+"Aula",
+"Canal Futura: Circuitos elétricos no cotidiano (Ciências, 8º ano)",
+"https://www.youtube.com/watch?v=N0DnSlhijOU"
+]
+],
+"r": [
+[
+"1 mês",
+"Gráficos: plano cartesiano, reta e leitura de gráficos",
+"2027-04-07"
+],
+[
+"3 meses",
+"Microrganismos",
+"2027-02-03"
+]
+]
+},
+{
+"d": "2027-05-07",
+"a": "fis",
+"t": "Consumo de energia: potência × tempo (usar a conta de luz de casa)",
+"m": [
+[
+"Leitura",
+"Descomplica: Conta de luz: calcule consumo e corte desperdício",
+"https://descomplica.com.br/blog/conta-de-luz-escolar-calcule-consumo-corte-desperdicio-2/"
+],
+[
+"Leitura",
+"CEMIRIM: Tabela Procel/Eletrobras de consumo de aparelhos",
+"https://cemirim.com.br/analise-o-seu-consumo-de-energia-tabela-proceleletrobras/"
+],
+[
+"Aula",
+"Canal Futura: Cálculo de consumo de energia elétrica (Ciências, 8º ano)",
+"https://www.youtube.com/watch?v=GDT1uVbethI"
+],
+[
+"Atividade",
+"Calcular o consumo da casa com a conta de luz",
+""
+]
+],
+"r": [
+[
+"1 mês",
+"Grandezas diretamente e inversamente proporcionais no gráfico",
+"2027-04-09"
+],
+[
+"3 meses",
+"História: como ler uma fonte histórica (teoria, método e historiografia)",
+"2027-02-05"
+]
+]
+},
+{
+"d": "2027-05-11",
+"a": "fis",
+"t": "Uso racional e eficiência energética",
+"m": [
+[
+"Leitura",
+"AGEMS-MS: Selo Procel e Etiqueta de Eficiência",
+"https://www.agems.ms.gov.br/consumo-de-energia-fique-de-olho-no-selo-procel-e-na-etiqueta-de-eficiencia-dos-equipamentos/"
+],
+[
+"Atividade",
+"Ler a etiqueta do Inmetro da geladeira/chuveiro de casa",
+""
+],
+[
+"Atividade",
+"Caçar os 3 aparelhos que mais gastam em casa",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
+"2027-05-05"
+],
+[
+"1 mês",
+"Tipos de energia e conservação da energia",
+"2027-04-13"
+],
+[
+"3 meses",
+"Plantas",
+"2027-02-10"
+]
+]
+},
+{
+"d": "2027-05-12",
+"a": "fis",
+"t": "Prova antiga do mês + correção",
+"m": [
+[
+"Prova",
+"Provas antigas ONC (Nível B)",
+"https://www.onciencias.org/exames"
+],
+[
+"Gabarito",
+"NOIC: gabaritos extraoficiais ONC",
+"https://noic.com.br/olimpiadas/ciencias/"
+]
+],
+"r": [
+[
+"1 semana",
+"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
+"2027-05-07"
+],
+[
+"1 mês",
+"Fontes renováveis e não renováveis",
+"2027-04-14"
+]
+]
+},
+{
+"d": "2027-05-14",
+"a": "his",
+"t": "História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
+"m": [
+[
+"Livro",
+"As Cientistas: 50 mulheres que mudaram o mundo, Rachel Ignotofsky (Blucher)",
+""
+],
+[
+"Leitura",
+"eBiografia: Mulheres na ciência: 10 cientistas",
+"https://www.ebiografia.com/mulheres_na_ciencia/"
+],
+[
+"Leitura",
+"Toda Matéria: Feminismo",
+"https://www.todamateria.com.br/feminismo/"
+],
+[
+"Atividade",
+"Linha do tempo: Olympe de Gouges (1791), sufragistas, voto feminino no Brasil (1932), hoje",
+""
+]
+],
+"r": []
+},
+{
+"d": "2027-05-18",
+"a": "fis",
+"t": "Leis de Newton: inércia e massa",
+"m": [
+[
+"Simulação",
+"PhET: Forças e movimento",
+"https://phet.colorado.edu/pt_BR/simulations/forces-and-motion-basics"
+],
+[
+"Aula",
+"Ciência Todo Dia: A primeira lei de Newton (inércia) explicada",
+"https://www.youtube.com/watch?v=RoyecFxgwTs"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios de Leis de Newton",
+"https://www.todamateria.com.br/leis-de-newton-exercicios/"
+],
+[
+"Atividade",
+"Moeda sobre cartão no copo: puxar o cartão rápido",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Uso racional e eficiência energética",
+"2027-05-11"
+],
+[
+"3 meses",
+"Características e desenvolvimento dos animais; biodiversidade",
+"2027-02-16"
+]
+]
+},
+{
+"d": "2027-05-19",
+"a": "fis",
+"t": "Força, velocidade e equilíbrio; ação e reação",
+"m": [
+[
+"Simulação",
+"PhET: Forças e movimento (aba Cabo de guerra)",
+"https://phet.colorado.edu/pt_BR/simulations/forces-and-motion-basics"
+],
+[
+"Aula",
+"Ciência Todo Dia: A terceira lei de Newton explicada",
+"https://www.youtube.com/watch?v=Ei6DcLyNuyI"
+],
+[
+"Aula",
+"Brasil Escola: Terceira lei de Newton, ação e reação",
+"https://www.youtube.com/watch?v=5nwKWnxPgoQ"
+],
+[
+"Atividade",
+"Balão-foguete num barbante esticado com canudo",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
+"2027-05-14"
+],
+[
+"3 meses",
+"Cadeias alimentares, fluxo de energia e ciclo da matéria",
+"2027-02-17"
+]
+]
+},
+{
+"d": "2027-05-21",
+"a": "fis",
+"t": "Calor, temperatura e escalas termométricas",
+"m": [
+[
+"Aula",
+"Matemática no Papel: Escalas termométricas",
+"https://www.youtube.com/watch?v=Vw83NddQh7E"
+],
+[
+"Simulação",
+"PhET: Formas de energia e transformações",
+"https://phet.colorado.edu/pt_BR/simulations/energy-forms-and-changes"
+],
+[
+"Exercícios",
+"Toda Matéria: Exercícios sobre escalas termométricas",
+"https://www.todamateria.com.br/escalas-termometricas-exercicios/"
+],
+[
+"Atividade",
+"Converter a previsão do tempo de hoje para °F e K",
+""
+]
+],
+"r": [
+[
+"3 meses",
+"Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
+"2027-02-19"
+]
+]
+},
+{
+"d": "2027-05-25",
+"a": "fis",
+"t": "Luz e cor: RGB e CMYK; espectro eletromagnético",
+"m": [
+[
+"Leitura",
+"PrePara Enem: O espectro eletromagnético",
+"https://www.preparaenem.com/amp/fisica/o-espectro-eletromagnetico-.htm"
+],
+[
+"Simulação",
+"PhET: Visão de cores",
+"https://phet.colorado.edu/pt_BR/simulations/color-vision"
+],
+[
+"Aula",
+"Quer que desenhe?: Espectro eletromagnético",
+"https://www.youtube.com/watch?v=3po0Ek5aPKE"
+],
+[
+"Atividade",
+"Lupa ou zoom da câmera na tela branca do celular",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Leis de Newton: inércia e massa",
+"2027-05-18"
+],
+[
+"3 meses",
+"Ecossistemas, impactos ambientais e preservação",
+"2027-02-23"
+]
+]
+},
+{
+"d": "2027-05-26",
+"a": "fis",
+"t": "Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"m": [
+[
+"Aula",
+"Nerdologia: Corrida espacial",
+"https://www.youtube.com/watch?v=urAy6BRsMTE"
+],
+[
+"Prova",
+"OBA 2010, nível 3: questões de astronáutica (foguete VS-30, satélites)",
+"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
+],
+[
+"Atividade",
+"Listar 5 dificuldades de ir a Marte e uma solução para cada",
+""
+]
+],
+"r": [
+[
+"1 semana",
+"Força, velocidade e equilíbrio; ação e reação",
+"2027-05-19"
+],
+[
+"3 meses",
+"Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
+"2027-02-24"
+]
+]
+},
+{
+"d": "2027-05-28",
+"a": "fis",
+"t": "Exercícios de Física e prova antiga do mês + correção",
+"m": [
+[
+"Prova",
+"Provas antigas ONC (Nível B)",
+"https://www.onciencias.org/exames"
+],
+[
+"Gabarito",
+"NOIC: gabaritos extraoficiais ONC",
+"https://noic.com.br/olimpiadas/ciencias/"
+]
+],
+"r": [
+[
+"1 semana",
+"Calor, temperatura e escalas termométricas",
+"2027-05-21"
+],
+[
+"3 meses",
+"Corpo humano: digestório, respiratório e circulatório integrados",
+"2027-02-26"
+]
+]
+},
+{
+"d": "2027-06-01",
 "a": "qui",
 "t": "Matéria: corpo, objeto e substância; propriedades gerais",
 "m": [
@@ -372,13 +1975,23 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
-"2027-01-25"
+"Luz e cor: RGB e CMYK; espectro eletromagnético",
+"2027-05-25"
+],
+[
+"1 mês",
+"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
+"2027-05-05"
+],
+[
+"3 meses",
+"História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
+"2027-03-02"
 ]
 ]
 },
 {
-"d": "2027-02-03",
+"d": "2027-06-02",
 "a": "qui",
 "t": "Propriedades específicas: organolépticas, físicas e químicas",
 "m": [
@@ -401,13 +2014,18 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Constelações e reconhecimento do céu (carta celeste + observação)",
-"2027-01-27"
+"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"2027-05-26"
+],
+[
+"3 meses",
+"Nutrição, hábitos alimentares e saúde pública",
+"2027-03-03"
 ]
 ]
 },
 {
-"d": "2027-02-05",
+"d": "2027-06-04",
 "a": "qui",
 "t": "Estados físicos e mudanças de estado",
 "m": [
@@ -430,17 +2048,18 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
-"2027-01-08"
+"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
+"2027-05-07"
+],
+[
+"3 meses",
+"Sistemas locomotor e nervoso (a ponte com a Psicologia)",
+"2027-03-05"
 ]
 ]
 },
 {
-"d": "2027-02-08",
-"off": "Carnaval"
-},
-{
-"d": "2027-02-10",
+"d": "2027-06-08",
 "a": "qui",
 "t": "Fenômenos físicos e químicos",
 "m": [
@@ -469,17 +2088,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Matéria: corpo, objeto e substância; propriedades gerais",
-"2027-02-01"
+"2027-06-01"
 ],
 [
 "1 mês",
-"Lua: fases, mês lunar e eclipses",
-"2027-01-11"
+"Uso racional e eficiência energética",
+"2027-05-11"
+],
+[
+"3 meses",
+"História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
+"2027-03-09"
 ]
 ]
 },
 {
-"d": "2027-02-12",
+"d": "2027-06-09",
 "a": "qui",
 "t": "Substâncias simples e compostas; alotropia",
 "m": [
@@ -508,17 +2132,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Propriedades específicas: organolépticas, físicas e químicas",
-"2027-02-03"
+"2027-06-02"
 ],
 [
-"1 mês",
-"Sol: translação, ano e estações; solstício e equinócio",
-"2027-01-13"
+"3 meses",
+"Lentes corretivas e visão",
+"2027-03-10"
 ]
 ]
 },
 {
-"d": "2027-02-15",
+"d": "2027-06-11",
 "a": "qui",
 "t": "Misturas homogêneas e heterogêneas",
 "m": [
@@ -542,17 +2166,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Estados físicos e mudanças de estado",
-"2027-02-05"
+"2027-06-04"
 ],
 [
 "1 mês",
-"Coordenadas geográficas, zonas térmicas, fusos horários e horário de verão",
-"2027-01-15"
+"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
+"2027-05-14"
+],
+[
+"3 meses",
+"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
+"2027-03-12"
 ]
 ]
 },
 {
-"d": "2027-02-17",
+"d": "2027-06-15",
 "a": "qui",
 "t": "Separação de misturas (1): filtração, decantação, peneiração",
 "m": [
@@ -576,17 +2205,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Fenômenos físicos e químicos",
-"2027-02-10"
+"2027-06-08"
 ],
 [
 "1 mês",
-"Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
-"2027-01-18"
+"Leis de Newton: inércia e massa",
+"2027-05-18"
+],
+[
+"3 meses",
+"Mecanismos reprodutivos e sexualidade",
+"2027-03-16"
 ]
 ]
 },
 {
-"d": "2027-02-19",
+"d": "2027-06-16",
 "a": "qui",
 "t": "Separação de misturas (2): destilação, evaporação, centrifugação",
 "m": [
@@ -610,17 +2244,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Substâncias simples e compostas; alotropia",
-"2027-02-12"
+"2027-06-09"
 ],
 [
 "1 mês",
-"Sistema Solar: planetas, satélites, asteroides e cometas; origem do Sistema Solar",
-"2027-01-20"
+"Força, velocidade e equilíbrio; ação e reação",
+"2027-05-19"
+],
+[
+"3 meses",
+"Hereditariedade",
+"2027-03-17"
 ]
 ]
 },
 {
-"d": "2027-02-22",
+"d": "2027-06-18",
 "a": "qui",
 "t": "A água e o ar na natureza",
 "m": [
@@ -644,56 +2283,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Misturas homogêneas e heterogêneas",
-"2027-02-15"
+"2027-06-11"
 ],
 [
 "1 mês",
-"Estrelas, galáxias, origem do Universo; geocentrismo × heliocentrismo",
-"2027-01-22"
+"Calor, temperatura e escalas termométricas",
+"2027-05-21"
+],
+[
+"3 meses",
+"Brasil República: Era Vargas, anos 1945–1964 (Dutra, JK, Jango), Ditadura, redemocratização e Constituição de 1988",
+"2027-03-19"
 ]
 ]
 },
 {
-"d": "2027-02-24",
-"a": "his",
-"t": "História: como ler uma fonte histórica (teoria, método e historiografia)",
-"m": [
-[
-"Leitura",
-"Toda Matéria: O que são fontes históricas",
-"https://www.todamateria.com.br/fontes-historicas/"
-],
-[
-"Aula",
-"Brasil Escola: Fontes históricas",
-"https://www.youtube.com/watch?v=G_WmELJlags"
-],
-[
-"Prova",
-"Colégio CCP: provas anteriores da ONHB (2020–2024)",
-"https://sistemas.colegioccp.com.br/provas-edicoes-anteriores-onhb/"
-],
-[
-"Atividade",
-"Resolver 3 questões de História de provas antigas sublinhando o que o documento diz",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Separação de misturas (1): filtração, decantação, peneiração",
-"2027-02-17"
-],
-[
-"1 mês",
-"Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
-"2027-01-25"
-]
-]
-},
-{
-"d": "2027-02-26",
+"d": "2027-06-22",
 "a": "qui",
 "t": "Exercícios de Química I e prova antiga do mês + correção",
 "m": [
@@ -711,18 +2316,23 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Separação de misturas (2): destilação, evaporação, centrifugação",
-"2027-02-19"
+"Separação de misturas (1): filtração, decantação, peneiração",
+"2027-06-15"
 ],
 [
 "1 mês",
-"Constelações e reconhecimento do céu (carta celeste + observação)",
-"2027-01-27"
+"Luz e cor: RGB e CMYK; espectro eletromagnético",
+"2027-05-25"
+],
+[
+"3 meses",
+"Ideias evolucionistas",
+"2027-03-23"
 ]
 ]
 },
 {
-"d": "2027-03-01",
+"d": "2027-06-23",
 "a": "qui",
 "t": "Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
 "m": [
@@ -750,13 +2360,23 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"A água e o ar na natureza",
-"2027-02-22"
+"Separação de misturas (2): destilação, evaporação, centrifugação",
+"2027-06-16"
+],
+[
+"1 mês",
+"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"2027-05-26"
+],
+[
+"3 meses",
+"Século XX: Guerras Mundiais, socialismo e Guerra Fria, descolonização da Ásia e da África, globalização",
+"2027-03-24"
 ]
 ]
 },
 {
-"d": "2027-03-03",
+"d": "2027-06-25",
 "a": "qui",
 "t": "Número atômico, número de massa, prótons, nêutrons e elétrons",
 "m": [
@@ -779,18 +2399,13 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"História: como ler uma fonte histórica (teoria, método e historiografia)",
-"2027-02-24"
-],
-[
-"1 mês",
-"Matéria: corpo, objeto e substância; propriedades gerais",
-"2027-02-01"
+"A água e o ar na natureza",
+"2027-06-18"
 ]
 ]
 },
 {
-"d": "2027-03-05",
+"d": "2027-06-29",
 "a": "qui",
 "t": "Isótopos, isóbaros e isótonos",
 "m": [
@@ -817,14 +2432,24 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
+"2027-06-23"
+],
+[
 "1 mês",
-"Propriedades específicas: organolépticas, físicas e químicas",
-"2027-02-03"
+"Matéria: corpo, objeto e substância; propriedades gerais",
+"2027-06-01"
+],
+[
+"3 meses",
+"História da Ciência: Europa e povos não europeus",
+"2027-03-31"
 ]
 ]
 },
 {
-"d": "2027-03-08",
+"d": "2027-06-30",
 "a": "qui",
 "t": "Elementos químicos e sua origem nas estrelas",
 "m": [
@@ -847,18 +2472,23 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
-"2027-03-01"
+"Número atômico, número de massa, prótons, nêutrons e elétrons",
+"2027-06-25"
 ],
 [
 "1 mês",
-"Estados físicos e mudanças de estado",
-"2027-02-05"
+"Propriedades específicas: organolépticas, físicas e químicas",
+"2027-06-02"
+],
+[
+"3 meses",
+"Notação científica; Sistema Internacional e prefixos",
+"2027-04-02"
 ]
 ]
 },
 {
-"d": "2027-03-10",
+"d": "2027-07-02",
 "a": "qui",
 "t": "Reações e equações químicas: conceitos básicos",
 "m": [
@@ -885,58 +2515,14 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"1 semana",
-"Número atômico, número de massa, prótons, nêutrons e elétrons",
-"2027-03-03"
-],
-[
 "1 mês",
-"Fenômenos físicos e químicos",
-"2027-02-10"
+"Estados físicos e mudanças de estado",
+"2027-06-04"
 ]
 ]
 },
 {
-"d": "2027-03-12",
-"a": "his",
-"t": "História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
-"m": [
-[
-"Leitura",
-"História do Mundo: Independência da América Espanhola",
-"https://www.historiadomundo.com.br/idade-contemporanea/independencia-da-america-espanhola.htm"
-],
-[
-"Leitura",
-"Toda Matéria: Neocolonialismo",
-"https://www.todamateria.com.br/neocolonialismo/"
-],
-[
-"Aula",
-"Débora Aladim: Resumo de História: IMPERIALISMO",
-"https://www.youtube.com/watch?v=8OZhwSCp_Z8"
-],
-[
-"Aula",
-"Brasil Escola: Independência da América Espanhola",
-"https://www.youtube.com/watch?v=t9Xlntk-2Dg"
-]
-],
-"r": [
-[
-"1 semana",
-"Isótopos, isóbaros e isótonos",
-"2027-03-05"
-],
-[
-"1 mês",
-"Substâncias simples e compostas; alotropia",
-"2027-02-12"
-]
-]
-},
-{
-"d": "2027-03-15",
+"d": "2027-07-06",
 "a": "qui",
 "t": "Energia: conceito e aplicações",
 "m": [
@@ -959,18 +2545,23 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Elementos químicos e sua origem nas estrelas",
-"2027-03-08"
+"Isótopos, isóbaros e isótonos",
+"2027-06-29"
 ],
 [
 "1 mês",
-"Misturas homogêneas e heterogêneas",
-"2027-02-15"
+"Fenômenos físicos e químicos",
+"2027-06-08"
+],
+[
+"3 meses",
+"Medidas: valor mais provável, desvio e erro",
+"2027-04-06"
 ]
 ]
 },
 {
-"d": "2027-03-17",
+"d": "2027-07-07",
 "a": "qui",
 "t": "Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
 "m": [
@@ -993,18 +2584,23 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Reações e equações químicas: conceitos básicos",
-"2027-03-10"
+"Elementos químicos e sua origem nas estrelas",
+"2027-06-30"
 ],
 [
 "1 mês",
-"Separação de misturas (1): filtração, decantação, peneiração",
-"2027-02-17"
+"Substâncias simples e compostas; alotropia",
+"2027-06-09"
+],
+[
+"3 meses",
+"Gráficos: plano cartesiano, reta e leitura de gráficos",
+"2027-04-07"
 ]
 ]
 },
 {
-"d": "2027-03-19",
+"d": "2027-07-09",
 "a": "qui",
 "t": "Ambiente, química verde e sustentabilidade",
 "m": [
@@ -1027,18 +2623,23 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
-"2027-03-12"
+"Reações e equações químicas: conceitos básicos",
+"2027-07-02"
 ],
 [
 "1 mês",
-"Separação de misturas (2): destilação, evaporação, centrifugação",
-"2027-02-19"
+"Misturas homogêneas e heterogêneas",
+"2027-06-11"
+],
+[
+"3 meses",
+"Grandezas diretamente e inversamente proporcionais no gráfico",
+"2027-04-09"
 ]
 ]
 },
 {
-"d": "2027-03-22",
+"d": "2027-07-13",
 "a": "qui",
 "t": "Laboratório: segurança, vidrarias, reagentes e equipamentos",
 "m": [
@@ -1067,60 +2668,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Energia: conceito e aplicações",
-"2027-03-15"
+"2027-07-06"
 ],
 [
 "1 mês",
-"A água e o ar na natureza",
-"2027-02-22"
+"Separação de misturas (1): filtração, decantação, peneiração",
+"2027-06-15"
+],
+[
+"3 meses",
+"Tipos de energia e conservação da energia",
+"2027-04-13"
 ]
 ]
 },
 {
-"d": "2027-03-24",
-"a": "his",
-"t": "História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Darwinismo Social",
-"https://www.todamateria.com.br/darwinismo-social/"
-],
-[
-"Aula",
-"Brasil Escola: Darwinismo social",
-"https://www.youtube.com/watch?v=_3cHuinzLh4"
-],
-[
-"Exercícios",
-"Toda Matéria: Questões sobre darwinismo social",
-"https://www.todamateria.com.br/questoes-sobre-darwinismo-social/"
-],
-[
-"Atividade",
-"Ler trecho de \"O fardo do homem branco\" (Kipling, 1899) e listar os argumentos usados",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
-"2027-03-17"
-],
-[
-"1 mês",
-"História: como ler uma fonte histórica (teoria, método e historiografia)",
-"2027-02-24"
-]
-]
-},
-{
-"d": "2027-03-26",
-"off": "Sexta-feira Santa"
-},
-{
-"d": "2027-03-29",
+"d": "2027-07-14",
 "a": "qui",
 "t": "Exercícios de Química II e revisão geral",
 "m": [
@@ -1143,13 +2706,23 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Ambiente, química verde e sustentabilidade",
-"2027-03-19"
+"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
+"2027-07-07"
+],
+[
+"1 mês",
+"Separação de misturas (2): destilação, evaporação, centrifugação",
+"2027-06-16"
+],
+[
+"3 meses",
+"Fontes renováveis e não renováveis",
+"2027-04-14"
 ]
 ]
 },
 {
-"d": "2027-03-31",
+"d": "2027-07-16",
 "a": "qui",
 "t": "Exercícios mistos de Química e prova antiga do mês + correção",
 "m": [
@@ -1167,1668 +2740,19 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Laboratório: segurança, vidrarias, reagentes e equipamentos",
-"2027-03-22"
-],
-[
-"1 mês",
-"Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
-"2027-03-01"
-]
-]
-},
-{
-"d": "2027-04-02",
-"a": "fis",
-"t": "Notação científica; Sistema Internacional e prefixos",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Notação científica: como transformar e fazer cálculos",
-"https://www.todamateria.com.br/notacao-cientifica/"
-],
-[
-"Leitura",
-"InfoEscola: Prefixos métricos",
-"https://www.infoescola.com/ciencias/prefixos-metricos/"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios de notação científica",
-"https://www.todamateria.com.br/notacao-cientifica-exercicios/"
-]
-],
-"r": [
-[
-"1 semana",
-"História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
-"2027-03-24"
-],
-[
-"1 mês",
-"Número atômico, número de massa, prótons, nêutrons e elétrons",
-"2027-03-03"
-]
-]
-},
-{
-"d": "2027-04-05",
-"a": "fis",
-"t": "Medidas: valor mais provável, desvio e erro",
-"m": [
-[
-"Leitura",
-"UFOP (Física): Medidas e erros",
-"https://fisica.ufop.br/sites/default/files/defis/files/medidas_e_erros.pdf?m=1525725089"
-],
-[
-"Atividade",
-"Medir a mesa 5 vezes e calcular a média e o desvio",
-""
-]
-],
-"r": [
-[
-"1 mês",
-"Isótopos, isóbaros e isótonos",
-"2027-03-05"
-]
-]
-},
-{
-"d": "2027-04-07",
-"a": "fis",
-"t": "Plano cartesiano: reta e equação do 1º grau; sistemas de equações",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Função afim (função do 1º grau)",
-"https://www.todamateria.com.br/funcao-afim/"
-],
-[
-"Leitura",
-"Toda Matéria: Sistemas de equações",
-"https://www.todamateria.com.br/sistemas-de-equacoes/"
-],
-[
-"Aula",
-"Khan Academy: Sistemas de equações com gráficos (vídeo, 8º ano)",
-"https://pt.khanacademy.org/math/pt-8-ano/algebra-equacoes-8ano/introducao-ao-sistema-de-equacoes/v/solving-systems-graphically-examples"
-],
-[
-"Simulação",
-"PhET: Gráficos de retas",
-"https://phet.colorado.edu/pt_BR/simulations/graphing-lines"
-]
-],
-"r": [
-[
-"1 mês",
-"Elementos químicos e sua origem nas estrelas",
-"2027-03-08"
-],
-[
-"3 meses",
-"Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
-"2027-01-08"
-]
-]
-},
-{
-"d": "2027-04-09",
-"a": "fis",
-"t": "Grandezas diretamente e inversamente proporcionais no gráfico",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Grandezas diretamente e inversamente proporcionais",
-"https://www.todamateria.com.br/grandezas-proporcionais-grandezas-diretamente-inversamente-proporcionais/"
-],
-[
-"Leitura",
-"UEL Matemática Essencial: Razões e proporções",
-"https://www.uel.br/projetos/matessencial/basico/fundamental/proporcoes.html"
-],
-[
-"Atividade",
-"Fazer 2 gráficos: pães × preço e velocidade × tempo (60 km)",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Notação científica; Sistema Internacional e prefixos",
-"2027-04-02"
-],
-[
-"1 mês",
-"Reações e equações químicas: conceitos básicos",
-"2027-03-10"
-],
-[
-"3 meses",
-"Lua: fases, mês lunar e eclipses",
-"2027-01-11"
-]
-]
-},
-{
-"d": "2027-04-12",
-"a": "fis",
-"t": "Equações do 2º grau",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Equação do 2º grau: como resolver",
-"https://www.todamateria.com.br/equacao-do-segundo-grau/"
-],
-[
-"Exercícios",
-"Khan Academy: Equações do segundo grau por fatoração (9º ano)",
-"https://pt.khanacademy.org/math/pt-9-ano/algebra-expressoes-algebricas-9ano/resolucao-de-equacoes-do-segundo-grau-por-fatoracao/e/solving_quadratics_by_factoring_2"
-],
-[
-"Exercícios",
-"Khan Academy: Número de soluções de equações do 2º grau",
-"https://pt.khanacademy.org/math/pt-mat-prep-em-todo-conteudo/xc940e6c2768299b1:resolucao-de-equacoes-do-segundo-grau/xc940e6c2768299b1:a-formula-de-bhaskara/e/determine-the-number-of-solutions-of-a-quadratic-equation"
-],
-[
-"Exercícios",
-"POTI/OBMEP: Funções quadráticas – Parte 1 (Álgebra N2)",
-"https://poti.obmep.org.br/uploads/material_teorico/8175ftvcqvk84.pdf"
-]
-],
-"r": [
-[
-"1 semana",
-"Medidas: valor mais provável, desvio e erro",
-"2027-04-05"
-],
-[
-"1 mês",
-"História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
-"2027-03-12"
-],
-[
-"3 meses",
-"Sol: translação, ano e estações; solstício e equinócio",
-"2027-01-13"
-]
-]
-},
-{
-"d": "2027-04-14",
-"a": "fis",
-"t": "Triângulo retângulo; área do círculo, volume do cilindro, litro e m³",
-"m": [
-[
-"Leitura",
-"Khan Academy: Introdução ao Teorema de Pitágoras (artigo, EF09MA14)",
-"https://pt.khanacademy.org/math/1-serie-em-mat-sp/x82b03a9b6c8af113:3-bimestre-2025/x82b03a9b6c8af113:ef09ma14-teorema-de-pitagoras/a/pythagorean-theorem-intro"
-],
-[
-"Aula",
-"Khan Academy: Introdução ao teorema de Pitágoras (vídeo)",
-"https://pt.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/geo-pythagorean-theorem/v/the-pythagorean-theorem"
-],
-[
-"Exercícios",
-"Khan Academy: Problemas com Teorema de Pitágoras",
-"https://pt.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/pythagorean-theorem-app/e/pythagorean-theorem-word-problems--basic"
-],
-[
-"Leitura",
-"Matemática Básica: Volume do cilindro",
-"https://matematicabasica.net/volume-do-cilindro/"
-]
-],
-"r": [
-[
-"1 semana",
-"Plano cartesiano: reta e equação do 1º grau; sistemas de equações",
-"2027-04-07"
-],
-[
-"1 mês",
-"Energia: conceito e aplicações",
-"2027-03-15"
-],
-[
-"3 meses",
-"Coordenadas geográficas, zonas térmicas, fusos horários e horário de verão",
-"2027-01-15"
-]
-]
-},
-{
-"d": "2027-04-16",
-"off": "Viagem"
-},
-{
-"d": "2027-04-19",
-"off": "Viagem"
-},
-{
-"d": "2027-04-21",
-"off": "Viagem"
-},
-{
-"d": "2027-04-23",
-"off": "Viagem"
-},
-{
-"d": "2027-04-26",
-"off": "Viagem"
-},
-{
-"d": "2027-04-28",
-"a": "fis",
-"t": "Retomada pós-viagem: exercícios de Fundamentos Matemáticos",
-"m": [
-[
-"Exercícios",
-"Portal da OBMEP: 9º ano",
-"https://portaldaobmep.impa.br/"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios de notação científica",
-"https://www.todamateria.com.br/notacao-cientifica-exercicios/"
-],
-[
-"Exercícios",
-"POTI/OBMEP: Teorema de Pitágoras (Geometria N1, aula 6)",
-"https://poti.obmep.org.br/uploads/material_teorico/s01vdbx53hck8.pdf"
-]
-],
-"r": [
-[
-"1 semana",
-"Grandezas diretamente e inversamente proporcionais no gráfico",
-"2027-04-09"
-],
-[
-"1 mês",
-"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
-"2027-03-17"
-],
-[
-"3 meses",
-"Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
-"2027-01-18"
-]
-]
-},
-{
-"d": "2027-04-30",
-"a": "fis",
-"t": "Prova antiga do mês + correção",
-"m": [
-[
-"Prova",
-"Provas antigas ONC (Nível B)",
-"https://www.onciencias.org/exames"
-],
-[
-"Gabarito",
-"NOIC: gabaritos extraoficiais ONC",
-"https://noic.com.br/olimpiadas/ciencias/"
-]
-],
-"r": [
-[
-"1 semana",
-"Equações do 2º grau",
-"2027-04-12"
-],
-[
-"1 mês",
 "Ambiente, química verde e sustentabilidade",
-"2027-03-19"
-],
-[
-"3 meses",
-"Sistema Solar: planetas, satélites, asteroides e cometas; origem do Sistema Solar",
-"2027-01-20"
-]
-]
-},
-{
-"d": "2027-05-03",
-"a": "fis",
-"t": "Tipos de energia e conservação da energia",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Tipos de energia",
-"https://www.todamateria.com.br/tipos-de-energia/"
-],
-[
-"Leitura",
-"PrePara Enem: Energia mecânica: fórmulas, tipos, conservação",
-"https://www.preparaenem.com/fisica/energia-mecanica.htm"
-],
-[
-"Simulação",
-"PhET: Pista de skate: energia",
-"https://phet.colorado.edu/pt_BR/simulations/energy-skate-park-basics"
-],
-[
-"Aula",
-"Brasil Escola: Conservação da energia mecânica (parte 1)",
-"https://www.youtube.com/watch?v=bRFpdJeF1gU"
-]
-],
-"r": [
-[
-"1 semana",
-"Triângulo retângulo; área do círculo, volume do cilindro, litro e m³",
-"2027-04-14"
-],
-[
-"1 mês",
-"Laboratório: segurança, vidrarias, reagentes e equipamentos",
-"2027-03-22"
-],
-[
-"3 meses",
-"Estrelas, galáxias, origem do Universo; geocentrismo × heliocentrismo",
-"2027-01-22"
-]
-]
-},
-{
-"d": "2027-05-05",
-"a": "fis",
-"t": "Fontes renováveis e não renováveis",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Fontes de energia (renováveis e não renováveis)",
-"https://www.todamateria.com.br/fontes-de-energia/"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios de fontes de energia",
-"https://www.todamateria.com.br/exercicios-de-fontes-de-energia/"
-],
-[
-"Aula",
-"Descomplica (Quer que desenhe?): Fontes de energia renováveis e não renováveis",
-"https://www.youtube.com/watch?v=bdgYTLW4ec4"
-]
-],
-"r": [
-[
-"1 mês",
-"História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
-"2027-03-24"
-],
-[
-"3 meses",
-"Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
-"2027-01-25"
-]
-]
-},
-{
-"d": "2027-05-07",
-"a": "fis",
-"t": "Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
-"m": [
-[
-"Leitura",
-"Conexão Escola SME Goiânia: Circuitos elétricos (8º ano)",
-"https://sme.goiania.go.gov.br/conexaoescola/ensino_fundamental/ciencias-da-natureza-circuitos-eletricos/"
-],
-[
-"Leitura",
-"Toda Matéria: Circuito elétrico: o que é, elementos e tipos",
-"https://www.todamateria.com.br/circuito-eletrico/"
-],
-[
-"Simulação",
-"PhET: Kit de circuito elétrico",
-"https://phet.colorado.edu/pt_BR/simulations/circuit-construction-kit-dc"
-],
-[
-"Aula",
-"Canal Futura: Circuitos elétricos no cotidiano (Ciências, 8º ano)",
-"https://www.youtube.com/watch?v=N0DnSlhijOU"
-]
-],
-"r": [
-[
-"3 meses",
-"Constelações e reconhecimento do céu (carta celeste + observação)",
-"2027-01-27"
-]
-]
-},
-{
-"d": "2027-05-10",
-"a": "fis",
-"t": "Consumo de energia: potência × tempo (usar a conta de luz de casa)",
-"m": [
-[
-"Leitura",
-"Descomplica: Conta de luz: calcule consumo e corte desperdício",
-"https://descomplica.com.br/blog/conta-de-luz-escolar-calcule-consumo-corte-desperdicio-2/"
-],
-[
-"Leitura",
-"CEMIRIM: Tabela Procel/Eletrobras de consumo de aparelhos",
-"https://cemirim.com.br/analise-o-seu-consumo-de-energia-tabela-proceleletrobras/"
-],
-[
-"Aula",
-"Canal Futura: Cálculo de consumo de energia elétrica (Ciências, 8º ano)",
-"https://www.youtube.com/watch?v=GDT1uVbethI"
-],
-[
-"Atividade",
-"Calcular o consumo da casa com a conta de luz",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Tipos de energia e conservação da energia",
-"2027-05-03"
-]
-]
-},
-{
-"d": "2027-05-12",
-"a": "fis",
-"t": "Uso racional e eficiência energética",
-"m": [
-[
-"Leitura",
-"AGEMS-MS: Selo Procel e Etiqueta de Eficiência",
-"https://www.agems.ms.gov.br/consumo-de-energia-fique-de-olho-no-selo-procel-e-na-etiqueta-de-eficiencia-dos-equipamentos/"
-],
-[
-"Atividade",
-"Ler a etiqueta do Inmetro da geladeira/chuveiro de casa",
-""
-],
-[
-"Atividade",
-"Caçar os 3 aparelhos que mais gastam em casa",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Fontes renováveis e não renováveis",
-"2027-05-05"
-],
-[
-"1 mês",
-"Notação científica; Sistema Internacional e prefixos",
-"2027-04-02"
-],
-[
-"3 meses",
-"Matéria: corpo, objeto e substância; propriedades gerais",
-"2027-02-01"
-]
-]
-},
-{
-"d": "2027-05-14",
-"a": "his",
-"t": "História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Primeira República",
-"https://www.todamateria.com.br/primeira-republica/"
-],
-[
-"Aula",
-"Débora Aladim: Resumo de História: REPÚBLICA OLIGÁRQUICA",
-"https://www.youtube.com/watch?v=FmGVa7W--mg"
-],
-[
-"Prova",
-"Colégio CCP: provas anteriores da ONHB (2020–2024)",
-"https://sistemas.colegioccp.com.br/provas-edicoes-anteriores-onhb/"
-],
-[
-"Atividade",
-"Tabela das 4 revoltas: onde, quando, quem, por quê, como terminou",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
-"2027-05-07"
-],
-[
-"1 mês",
-"Medidas: valor mais provável, desvio e erro",
-"2027-04-05"
-],
-[
-"3 meses",
-"Propriedades específicas: organolépticas, físicas e químicas",
-"2027-02-03"
-]
-]
-},
-{
-"d": "2027-05-17",
-"a": "fis",
-"t": "Leis de Newton: inércia e massa",
-"m": [
-[
-"Simulação",
-"PhET: Forças e movimento",
-"https://phet.colorado.edu/pt_BR/simulations/forces-and-motion-basics"
-],
-[
-"Aula",
-"Ciência Todo Dia: A primeira lei de Newton (inércia) explicada",
-"https://www.youtube.com/watch?v=RoyecFxgwTs"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios de Leis de Newton",
-"https://www.todamateria.com.br/leis-de-newton-exercicios/"
-],
-[
-"Atividade",
-"Moeda sobre cartão no copo: puxar o cartão rápido",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
-"2027-05-10"
-],
-[
-"1 mês",
-"Plano cartesiano: reta e equação do 1º grau; sistemas de equações",
-"2027-04-07"
-],
-[
-"3 meses",
-"Estados físicos e mudanças de estado",
-"2027-02-05"
-]
-]
-},
-{
-"d": "2027-05-19",
-"a": "ast",
-"t": "Revisão de Astronomia para a OBA",
-"m": [
-[
-"Prova",
-"Provas antigas da OBA (site oficial)",
-"https://site.oba.org.br/"
-],
-[
-"Prova",
-"OBA 2010, nível 3, com gabarito",
-"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
-],
-[
-"App",
-"Stellarium Web (céu ao vivo)",
-"https://stellarium-web.org/"
-]
-],
-"r": [
-[
-"1 semana",
-"Uso racional e eficiência energética",
-"2027-05-12"
-],
-[
-"1 mês",
-"Grandezas diretamente e inversamente proporcionais no gráfico",
-"2027-04-09"
-],
-[
-"3 meses",
-"Fenômenos físicos e químicos",
-"2027-02-10"
-]
-]
-},
-{
-"d": "2027-05-21",
-"a": "fis",
-"t": "Força, velocidade e equilíbrio; ação e reação",
-"m": [
-[
-"Simulação",
-"PhET: Forças e movimento (aba Cabo de guerra)",
-"https://phet.colorado.edu/pt_BR/simulations/forces-and-motion-basics"
-],
-[
-"Aula",
-"Ciência Todo Dia: A terceira lei de Newton explicada",
-"https://www.youtube.com/watch?v=Ei6DcLyNuyI"
-],
-[
-"Aula",
-"Brasil Escola: Terceira lei de Newton, ação e reação",
-"https://www.youtube.com/watch?v=5nwKWnxPgoQ"
-],
-[
-"Atividade",
-"Balão-foguete num barbante esticado com canudo",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
-"2027-05-14"
-],
-[
-"1 mês",
-"Equações do 2º grau",
-"2027-04-12"
-],
-[
-"3 meses",
-"Substâncias simples e compostas; alotropia",
-"2027-02-12"
-]
-]
-},
-{
-"d": "2027-05-24",
-"a": "fis",
-"t": "Calor, temperatura e escalas termométricas",
-"m": [
-[
-"Aula",
-"Matemática no Papel: Escalas termométricas",
-"https://www.youtube.com/watch?v=Vw83NddQh7E"
-],
-[
-"Simulação",
-"PhET: Formas de energia e transformações",
-"https://phet.colorado.edu/pt_BR/simulations/energy-forms-and-changes"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios sobre escalas termométricas",
-"https://www.todamateria.com.br/escalas-termometricas-exercicios/"
-],
-[
-"Atividade",
-"Converter a previsão do tempo de hoje para °F e K",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Leis de Newton: inércia e massa",
-"2027-05-17"
-],
-[
-"1 mês",
-"Triângulo retângulo; área do círculo, volume do cilindro, litro e m³",
-"2027-04-14"
-],
-[
-"3 meses",
-"Misturas homogêneas e heterogêneas",
-"2027-02-15"
-]
-]
-},
-{
-"d": "2027-05-26",
-"a": "fis",
-"t": "Luz e cor: RGB e CMYK; espectro eletromagnético",
-"m": [
-[
-"Leitura",
-"PrePara Enem: O espectro eletromagnético",
-"https://www.preparaenem.com/amp/fisica/o-espectro-eletromagnetico-.htm"
-],
-[
-"Simulação",
-"PhET: Visão de cores",
-"https://phet.colorado.edu/pt_BR/simulations/color-vision"
-],
-[
-"Aula",
-"Quer que desenhe?: Espectro eletromagnético",
-"https://www.youtube.com/watch?v=3po0Ek5aPKE"
-],
-[
-"Atividade",
-"Lupa ou zoom da câmera na tela branca do celular",
-""
-]
-],
-"r": [
-[
-"3 meses",
-"Separação de misturas (1): filtração, decantação, peneiração",
-"2027-02-17"
-]
-]
-},
-{
-"d": "2027-05-28",
-"a": "fis",
-"t": "Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
-"m": [
-[
-"Aula",
-"Nerdologia: Corrida espacial",
-"https://www.youtube.com/watch?v=urAy6BRsMTE"
-],
-[
-"Prova",
-"OBA 2010, nível 3: questões de astronáutica (foguete VS-30, satélites)",
-"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
-],
-[
-"Atividade",
-"Listar 5 dificuldades de ir a Marte e uma solução para cada",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Força, velocidade e equilíbrio; ação e reação",
-"2027-05-21"
-],
-[
-"3 meses",
-"Separação de misturas (2): destilação, evaporação, centrifugação",
-"2027-02-19"
-]
-]
-},
-{
-"d": "2027-05-31",
-"a": "fis",
-"t": "Exercícios de Física e prova antiga do mês + correção",
-"m": [
-[
-"Prova",
-"Provas antigas ONC (Nível B)",
-"https://www.onciencias.org/exames"
-],
-[
-"Gabarito",
-"NOIC: gabaritos extraoficiais ONC",
-"https://noic.com.br/olimpiadas/ciencias/"
-]
-],
-"r": [
-[
-"1 semana",
-"Calor, temperatura e escalas termométricas",
-"2027-05-24"
-],
-[
-"1 mês",
-"Tipos de energia e conservação da energia",
-"2027-05-03"
-],
-[
-"3 meses",
-"A água e o ar na natureza",
-"2027-02-22"
-]
-]
-},
-{
-"d": "2027-06-02",
-"a": "bio",
-"t": "Célula como unidade da vida",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Citologia — células e organelas",
-"https://www.todamateria.com.br/citologia/"
-],
-[
-"Aula",
-"Biologia com Samuel Cunha: Introdução à Citologia",
-"https://www.youtube.com/watch?v=N33jWXzV8RU"
-],
-[
-"Aula",
-"Biologia com Samuel Cunha: Células eucariontes e procariontes",
-"https://www.youtube.com/watch?v=C5wehaJMyjE"
-],
-[
-"Atividade",
-"Desenhar lado a lado célula animal e vegetal",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Luz e cor: RGB e CMYK; espectro eletromagnético",
-"2027-05-26"
-],
-[
-"1 mês",
-"Fontes renováveis e não renováveis",
-"2027-05-05"
-],
-[
-"3 meses",
-"História: como ler uma fonte histórica (teoria, método e historiografia)",
-"2027-02-24"
-]
-]
-},
-{
-"d": "2027-06-04",
-"a": "bio",
-"t": "Microrganismos",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Microbiologia — vírus, bactérias, fungos, protozoários",
-"https://www.todamateria.com.br/microbiologia/"
-],
-[
-"Aula",
-"Biologia com Samuel Cunha: Introdução à Microbiologia",
-"https://www.youtube.com/watch?v=4-xzdCHok2o"
-],
-[
-"Aula",
-"Biologia com Samuel Cunha: Resumo sobre vírus",
-"https://www.youtube.com/watch?v=RYzuuPC0sGc"
-],
-[
-"Atividade",
-"Pão úmido num saco fechado: observar o bolor por 5 dias",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
-"2027-05-28"
-],
-[
-"1 mês",
-"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
-"2027-05-07"
-]
-]
-},
-{
-"d": "2027-06-07",
-"a": "bio",
-"t": "Plantas",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Plantas — características, funções e os 4 tipos",
-"https://www.todamateria.com.br/plantas/"
-],
-[
-"Aula",
-"Biologia com Samuel Cunha: Reino vegetal, introdução à botânica",
-"https://www.youtube.com/watch?v=EAVhBfwLUhk"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios sobre Reino Plantae",
-"https://www.todamateria.com.br/exercicios-sobre-reino-plantae/"
-]
-],
-"r": [
-[
-"1 mês",
-"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
-"2027-05-10"
-],
-[
-"3 meses",
-"Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
-"2027-03-01"
-]
-]
-},
-{
-"d": "2027-06-09",
-"a": "bio",
-"t": "Características e desenvolvimento dos animais; biodiversidade",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Animais — classificação, características e exemplos",
-"https://www.todamateria.com.br/animais-classificacao/"
-],
-[
-"Aula",
-"Biologia com Samuel Cunha: Reino Animalia, introdução à zoologia",
-"https://www.youtube.com/watch?v=wX2T2CaVmaA"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios sobre reino animal",
-"https://www.todamateria.com.br/exercicios-sobre-reino-animal-com-gabarito-e-respostas-comentadas/"
-],
-[
-"Simulação",
-"PhET: Seleção natural",
-"https://phet.colorado.edu/pt_BR/simulations/natural-selection"
-]
-],
-"r": [
-[
-"1 semana",
-"Célula como unidade da vida",
-"2027-06-02"
-],
-[
-"1 mês",
-"Uso racional e eficiência energética",
-"2027-05-12"
-],
-[
-"3 meses",
-"Número atômico, número de massa, prótons, nêutrons e elétrons",
-"2027-03-03"
-]
-]
-},
-{
-"d": "2027-06-11",
-"a": "bio",
-"t": "Cadeias alimentares, fluxo de energia e ciclo da matéria",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Cadeia e teia alimentar",
-"https://www.todamateria.com.br/cadeia-e-teia-alimentar/"
-],
-[
-"Leitura",
-"Toda Matéria: Ciclos biogeoquímicos",
-"https://www.todamateria.com.br/ciclos-biogeoquimicos/"
-],
-[
-"Aula",
-"Biologia com Samuel Cunha: Cadeia alimentar e teia alimentar",
-"https://www.youtube.com/watch?v=QQAqN7qL8Yg"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios sobre cadeia alimentar",
-"https://www.todamateria.com.br/exercicios-sobre-cadeia-alimentar/"
-]
-],
-"r": [
-[
-"1 semana",
-"Microrganismos",
-"2027-06-04"
-],
-[
-"1 mês",
-"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
-"2027-05-14"
-],
-[
-"3 meses",
-"Isótopos, isóbaros e isótonos",
-"2027-03-05"
-]
-]
-},
-{
-"d": "2027-06-14",
-"a": "bio",
-"t": "Ecossistemas, impactos ambientais e preservação",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Impactos ambientais",
-"https://www.todamateria.com.br/impactos-ambientais/"
-],
-[
-"Aula",
-"Biologia com Samuel Cunha: Fatores bióticos e abióticos do ecossistema",
-"https://www.youtube.com/watch?v=tJdb1To5D2E"
-],
-[
-"Atividade",
-"Mapa: 1 impacto por bioma brasileiro e 1 forma de preservar",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Plantas",
-"2027-06-07"
-],
-[
-"1 mês",
-"Leis de Newton: inércia e massa",
-"2027-05-17"
-],
-[
-"3 meses",
-"Elementos químicos e sua origem nas estrelas",
-"2027-03-08"
-]
-]
-},
-{
-"d": "2027-06-16",
-"a": "bio",
-"t": "Corpo humano: digestório, respiratório e circulatório integrados",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Sistemas do corpo humano",
-"https://www.todamateria.com.br/sistemas-do-corpo-humano/"
-],
-[
-"Aula",
-"Biologia com Samuel Cunha: Sistema digestório — fisiologia",
-"https://www.youtube.com/watch?v=ccxiObyUGRA"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios sobre o corpo humano",
-"https://www.todamateria.com.br/exercicios-sobre-o-corpo-humano-com-gabarito-e-comentarios/"
-],
-[
-"Atividade",
-"Desenhar o caminho do O2 e da glicose até a célula do músculo",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Características e desenvolvimento dos animais; biodiversidade",
-"2027-06-09"
-],
-[
-"3 meses",
-"Reações e equações químicas: conceitos básicos",
-"2027-03-10"
-]
-]
-},
-{
-"d": "2027-06-18",
-"a": "bio",
-"t": "Nutrição, hábitos alimentares e saúde pública",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Saúde pública no Brasil",
-"https://www.todamateria.com.br/saude-publica-no-brasil/"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios sobre sistema digestório",
-"https://www.todamateria.com.br/exercicios-sistema-digestorio/"
-],
-[
-"Atividade",
-"Ler 5 rótulos de casa: açúcar, sódio, gordura, ultraprocessado?",
-""
-],
-[
-"Aula",
-"Drauzio Varella: O que é um alimento ultraprocessado?",
-"https://www.youtube.com/watch?v=5gyTL7vqwMA"
-]
-],
-"r": [
-[
-"1 semana",
-"Cadeias alimentares, fluxo de energia e ciclo da matéria",
-"2027-06-11"
-],
-[
-"1 mês",
-"Força, velocidade e equilíbrio; ação e reação",
-"2027-05-21"
-],
-[
-"3 meses",
-"História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
-"2027-03-12"
-]
-]
-},
-{
-"d": "2027-06-21",
-"a": "bio",
-"t": "Sistemas locomotor e nervoso (a ponte com a Psicologia)",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Sistema nervoso",
-"https://www.todamateria.com.br/sistema-nervoso/"
-],
-[
-"Leitura",
-"Toda Matéria: Sistema locomotor",
-"https://www.todamateria.com.br/sistema-locomotor/"
-],
-[
-"Aula",
-"TED: Suzana Herculano-Houzel — O que há de especial no cérebro humano?",
-"https://www.ted.com/talks/suzana_herculano_houzel_what_is_so_special_about_the_human_brain"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios sobre o sistema nervoso",
-"https://www.todamateria.com.br/exercicios-sistema-nervoso/"
-]
-],
-"r": [
-[
-"1 semana",
-"Ecossistemas, impactos ambientais e preservação",
-"2027-06-14"
-],
-[
-"1 mês",
-"Calor, temperatura e escalas termométricas",
-"2027-05-24"
-],
-[
-"3 meses",
-"Energia: conceito e aplicações",
-"2027-03-15"
-]
-]
-},
-{
-"d": "2027-06-23",
-"a": "bio",
-"t": "Lentes corretivas e visão",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Olho humano — anatomia e como funciona",
-"https://www.todamateria.com.br/olhos/"
-],
-[
-"Simulação",
-"PhET: Óptica geométrica (lentes)",
-"https://phet.colorado.edu/pt_BR/simulations/geometric-optics"
-],
-[
-"Atividade",
-"Óculos de míope x de leitura: ver se a lente aumenta ou diminui",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Corpo humano: digestório, respiratório e circulatório integrados",
-"2027-06-16"
-],
-[
-"1 mês",
-"Luz e cor: RGB e CMYK; espectro eletromagnético",
-"2027-05-26"
-],
-[
-"3 meses",
-"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
-"2027-03-17"
-]
-]
-},
-{
-"d": "2027-06-25",
-"a": "bio",
-"t": "Mecanismos reprodutivos e sexualidade",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Sistema reprodutor feminino",
-"https://www.todamateria.com.br/sistema-reprodutor-feminino/"
-],
-[
-"Leitura",
-"Toda Matéria: Sistema reprodutor masculino",
-"https://www.todamateria.com.br/sistema-reprodutor-masculino/"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios sobre sistema reprodutor",
-"https://www.todamateria.com.br/exercicios-sobre-sistema-reprodutor-masculino-e-feminino/"
-],
-[
-"Atividade",
-"Caderneta de Saúde de Adolescentes (Ministério da Saúde) na UBS",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Nutrição, hábitos alimentares e saúde pública",
-"2027-06-18"
-],
-[
-"1 mês",
-"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
-"2027-05-28"
-],
-[
-"3 meses",
-"Ambiente, química verde e sustentabilidade",
-"2027-03-19"
-]
-]
-},
-{
-"d": "2027-06-28",
-"a": "bio",
-"t": "Hereditariedade",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Genética — resumo e conceitos básicos",
-"https://www.todamateria.com.br/introducao-a-genetica/"
-],
-[
-"Aula",
-"Me Gusta Bio: 1ª Lei de Mendel (resumo)",
-"https://www.youtube.com/watch?v=UGj4x0uAuio"
-],
-[
-"Exercícios",
-"Toda Matéria: Primeira Lei de Mendel",
-"https://www.todamateria.com.br/primeira-lei-de-mendel/"
-],
-[
-"Atividade",
-"Duas moedas (A/a): 40 lançamentos e conferir a proporção 1:2:1",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Sistemas locomotor e nervoso (a ponte com a Psicologia)",
-"2027-06-21"
-],
-[
-"3 meses",
-"Laboratório: segurança, vidrarias, reagentes e equipamentos",
-"2027-03-22"
-]
-]
-},
-{
-"d": "2027-06-30",
-"a": "bio",
-"t": "Ideias evolucionistas",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Teoria da evolução",
-"https://www.todamateria.com.br/teoria-da-evolucao/"
-],
-[
-"Aula",
-"Descomplica (Quer que desenhe?): Resumo sobre evolução",
-"https://www.youtube.com/watch?v=4WO-A_GaA1o"
-],
-[
-"Simulação",
-"PhET: Seleção natural",
-"https://phet.colorado.edu/pt_BR/simulations/natural-selection"
-],
-[
-"Exercícios",
-"Toda Matéria: Exercícios sobre evolução",
-"https://www.todamateria.com.br/exercicios-sobre-evolucao/"
-]
-],
-"r": [
-[
-"1 semana",
-"Lentes corretivas e visão",
-"2027-06-23"
-],
-[
-"1 mês",
-"Célula como unidade da vida",
-"2027-06-02"
-],
-[
-"3 meses",
-"História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
-"2027-03-24"
-]
-]
-},
-{
-"d": "2027-07-02",
-"a": "his",
-"t": "Triagem: separar as questões de História das provas antigas e ver o que mais cai",
-"m": [
-[
-"Prova",
-"Provas antigas ONC (Nível B)",
-"https://www.onciencias.org/exames"
-],
-[
-"Prova",
-"Provas antigas da ONHB (História)",
-"https://www.olimpiadadehistoria.com.br/"
-],
-[
-"Prova",
-"Colégio CCP: provas anteriores da ONHB (2020–2024)",
-"https://sistemas.colegioccp.com.br/provas-edicoes-anteriores-onhb/"
-],
-[
-"Atividade",
-"Listar os temas de História que mais aparecem",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Mecanismos reprodutivos e sexualidade",
-"2027-06-25"
-],
-[
-"1 mês",
-"Microrganismos",
-"2027-06-04"
-]
-]
-},
-{
-"d": "2027-07-05",
-"a": "his",
-"t": "Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Revolução Francesa (Resumo)",
-"https://www.todamateria.com.br/revolucao-francesa-resumo/"
-],
-[
-"Aula",
-"Débora Aladim: REVOLUÇÃO FRANCESA: TUDO QUE VOCÊ PRECISA SABER!",
-"https://www.youtube.com/watch?v=ceCcZooYDBo"
-],
-[
-"Leitura",
-"Toda Matéria: Revolução Industrial",
-"https://www.todamateria.com.br/revolucao-industrial/"
-],
-[
-"Aula",
-"Débora Aladim: Resumo de História: Revolução Industrial",
-"https://www.youtube.com/watch?v=t6nJNv-pNr8"
-]
-],
-"r": [
-[
-"1 semana",
-"Hereditariedade",
-"2027-06-28"
-],
-[
-"1 mês",
-"Plantas",
-"2027-06-07"
-]
-]
-},
-{
-"d": "2027-07-07",
-"a": "his",
-"t": "Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
-"m": [
-[
-"Leitura",
-"História do Mundo: Período Joanino",
-"https://www.historiadomundo.com.br/idade-moderna/periodo-joanino.htm"
-],
-[
-"Leitura",
-"Toda Matéria: Segundo Reinado",
-"https://www.todamateria.com.br/segundo-reinado/"
-],
-[
-"Aula",
-"Débora Aladim: INDEPENDÊNCIA DO BRASIL EM 1822 (História do Brasil pelo Brasil ep. 9)",
-"https://www.youtube.com/watch?v=Fr9lurVLNyo"
-],
-[
-"Aula",
-"Débora Aladim: Resumo de História: SEGUNDO REINADO",
-"https://www.youtube.com/watch?v=Nir4-ql0U6s"
-]
-],
-"r": [
-[
-"1 semana",
-"Ideias evolucionistas",
-"2027-06-30"
-],
-[
-"1 mês",
-"Características e desenvolvimento dos animais; biodiversidade",
-"2027-06-09"
-],
-[
-"3 meses",
-"Notação científica; Sistema Internacional e prefixos",
-"2027-04-02"
-]
-]
-},
-{
-"d": "2027-07-09",
-"a": "his",
-"t": "História da Ciência: Europa e povos não europeus",
-"m": [
-[
-"Leitura",
-"Toda Matéria: Renascimento Científico",
-"https://www.todamateria.com.br/renascimento-cientifico/"
-],
-[
-"Leitura",
-"ICArabe: Os árabes e suas contribuições para a ciência e medicina",
-"https://icarabe.org/artigos/os-arabes-e-suas-contribuicoes-para-a-ciencia-e-medicina/"
-],
-[
-"Livro",
-"Breve história de quase tudo, Bill Bryson",
-""
-],
-[
-"Atividade",
-"Linha do tempo: 5 descobertas não europeias (zero indiano, álgebra, papel chinês...) e como chegaram à Europa",
-""
-]
-],
-"r": [
-[
-"1 mês",
-"Cadeias alimentares, fluxo de energia e ciclo da matéria",
-"2027-06-11"
-],
-[
-"3 meses",
-"Medidas: valor mais provável, desvio e erro",
-"2027-04-05"
-]
-]
-},
-{
-"d": "2027-07-12",
-"a": "his",
-"t": "História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
-"m": [
-[
-"Livro",
-"As Cientistas: 50 mulheres que mudaram o mundo, Rachel Ignotofsky (Blucher)",
-""
-],
-[
-"Leitura",
-"eBiografia: Mulheres na ciência: 10 cientistas",
-"https://www.ebiografia.com/mulheres_na_ciencia/"
-],
-[
-"Leitura",
-"Toda Matéria: Feminismo",
-"https://www.todamateria.com.br/feminismo/"
-],
-[
-"Atividade",
-"Linha do tempo: Olympe de Gouges (1791), sufragistas, voto feminino no Brasil (1932), hoje",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
-"2027-07-05"
-],
-[
-"1 mês",
-"Ecossistemas, impactos ambientais e preservação",
-"2027-06-14"
-],
-[
-"3 meses",
-"Plano cartesiano: reta e equação do 1º grau; sistemas de equações",
-"2027-04-07"
-]
-]
-},
-{
-"d": "2027-07-14",
-"a": "his",
-"t": "Brasil República: Era Vargas, anos 1945–1964 (Dutra, JK, Jango), Ditadura, redemocratização e Constituição de 1988",
-"m": [
-[
-"Aula",
-"Débora Aladim: ERA VARGAS: RESUMO EM 5 MINUTOS",
-"https://www.youtube.com/watch?v=rkF8jDLS2Xc"
-],
-[
-"Aula",
-"Débora Aladim: 50 minutos em 5: DITADURA MILITAR",
-"https://www.youtube.com/watch?v=_h31-55wuEw"
-],
-[
-"Aula",
-"Débora Aladim: TUDO SOBRE TODAS AS CONSTITUIÇÕES DA HISTÓRIA DO BRASIL",
-"https://www.youtube.com/watch?v=r7Uf2x_agjk"
-],
-[
-"Aula",
-"Professor Ferrari: República \"Populista\" (1945–1964), resumo",
-"https://www.youtube.com/watch?v=bm13wedJ8hM"
-]
-],
-"r": [
-[
-"1 semana",
-"Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
-"2027-07-07"
-],
-[
-"1 mês",
-"Corpo humano: digestório, respiratório e circulatório integrados",
-"2027-06-16"
-],
-[
-"3 meses",
-"Grandezas diretamente e inversamente proporcionais no gráfico",
-"2027-04-09"
-]
-]
-},
-{
-"d": "2027-07-16",
-"a": "his",
-"t": "Século XX: Guerras Mundiais, socialismo e Guerra Fria, descolonização da Ásia e da África, globalização",
-"m": [
-[
-"Aula",
-"Débora Aladim: Resumo de História: 1ª PRIMEIRA GUERRA MUNDIAL",
-"https://www.youtube.com/watch?v=EEOYAN2CWwM"
-],
-[
-"Aula",
-"Débora Aladim: Resumo de História: NAZISMO e FASCISMO - Período entre Guerras",
-"https://www.youtube.com/watch?v=Mzb-TIfKeW0"
-],
-[
-"Aula",
-"Débora Aladim: Resumo de História: GUERRA FRIA",
-"https://www.youtube.com/watch?v=eQ08AS5ZHQQ"
-],
-[
-"Aula",
-"Parabólica: Descolonização da África e da Ásia",
-"https://www.youtube.com/watch?v=47DL0DVy28M"
-]
-],
-"r": [
-[
-"1 semana",
-"História da Ciência: Europa e povos não europeus",
 "2027-07-09"
 ],
 [
 "1 mês",
-"Nutrição, hábitos alimentares e saúde pública",
+"A água e o ar na natureza",
 "2027-06-18"
-],
-[
-"3 meses",
-"Equações do 2º grau",
-"2027-04-12"
 ]
 ]
 },
 {
-"d": "2027-07-19",
-"a": "his",
+"d": "2027-07-20",
+"a": "rev",
 "t": "Curso preparatório da plataforma ONC (área mais fraca no diagnóstico)",
 "m": [
 [
@@ -2840,24 +2764,19 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
-"2027-07-12"
+"Laboratório: segurança, vidrarias, reagentes e equipamentos",
+"2027-07-13"
 ],
 [
 "1 mês",
-"Sistemas locomotor e nervoso (a ponte com a Psicologia)",
-"2027-06-21"
-],
-[
-"3 meses",
-"Triângulo retângulo; área do círculo, volume do cilindro, litro e m³",
-"2027-04-14"
+"Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
+"2027-06-23"
 ]
 ]
 },
 {
 "d": "2027-07-21",
-"a": "his",
+"a": "rev",
 "t": "Simulado 1: prova antiga completa, com cronômetro",
 "m": [
 [
@@ -2875,7 +2794,7 @@ export const SESSIONS = [
 },
 {
 "d": "2027-07-23",
-"a": "his",
+"a": "rev",
 "t": "Correção do simulado 1",
 "m": [
 [
@@ -2886,20 +2805,15 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"1 semana",
-"Século XX: Guerras Mundiais, socialismo e Guerra Fria, descolonização da Ásia e da África, globalização",
-"2027-07-16"
-],
-[
 "1 mês",
-"Mecanismos reprodutivos e sexualidade",
+"Número atômico, número de massa, prótons, nêutrons e elétrons",
 "2027-06-25"
 ]
 ]
 },
 {
-"d": "2027-07-26",
-"a": "his",
+"d": "2027-07-27",
+"a": "rev",
 "t": "Curso da plataforma ONC: revisão do tema da edição 2027",
 "m": [
 [
@@ -2911,19 +2825,14 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"Hereditariedade",
-"2027-06-28"
-],
-[
-"3 meses",
-"Tipos de energia e conservação da energia",
-"2027-05-03"
+"Isótopos, isóbaros e isótonos",
+"2027-06-29"
 ]
 ]
 },
 {
 "d": "2027-07-28",
-"a": "his",
+"a": "rev",
 "t": "Simulado 2: prova antiga completa, com cronômetro",
 "m": [
 [
@@ -2941,7 +2850,7 @@ export const SESSIONS = [
 },
 {
 "d": "2027-07-30",
-"a": "his",
+"a": "rev",
 "t": "Correção do simulado 2 e lista dos erros",
 "m": [
 [
@@ -2957,14 +2866,14 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"3 meses",
-"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
-"2027-05-07"
+"1 mês",
+"Elementos químicos e sua origem nas estrelas",
+"2027-06-30"
 ]
 ]
 },
 {
-"d": "2027-08-02",
+"d": "2027-08-03",
 "a": "rev",
 "t": "Simulado 3: prova antiga no formato da 1ª fase",
 "m": [
@@ -3000,13 +2909,13 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
-"2027-07-07"
+"Energia: conceito e aplicações",
+"2027-07-06"
 ],
 [
 "3 meses",
-"Uso racional e eficiência energética",
-"2027-05-12"
+"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
+"2027-05-05"
 ]
 ]
 },
@@ -3034,18 +2943,18 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"História da Ciência: Europa e povos não europeus",
-"2027-07-09"
+"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
+"2027-07-07"
 ],
 [
 "3 meses",
-"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
-"2027-05-14"
+"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
+"2027-05-07"
 ]
 ]
 },
 {
-"d": "2027-08-09",
+"d": "2027-08-10",
 "a": "ast",
 "t": "Sessão leve: Astronomia e descanso antes da prova",
 "m": [
@@ -3063,13 +2972,13 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
-"2027-07-12"
+"Ambiente, química verde e sustentabilidade",
+"2027-07-09"
 ],
 [
 "3 meses",
-"Leis de Newton: inércia e massa",
-"2027-05-17"
+"Uso racional e eficiência energética",
+"2027-05-11"
 ]
 ]
 },
