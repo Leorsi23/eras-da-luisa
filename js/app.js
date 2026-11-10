@@ -269,6 +269,8 @@ function weekLabel(iso) {
   return `Semana de ${weekKey(iso).slice(8)}/${weekKey(iso).slice(5, 7)}`;
 }
 const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+const LONGA = (s) => /^(Diagnóstico|Simulado|OBA: prova antiga)/.test(s.t);
+const OPCIONAL = /^(Diagnóstico|Correção|Simulado|Último|Exercícios|Prova antiga|OBA:|Curso|Triagem|Revisão)/;
 const WD_LONG = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
 function dateTile(iso) {
   return `<span class="dtile"><span>${WD[dt(iso).getDay()]}</span><b>${+iso.slice(8)}</b><span>${MES_C[monthOf(iso)].toLowerCase()}</span></span>`;
@@ -320,7 +322,7 @@ function viewHoje() {
     ${pendHtml(m)}
     ${nx ? `<article class="card hero">
       <span class="eyebrow">${preStart ? `A turnê começa em ${daysToStart} dias` : "Próximo encontro"}</span>
-      <div class="hero-when">${dateTile(nx.d)}<span class="stack-xs"><b class="hero-day">${cap(WD_LONG[dt(nx.d).getDay()])}, ${+nx.d.slice(8)} de ${MES[monthOf(nx.d)]}</b><span class="hero-time">às ${horario(nx.d)} · 1h30</span></span></div>
+      <div class="hero-when">${dateTile(nx.d)}<span class="stack-xs"><b class="hero-day">${cap(WD_LONG[dt(nx.d).getDay()])}, ${+nx.d.slice(8)} de ${MES[monthOf(nx.d)]}</b><span class="hero-time">às ${horario(nx.d)} · ${LONGA(nx) ? "prova inteira, reserve 2h" : "1h"}</span></span></div>
       <div class="row">${chip(nx.a)}</div>
       <h2 class="display lg">${esc(nx.t)}</h2>
       <a class="btn primary big" href="#/encontro/${nx.d}/aquecimento">${I.play} Começar encontro</a>
@@ -333,8 +335,8 @@ function viewHoje() {
     <details class="card howto" ${howtoOpen() ? "open" : ""}>
       <summary><span class="display md">Como funciona</span><span class="small muted howto-hint">toque para ${howtoOpen() ? "recolher" : "abrir"}</span></summary>
       <ol class="howto-steps">
-        <li><b>Aquecimento · 15 min.</b> Aparecem temas de semanas atrás. Escreva no papel o que lembra, sem olhar nada, e depois confira no seu mapa mental daquele dia.</li>
-        <li><b>Foco · 70 min.</b> Vídeo, simulação ou exercício do dia, com timer de 35 + 5 + 30 minutos e a trilha da era tocando.</li>
+        <li><b>Aquecimento · 10 min.</b> Aparecem temas de semanas atrás. Escreva no papel o que lembra, sem olhar nada, e depois confira no seu mapa mental daquele dia.</li>
+        <li><b>Foco · 40 min.</b> Vídeo, simulação ou exercício do dia, com timer de 20 + 5 + 15 minutos e a trilha da era tocando. A atividade prática é opcional: faça se sobrar tempo. Nos dias de prova inteira (diagnóstico e simulados), o encontro é mais longo.</li>
         <li><b>Mapa mental · 10 min.</b> No papel e sem olhar o material: o tema no meio e ramos com o que você aprendeu. Depois tire uma foto pelo celular e envie no app.</li>
         <li><b>Miçanga.</b> Quando o pai aprova o mapa, a miçanga ganha cor na pulseira.</li>
       </ol>
@@ -403,7 +405,7 @@ function viewFoco(d) {
         </div></div>`;
   }
   const rk = (k) => (e.roteiro || {})[k];
-  const items = [["aquec", "Aquecimento"], ...mats.map((x, i) => ["m" + i, `${x[0]}: ${x[1]}`]), ["mapa", "Mapa mental no papel, sem olhar o material"]];
+  const items = [["aquec", "Aquecimento"], ...mats.map((x, i) => ["m" + i, `${x[0]}${x[0] === "Atividade" && !x[2] && mats.length > 1 && !OPCIONAL.test(s.t) ? " (opcional)" : ""}: ${x[1]}`]), ["mapa", "Mapa mental no papel, sem olhar o material"]];
   const emb = spotifyEmbed(trilhaUrl(m));
   return `<div class="encontro">
     <div class="topbar">${back(`#/encontro/${d}/aquecimento`)}${steps(2)}<span class="phone-off">${I.phone} Celular fora do quarto</span></div>

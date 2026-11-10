@@ -17,11 +17,12 @@ export const CONFIG = {
   horarioPadrao: { 2: "15:30", 3: "14:00", 5: "14:00" },
 
   // Blocos do modo foco, em minutos.
-  // 15 de aquecimento + 70 aqui + uns 10 de mapa mental = 1h30 e pouco.
+  // 10 de aquecimento + 40 aqui + 10 de mapa mental = 1h.
+  // Diagnóstico e simulados são prova inteira e passam disso.
   blocos: [
-    { nome: "Bloco 1 · foco", min: 35 },
+    { nome: "Bloco 1 · foco", min: 20 },
     { nome: "Pausa", min: 5, pausa: true },
-    { nome: "Bloco 2 · foco", min: 30 },
+    { nome: "Bloco 2 · foco", min: 15 },
   ],
 };
 
