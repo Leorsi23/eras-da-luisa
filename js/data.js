@@ -80,11 +80,6 @@ export const SESSIONS = [
 "https://cdcc.usp.br/wp-content/uploads/sites/512/2024/04/Fases-da-lua-e-eclipses-versao-final-22-10-2022.pdf"
 ],
 [
-"Leitura",
-"Caderno do Aluno SEE-SP Ciências 8º ano vol. 3, p. 33-40",
-"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
-],
-[
 "Exercícios",
 "Seduc-GO: Atividade 17, 8º ano, Sistema Sol-Terra-Lua",
 "https://portal.educacao.go.gov.br/wp-content/uploads/2021/10/Atividade-17-8o-CIE-Sistema-Sol-Terra-e-Lua.pdf"
@@ -102,11 +97,6 @@ export const SESSIONS = [
 "a": "ast",
 "t": "Sol: translação, ano e estações; solstício e equinócio",
 "m": [
-[
-"Leitura",
-"Caderno do Aluno SEE-SP Ciências 8º ano vol. 3, p. 3-27",
-"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
-],
 [
 "Aula",
 "MultiRio (Rioeduca na TV, 8º ano): Como ocorrem as estações do ano?",
@@ -147,11 +137,6 @@ export const SESSIONS = [
 "https://www.todamateria.com.br/exercicios-sobre-fusos-horarios-do-brasil-com-gabarito/"
 ],
 [
-"Leitura",
-"Caderno do Aluno SEE-SP 8º ano vol. 3, p. 20-24 (horário de verão)",
-"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
-],
-[
 "Atividade",
 "Calcular que horas são em Paris quando são 17h aqui",
 ""
@@ -170,11 +155,6 @@ export const SESSIONS = [
 "a": "ast",
 "t": "Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
 "m": [
-[
-"Leitura",
-"Caderno do Aluno SEE-SP 8º ano vol. 3, p. 5-9 (plano da eclíptica)",
-"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
-],
 [
 "Aula",
 "geo ilustrada: Estrutura geológica da Terra (interna e externa)",
@@ -233,11 +213,6 @@ export const SESSIONS = [
 "t": "Estrelas, galáxias, origem do Universo; geocentrismo × heliocentrismo",
 "m": [
 [
-"Leitura",
-"Caderno do Aluno SEE-SP 8º ano vol. 3, p. 41-46 (Nossa vizinhança cósmica)",
-"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
-],
-[
 "Aula",
 "Ciência Todo Dia: O Big Bang explicado",
 "https://www.youtube.com/watch?v=nNAuuTIf3LE"
@@ -261,11 +236,6 @@ export const SESSIONS = [
 "a": "ast",
 "t": "Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
 "m": [
-[
-"Leitura",
-"Caderno do Aluno SEE-SP 8º ano vol. 3, p. 43-46 (distâncias, ano-luz)",
-"https://fep.if.usp.br/~profis/arquivo/docs_curriculares/SP/Cadernos%20SEESP/Ciencias/Ciencias%20Aluno/CI%c3%8aNCIAS_CAA_7s_Vol3_2010reduzido.pdf"
-],
 [
 "Aula",
 "Universo da Ciência: O que é e quantos km tem um ano-luz",
@@ -1059,13 +1029,13 @@ export const SESSIONS = [
 "https://www.youtube.com/watch?v=_h31-55wuEw"
 ],
 [
-"Aula",
-"Débora Aladim: TUDO SOBRE TODAS AS CONSTITUIÇÕES DA HISTÓRIA DO BRASIL",
+"Extra",
+"Débora Aladim: TUDO SOBRE TODAS AS CONSTITUIÇÕES DA HISTÓRIA DO BRASIL (só se sobrar tempo)",
 "https://www.youtube.com/watch?v=r7Uf2x_agjk"
 ],
 [
-"Aula",
-"Professor Ferrari: República \"Populista\" (1945–1964), resumo",
+"Extra",
+"Professor Ferrari: República \"Populista\" (1945–1964), resumo (só se sobrar tempo)",
 "https://www.youtube.com/watch?v=bm13wedJ8hM"
 ]
 ],
@@ -1137,13 +1107,13 @@ export const SESSIONS = [
 "https://www.youtube.com/watch?v=Mzb-TIfKeW0"
 ],
 [
-"Aula",
-"Débora Aladim: Resumo de História: GUERRA FRIA",
+"Extra",
+"Débora Aladim: Resumo de História: GUERRA FRIA (só se sobrar tempo)",
 "https://www.youtube.com/watch?v=eQ08AS5ZHQQ"
 ],
 [
-"Aula",
-"Parabólica: Descolonização da África e da Ásia",
+"Extra",
+"Parabólica: Descolonização da África e da Ásia (só se sobrar tempo)",
 "https://www.youtube.com/watch?v=47DL0DVy28M"
 ]
 ],
@@ -1688,7 +1658,7 @@ export const SESSIONS = [
 ],
 [
 "Atividade",
-"Ficha de uma linha para cada: ISS, Hubble, James Webb, Artemis, Saturno V, Soyuz, Falcon (SpaceX)",
+"Ficha de uma linha para cada: ISS, Hubble, James Webb, Artemis; foguetes Saturno V, Soyuz, Ariane, Falcon (SpaceX) e os brasileiros VLS e VS-30; satélites CBERS e SCD; AEB, INPE e DCTA",
 ""
 ]
 ],
