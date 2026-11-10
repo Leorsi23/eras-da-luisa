@@ -1,7 +1,7 @@
 // Gerado a partir do plano de estudos. Cada item: d=data, a=área, t=tema, m=materiais [formato, rótulo, link], r=revisões [intervalo, tema, data do tema].
 export const SESSIONS = [
 {
-"d": "2027-01-05",
+"d": "2027-01-04",
 "a": "ast",
 "t": "Diagnóstico: prova antiga ONC Nível B, sem cronômetro",
 "m": [
@@ -19,7 +19,7 @@ export const SESSIONS = [
 "r": []
 },
 {
-"d": "2027-01-06",
+"d": "2027-01-05",
 "a": "ast",
 "t": "Correção do diagnóstico juntos: o que errou e por quê",
 "m": [
@@ -32,12 +32,17 @@ export const SESSIONS = [
 "Atividade",
 "Anotar num caderno os 5 assuntos em que mais errou",
 ""
+],
+[
+"Atividade",
+"Anotar também 3 assuntos que você já domina",
+""
 ]
 ],
 "r": []
 },
 {
-"d": "2027-01-08",
+"d": "2027-01-06",
 "a": "ast",
 "t": "Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
 "m": [
@@ -65,7 +70,7 @@ export const SESSIONS = [
 "r": []
 },
 {
-"d": "2027-01-12",
+"d": "2027-01-08",
 "a": "ast",
 "t": "Lua: fases, mês lunar e eclipses",
 "m": [
@@ -90,16 +95,10 @@ export const SESSIONS = [
 ""
 ]
 ],
-"r": [
-[
-"1 semana",
-"Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
-"2027-01-08"
-]
-]
+"r": []
 },
 {
-"d": "2027-01-13",
+"d": "2027-01-11",
 "a": "ast",
 "t": "Sol: translação, ano e estações; solstício e equinócio",
 "m": [
@@ -124,10 +123,16 @@ export const SESSIONS = [
 "https://iec.ib.usp.br/wp-content/uploads/2013/07/roteiro_estacoes_do_ano_i.pdf"
 ]
 ],
-"r": []
+"r": [
+[
+"1 semana",
+"Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
+"2027-01-06"
+]
+]
 },
 {
-"d": "2027-01-15",
+"d": "2027-01-12",
 "a": "ast",
 "t": "Coordenadas geográficas, zonas térmicas, fusos horários e horário de verão",
 "m": [
@@ -152,10 +157,16 @@ export const SESSIONS = [
 ""
 ]
 ],
-"r": []
+"r": [
+[
+"1 semana",
+"Lua: fases, mês lunar e eclipses",
+"2027-01-08"
+]
+]
 },
 {
-"d": "2027-01-19",
+"d": "2027-01-13",
 "a": "ast",
 "t": "Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
 "m": [
@@ -180,16 +191,10 @@ export const SESSIONS = [
 ""
 ]
 ],
-"r": [
-[
-"1 semana",
-"Lua: fases, mês lunar e eclipses",
-"2027-01-12"
-]
-]
+"r": []
 },
 {
-"d": "2027-01-20",
+"d": "2027-01-15",
 "a": "ast",
 "t": "Sistema Solar: planetas, satélites, asteroides e cometas; origem do Sistema Solar",
 "m": [
@@ -218,12 +223,12 @@ export const SESSIONS = [
 [
 "1 semana",
 "Sol: translação, ano e estações; solstício e equinócio",
-"2027-01-13"
+"2027-01-11"
 ]
 ]
 },
 {
-"d": "2027-01-22",
+"d": "2027-01-19",
 "a": "ast",
 "t": "Estrelas, galáxias, origem do Universo; geocentrismo × heliocentrismo",
 "m": [
@@ -247,12 +252,12 @@ export const SESSIONS = [
 [
 "1 semana",
 "Coordenadas geográficas, zonas térmicas, fusos horários e horário de verão",
-"2027-01-15"
+"2027-01-12"
 ]
 ]
 },
 {
-"d": "2027-01-26",
+"d": "2027-01-20",
 "a": "ast",
 "t": "Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
 "m": [
@@ -281,12 +286,12 @@ export const SESSIONS = [
 [
 "1 semana",
 "Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
-"2027-01-19"
+"2027-01-13"
 ]
 ]
 },
 {
-"d": "2027-01-27",
+"d": "2027-01-22",
 "a": "ast",
 "t": "Constelações e reconhecimento do céu (carta celeste + observação)",
 "m": [
@@ -310,12 +315,12 @@ export const SESSIONS = [
 [
 "1 semana",
 "Sistema Solar: planetas, satélites, asteroides e cometas; origem do Sistema Solar",
-"2027-01-20"
+"2027-01-15"
 ]
 ]
 },
 {
-"d": "2027-01-29",
+"d": "2027-01-26",
 "a": "ast",
 "t": "Exercícios de Astronomia de provas antigas da ONC e da OBA",
 "m": [
@@ -339,12 +344,12 @@ export const SESSIONS = [
 [
 "1 semana",
 "Estrelas, galáxias, origem do Universo; geocentrismo × heliocentrismo",
-"2027-01-22"
+"2027-01-19"
 ]
 ]
 },
 {
-"d": "2027-02-02",
+"d": "2027-01-27",
 "a": "bio",
 "t": "Célula como unidade da vida",
 "m": [
@@ -373,12 +378,12 @@ export const SESSIONS = [
 [
 "1 semana",
 "Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
-"2027-01-26"
+"2027-01-20"
 ]
 ]
 },
 {
-"d": "2027-02-03",
+"d": "2027-01-29",
 "a": "bio",
 "t": "Microrganismos",
 "m": [
@@ -407,12 +412,12 @@ export const SESSIONS = [
 [
 "1 semana",
 "Constelações e reconhecimento do céu (carta celeste + observação)",
-"2027-01-27"
+"2027-01-22"
 ]
 ]
 },
 {
-"d": "2027-02-05",
+"d": "2027-02-02",
 "a": "his",
 "t": "História: como ler uma fonte histórica (teoria, método e historiografia)",
 "m": [
@@ -439,18 +444,19 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"Célula como unidade da vida",
+"2027-01-27"
+],
+[
 "1 mês",
 "Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
-"2027-01-08"
+"2027-01-06"
 ]
 ]
 },
 {
-"d": "2027-02-09",
-"off": "Carnaval"
-},
-{
-"d": "2027-02-10",
+"d": "2027-02-03",
 "a": "bio",
 "t": "Plantas",
 "m": [
@@ -474,17 +480,12 @@ export const SESSIONS = [
 [
 "1 semana",
 "Microrganismos",
-"2027-02-03"
-],
-[
-"1 mês",
-"Lua: fases, mês lunar e eclipses",
-"2027-01-12"
+"2027-01-29"
 ]
 ]
 },
 {
-"d": "2027-02-12",
+"d": "2027-02-05",
 "a": "his",
 "t": "Triagem: separar as questões de História das provas antigas e ver o que mais cai",
 "m": [
@@ -511,19 +512,18 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"1 semana",
-"História: como ler uma fonte histórica (teoria, método e historiografia)",
-"2027-02-05"
-],
-[
 "1 mês",
-"Sol: translação, ano e estações; solstício e equinócio",
-"2027-01-13"
+"Lua: fases, mês lunar e eclipses",
+"2027-01-08"
 ]
 ]
 },
 {
-"d": "2027-02-16",
+"d": "2027-02-09",
+"off": "Carnaval"
+},
+{
+"d": "2027-02-10",
 "a": "bio",
 "t": "Características e desenvolvimento dos animais; biodiversidade",
 "m": [
@@ -552,17 +552,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Plantas",
-"2027-02-10"
+"2027-02-03"
 ],
 [
 "1 mês",
-"Coordenadas geográficas, zonas térmicas, fusos horários e horário de verão",
-"2027-01-15"
+"Sol: translação, ano e estações; solstício e equinócio",
+"2027-01-11"
 ]
 ]
 },
 {
-"d": "2027-02-17",
+"d": "2027-02-12",
 "a": "bio",
 "t": "Cadeias alimentares, fluxo de energia e ciclo da matéria",
 "m": [
@@ -589,14 +589,19 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"História: como ler uma fonte histórica (teoria, método e historiografia)",
+"2027-02-02"
+],
+[
 "1 mês",
 "Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
-"2027-01-19"
+"2027-01-13"
 ]
 ]
 },
 {
-"d": "2027-02-19",
+"d": "2027-02-16",
 "a": "his",
 "t": "Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
 "m": [
@@ -623,14 +628,19 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"Características e desenvolvimento dos animais; biodiversidade",
+"2027-02-10"
+],
+[
 "1 mês",
 "Sistema Solar: planetas, satélites, asteroides e cometas; origem do Sistema Solar",
-"2027-01-20"
+"2027-01-15"
 ]
 ]
 },
 {
-"d": "2027-02-23",
+"d": "2027-02-17",
 "a": "bio",
 "t": "Ecossistemas, impactos ambientais e preservação",
 "m": [
@@ -653,18 +663,18 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Características e desenvolvimento dos animais; biodiversidade",
-"2027-02-16"
+"Cadeias alimentares, fluxo de energia e ciclo da matéria",
+"2027-02-12"
 ],
 [
 "1 mês",
 "Estrelas, galáxias, origem do Universo; geocentrismo × heliocentrismo",
-"2027-01-22"
+"2027-01-19"
 ]
 ]
 },
 {
-"d": "2027-02-24",
+"d": "2027-02-19",
 "a": "his",
 "t": "Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
 "m": [
@@ -691,19 +701,14 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"1 semana",
-"Cadeias alimentares, fluxo de energia e ciclo da matéria",
-"2027-02-17"
-],
-[
 "1 mês",
 "Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
-"2027-01-26"
+"2027-01-20"
 ]
 ]
 },
 {
-"d": "2027-02-26",
+"d": "2027-02-23",
 "a": "bio",
 "t": "Corpo humano: digestório, respiratório e circulatório integrados",
 "m": [
@@ -732,17 +737,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
-"2027-02-19"
+"2027-02-16"
 ],
 [
 "1 mês",
 "Constelações e reconhecimento do céu (carta celeste + observação)",
-"2027-01-27"
+"2027-01-22"
 ]
 ]
 },
 {
-"d": "2027-03-02",
+"d": "2027-02-24",
 "a": "his",
 "t": "História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
 "m": [
@@ -771,17 +776,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Ecossistemas, impactos ambientais e preservação",
-"2027-02-23"
+"2027-02-17"
 ],
 [
 "1 mês",
 "Célula como unidade da vida",
-"2027-02-02"
+"2027-01-27"
 ]
 ]
 },
 {
-"d": "2027-03-03",
+"d": "2027-02-26",
 "a": "bio",
 "t": "Nutrição, hábitos alimentares e saúde pública",
 "m": [
@@ -810,17 +815,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
-"2027-02-24"
+"2027-02-19"
 ],
 [
 "1 mês",
 "Microrganismos",
-"2027-02-03"
+"2027-01-29"
 ]
 ]
 },
 {
-"d": "2027-03-05",
+"d": "2027-03-02",
 "a": "bio",
 "t": "Sistemas locomotor e nervoso (a ponte com a Psicologia)",
 "m": [
@@ -849,17 +854,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Corpo humano: digestório, respiratório e circulatório integrados",
-"2027-02-26"
+"2027-02-23"
 ],
 [
 "1 mês",
 "História: como ler uma fonte histórica (teoria, método e historiografia)",
-"2027-02-05"
+"2027-02-02"
 ]
 ]
 },
 {
-"d": "2027-03-09",
+"d": "2027-03-03",
 "a": "his",
 "t": "História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
 "m": [
@@ -888,17 +893,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
-"2027-03-02"
+"2027-02-24"
 ],
 [
 "1 mês",
 "Plantas",
-"2027-02-10"
+"2027-02-03"
 ]
 ]
 },
 {
-"d": "2027-03-10",
+"d": "2027-03-05",
 "a": "bio",
 "t": "Lentes corretivas e visão",
 "m": [
@@ -922,12 +927,12 @@ export const SESSIONS = [
 [
 "1 semana",
 "Nutrição, hábitos alimentares e saúde pública",
-"2027-03-03"
+"2027-02-26"
 ]
 ]
 },
 {
-"d": "2027-03-12",
+"d": "2027-03-09",
 "a": "his",
 "t": "História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
 "m": [
@@ -956,12 +961,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Sistemas locomotor e nervoso (a ponte com a Psicologia)",
-"2027-03-05"
+"2027-03-02"
+],
+[
+"1 mês",
+"Características e desenvolvimento dos animais; biodiversidade",
+"2027-02-10"
 ]
 ]
 },
 {
-"d": "2027-03-16",
+"d": "2027-03-10",
 "a": "bio",
 "t": "Mecanismos reprodutivos e sexualidade",
 "m": [
@@ -990,17 +1000,12 @@ export const SESSIONS = [
 [
 "1 semana",
 "História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
-"2027-03-09"
-],
-[
-"1 mês",
-"Características e desenvolvimento dos animais; biodiversidade",
-"2027-02-16"
+"2027-03-03"
 ]
 ]
 },
 {
-"d": "2027-03-17",
+"d": "2027-03-12",
 "a": "bio",
 "t": "Hereditariedade",
 "m": [
@@ -1029,17 +1034,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Lentes corretivas e visão",
-"2027-03-10"
+"2027-03-05"
 ],
 [
 "1 mês",
 "Cadeias alimentares, fluxo de energia e ciclo da matéria",
-"2027-02-17"
+"2027-02-12"
 ]
 ]
 },
 {
-"d": "2027-03-19",
+"d": "2027-03-16",
 "a": "his",
 "t": "Brasil República: Era Vargas, anos 1945–1964 (Dutra, JK, Jango), Ditadura, redemocratização e Constituição de 1988",
 "m": [
@@ -1068,17 +1073,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
-"2027-03-12"
+"2027-03-09"
 ],
 [
 "1 mês",
 "Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
-"2027-02-19"
+"2027-02-16"
 ]
 ]
 },
 {
-"d": "2027-03-23",
+"d": "2027-03-17",
 "a": "bio",
 "t": "Ideias evolucionistas",
 "m": [
@@ -1107,17 +1112,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Mecanismos reprodutivos e sexualidade",
-"2027-03-16"
+"2027-03-10"
 ],
 [
 "1 mês",
 "Ecossistemas, impactos ambientais e preservação",
-"2027-02-23"
+"2027-02-17"
 ]
 ]
 },
 {
-"d": "2027-03-24",
+"d": "2027-03-19",
 "a": "his",
 "t": "Século XX: Guerras Mundiais, socialismo e Guerra Fria, descolonização da Ásia e da África, globalização",
 "m": [
@@ -1146,21 +1151,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Hereditariedade",
-"2027-03-17"
+"2027-03-12"
 ],
 [
 "1 mês",
 "Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
-"2027-02-24"
+"2027-02-19"
 ]
 ]
 },
 {
-"d": "2027-03-26",
-"off": "Sexta-feira Santa"
-},
-{
-"d": "2027-03-30",
+"d": "2027-03-23",
 "a": "bio",
 "t": "Exercícios de Biologia e prova antiga do mês + correção",
 "m": [
@@ -1183,18 +1184,18 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Ideias evolucionistas",
-"2027-03-23"
+"Brasil República: Era Vargas, anos 1945–1964 (Dutra, JK, Jango), Ditadura, redemocratização e Constituição de 1988",
+"2027-03-16"
 ],
 [
 "1 mês",
 "Corpo humano: digestório, respiratório e circulatório integrados",
-"2027-02-26"
+"2027-02-23"
 ]
 ]
 },
 {
-"d": "2027-03-31",
+"d": "2027-03-24",
 "a": "his",
 "t": "História da Ciência: Europa e povos não europeus",
 "m": [
@@ -1222,18 +1223,22 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Século XX: Guerras Mundiais, socialismo e Guerra Fria, descolonização da Ásia e da África, globalização",
-"2027-03-24"
+"Ideias evolucionistas",
+"2027-03-17"
 ],
 [
 "1 mês",
 "História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
-"2027-03-02"
+"2027-02-24"
 ]
 ]
 },
 {
-"d": "2027-04-02",
+"d": "2027-03-26",
+"off": "Sexta-feira Santa"
+},
+{
+"d": "2027-03-30",
 "a": "fis",
 "t": "Notação científica; Sistema Internacional e prefixos",
 "m": [
@@ -1255,14 +1260,19 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"História da Ciência: Europa e povos não europeus",
+"2027-03-24"
+],
+[
 "1 mês",
 "Nutrição, hábitos alimentares e saúde pública",
-"2027-03-03"
+"2027-02-26"
 ]
 ]
 },
 {
-"d": "2027-04-06",
+"d": "2027-03-31",
 "a": "fis",
 "t": "Medidas: valor mais provável, desvio e erro",
 "m": [
@@ -1279,31 +1289,31 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"1 semana",
-"História da Ciência: Europa e povos não europeus",
-"2027-03-31"
-],
-[
 "1 mês",
 "Sistemas locomotor e nervoso (a ponte com a Psicologia)",
-"2027-03-05"
-],
-[
-"3 meses",
-"Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
-"2027-01-08"
+"2027-03-02"
 ]
 ]
 },
 {
-"d": "2027-04-07",
+"d": "2027-04-02",
 "a": "fis",
-"t": "Gráficos: plano cartesiano, reta e leitura de gráficos",
+"t": "Plano cartesiano: reta e equação do 1º grau; sistemas de equações",
 "m": [
 [
 "Leitura",
 "Toda Matéria: Função afim (função do 1º grau)",
 "https://www.todamateria.com.br/funcao-afim/"
+],
+[
+"Leitura",
+"Toda Matéria: Sistemas de equações",
+"https://www.todamateria.com.br/sistemas-de-equacoes/"
+],
+[
+"Aula",
+"Khan Academy: Sistemas de equações com gráficos (vídeo, 8º ano)",
+"https://pt.khanacademy.org/math/pt-8-ano/algebra-equacoes-8ano/introducao-ao-sistema-de-equacoes/v/solving-systems-graphically-examples"
 ],
 [
 "Simulação",
@@ -1313,19 +1323,14 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"1 semana",
-"Notação científica; Sistema Internacional e prefixos",
-"2027-04-02"
-],
-[
 "1 mês",
 "História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
-"2027-03-09"
+"2027-03-03"
 ]
 ]
 },
 {
-"d": "2027-04-09",
+"d": "2027-04-06",
 "a": "fis",
 "t": "Grandezas diretamente e inversamente proporcionais no gráfico",
 "m": [
@@ -1347,9 +1352,107 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"Notação científica; Sistema Internacional e prefixos",
+"2027-03-30"
+],
+[
 "1 mês",
 "Lentes corretivas e visão",
+"2027-03-05"
+],
+[
+"3 meses",
+"Terra: forma, atmosfera, rotação, polos, equador, pontos cardeais, dia e noite",
+"2027-01-06"
+]
+]
+},
+{
+"d": "2027-04-07",
+"a": "fis",
+"t": "Equações do 2º grau",
+"m": [
+[
+"Leitura",
+"Toda Matéria: Equação do 2º grau: como resolver",
+"https://www.todamateria.com.br/equacao-do-segundo-grau/"
+],
+[
+"Exercícios",
+"Khan Academy: Equações do segundo grau por fatoração (9º ano)",
+"https://pt.khanacademy.org/math/pt-9-ano/algebra-expressoes-algebricas-9ano/resolucao-de-equacoes-do-segundo-grau-por-fatoracao/e/solving_quadratics_by_factoring_2"
+],
+[
+"Exercícios",
+"Khan Academy: Número de soluções de equações do 2º grau",
+"https://pt.khanacademy.org/math/pt-mat-prep-em-todo-conteudo/xc940e6c2768299b1:resolucao-de-equacoes-do-segundo-grau/xc940e6c2768299b1:a-formula-de-bhaskara/e/determine-the-number-of-solutions-of-a-quadratic-equation"
+],
+[
+"Exercícios",
+"POTI/OBMEP: Funções quadráticas – Parte 1 (Álgebra N2)",
+"https://poti.obmep.org.br/uploads/material_teorico/8175ftvcqvk84.pdf"
+]
+],
+"r": [
+[
+"1 semana",
+"Medidas: valor mais provável, desvio e erro",
+"2027-03-31"
+],
+[
+"1 mês",
+"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
+"2027-03-09"
+],
+[
+"3 meses",
+"Lua: fases, mês lunar e eclipses",
+"2027-01-08"
+]
+]
+},
+{
+"d": "2027-04-09",
+"a": "fis",
+"t": "Triângulo retângulo; área do círculo, volume do cilindro, litro e m³",
+"m": [
+[
+"Leitura",
+"Khan Academy: Introdução ao Teorema de Pitágoras (artigo, EF09MA14)",
+"https://pt.khanacademy.org/math/1-serie-em-mat-sp/x82b03a9b6c8af113:3-bimestre-2025/x82b03a9b6c8af113:ef09ma14-teorema-de-pitagoras/a/pythagorean-theorem-intro"
+],
+[
+"Aula",
+"Khan Academy: Introdução ao teorema de Pitágoras (vídeo)",
+"https://pt.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/geo-pythagorean-theorem/v/the-pythagorean-theorem"
+],
+[
+"Exercícios",
+"Khan Academy: Problemas com Teorema de Pitágoras",
+"https://pt.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/pythagorean-theorem-app/e/pythagorean-theorem-word-problems--basic"
+],
+[
+"Leitura",
+"Matemática Básica: Volume do cilindro",
+"https://matematicabasica.net/volume-do-cilindro/"
+]
+],
+"r": [
+[
+"1 semana",
+"Plano cartesiano: reta e equação do 1º grau; sistemas de equações",
+"2027-04-02"
+],
+[
+"1 mês",
+"Mecanismos reprodutivos e sexualidade",
 "2027-03-10"
+],
+[
+"3 meses",
+"Sol: translação, ano e estações; solstício e equinócio",
+"2027-01-11"
 ]
 ]
 },
@@ -1382,17 +1485,17 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Medidas: valor mais provável, desvio e erro",
+"Grandezas diretamente e inversamente proporcionais no gráfico",
 "2027-04-06"
 ],
 [
 "1 mês",
-"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
+"Hereditariedade",
 "2027-03-12"
 ],
 [
 "3 meses",
-"Lua: fases, mês lunar e eclipses",
+"Coordenadas geográficas, zonas térmicas, fusos horários e horário de verão",
 "2027-01-12"
 ]
 ]
@@ -1421,17 +1524,17 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Gráficos: plano cartesiano, reta e leitura de gráficos",
+"Equações do 2º grau",
 "2027-04-07"
 ],
 [
 "1 mês",
-"Mecanismos reprodutivos e sexualidade",
+"Brasil República: Era Vargas, anos 1945–1964 (Dutra, JK, Jango), Ditadura, redemocratização e Constituição de 1988",
 "2027-03-16"
 ],
 [
 "3 meses",
-"Sol: translação, ano e estações; solstício e equinócio",
+"Terra: origem, estrutura interna, alterações na superfície, marés, bússola; eclíptica",
 "2027-01-13"
 ]
 ]
@@ -1480,12 +1583,12 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"História da Ciência: Europa e povos não europeus",
-"2027-03-31"
+"Notação científica; Sistema Internacional e prefixos",
+"2027-03-30"
 ],
 [
 "3 meses",
-"Constelações e reconhecimento do céu (carta celeste + observação)",
+"Célula como unidade da vida",
 "2027-01-27"
 ]
 ]
@@ -1493,44 +1596,117 @@ export const SESSIONS = [
 {
 "d": "2027-04-30",
 "a": "ast",
-"t": "Revisão para a OBA (2): Sistema Solar, estrelas, constelações e Astronáutica",
+"t": "Revisão para a OBA (2): Sistema Solar, leis de Kepler, brilho e magnitude, estrelas e constelações",
 "m": [
 [
-"Prova",
-"Provas antigas da OBA (site oficial)",
-"https://site.oba.org.br/"
+"Leitura",
+"Toda Matéria: Leis de Kepler (com exercícios resolvidos)",
+"https://www.todamateria.com.br/leis-de-kepler/"
+],
+[
+"Leitura",
+"Star Walk: Magnitude na astronomia, como o brilho dos astros é medido",
+"https://starwalk.space/pt/news/what-is-magnitude-in-astronomy"
+],
+[
+"Leitura",
+"astro4edu (IAU): glossário, Magnitude",
+"https://astro4edu.org/pt-br/resources/glossary/term/185/"
 ],
 [
 "App",
 "Stellarium Web (céu ao vivo)",
 "https://stellarium-web.org/"
+]
+],
+"r": [
+[
+"1 mês",
+"Medidas: valor mais provável, desvio e erro",
+"2027-03-31"
 ],
 [
-"Leitura",
-"Regulamento da OBA 2025: lista de temas de Astronáutica do nível 3",
-"https://midiasstoragesec.blob.core.windows.net/001/2025/04/regulamento-da-28a-oba-de-2025-compactado-1-pdf-crdownload.pdf"
+"3 meses",
+"Microrganismos",
+"2027-01-29"
+]
+]
+},
+{
+"d": "2027-05-04",
+"a": "ast",
+"t": "Astronáutica (1): conquista do espaço, viagens interplanetárias e exploração de Marte",
+"m": [
+[
+"Aula",
+"Nerdologia: Corrida espacial",
+"https://www.youtube.com/watch?v=urAy6BRsMTE"
+],
+[
+"Prova",
+"OBA 2010, nível 3: questões de astronáutica (foguete VS-30, satélites)",
+"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
 ],
 [
 "Atividade",
-"Marcar na lista os temas de Astronáutica que ainda não sabe e pesquisar 2 deles",
+"Listar 5 dificuldades de ir a Marte e uma solução para cada",
 ""
 ]
 ],
 "r": [
 [
 "1 mês",
-"Notação científica; Sistema Internacional e prefixos",
+"Plano cartesiano: reta e equação do 1º grau; sistemas de equações",
 "2027-04-02"
 ],
 [
 "3 meses",
-"Distâncias: UA, ano-luz, mês-luz, dia-luz, segundo-luz; gravitação e peso",
-"2027-01-26"
+"História: como ler uma fonte histórica (teoria, método e historiografia)",
+"2027-02-02"
 ]
 ]
 },
 {
-"d": "2027-05-04",
+"d": "2027-05-05",
+"a": "ast",
+"t": "Astronáutica (2): foguetes, satélites, ISS, Hubble e James Webb, Programa Espacial Brasileiro e corpo humano no espaço",
+"m": [
+[
+"Leitura",
+"Regulamento da OBA 2025: lista de temas de Astronáutica do nível 3",
+"https://midiasstoragesec.blob.core.windows.net/001/2025/04/regulamento-da-28a-oba-de-2025-compactado-1-pdf-crdownload.pdf"
+],
+[
+"Leitura",
+"Canaltech: o dia em que o primeiro brasileiro foi ao espaço (Missão Centenário)",
+"https://canaltech.com.br/espaco/o-dia-em-que-o-primeiro-brasileiro-foi-ao-espaco-a-bordo-de-nave-russa-ate-a-iss/"
+],
+[
+"Leitura",
+"Câmara dos Deputados: Programa Espacial Brasileiro",
+"https://www2.camara.leg.br/a-camara/visiteacamara/cultura-na-camara/historico/historico-de-paginas/programa-espacial-brasileiro"
+],
+[
+"Atividade",
+"Ficha de uma linha para cada: ISS, Hubble, James Webb, Artemis, Saturno V, Soyuz, Falcon (SpaceX)",
+""
+]
+],
+"r": [
+[
+"1 mês",
+"Grandezas diretamente e inversamente proporcionais no gráfico",
+"2027-04-06"
+],
+[
+"3 meses",
+"Plantas",
+"2027-02-03"
+]
+]
+},
+{
+"d": "2027-05-07",
 "a": "ast",
 "t": "OBA: prova mais recente (nível 3) + correção",
 "m": [
@@ -1553,52 +1729,13 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"Medidas: valor mais provável, desvio e erro",
-"2027-04-06"
-],
-[
-"3 meses",
-"Célula como unidade da vida",
-"2027-02-02"
-]
-]
-},
-{
-"d": "2027-05-05",
-"a": "fis",
-"t": "Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
-"m": [
-[
-"Aula",
-"Nerdologia: Corrida espacial",
-"https://www.youtube.com/watch?v=urAy6BRsMTE"
-],
-[
-"Prova",
-"OBA 2010, nível 3: questões de astronáutica (foguete VS-30, satélites)",
-"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
-],
-[
-"Atividade",
-"Listar 5 dificuldades de ir a Marte e uma solução para cada",
-""
-]
-],
-"r": [
-[
-"1 mês",
-"Gráficos: plano cartesiano, reta e leitura de gráficos",
+"Equações do 2º grau",
 "2027-04-07"
-],
-[
-"3 meses",
-"Microrganismos",
-"2027-02-03"
 ]
 ]
 },
 {
-"d": "2027-05-07",
+"d": "2027-05-11",
 "a": "fis",
 "t": "Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
 "m": [
@@ -1625,19 +1762,24 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"Astronáutica (1): conquista do espaço, viagens interplanetárias e exploração de Marte",
+"2027-05-04"
+],
+[
 "1 mês",
-"Grandezas diretamente e inversamente proporcionais no gráfico",
+"Triângulo retângulo; área do círculo, volume do cilindro, litro e m³",
 "2027-04-09"
 ],
 [
 "3 meses",
-"História: como ler uma fonte histórica (teoria, método e historiografia)",
-"2027-02-05"
+"Características e desenvolvimento dos animais; biodiversidade",
+"2027-02-10"
 ]
 ]
 },
 {
-"d": "2027-05-11",
+"d": "2027-05-12",
 "a": "fis",
 "t": "Consumo de energia: potência × tempo (usar a conta de luz de casa)",
 "m": [
@@ -1665,7 +1807,7 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"Astronáutica (2): foguetes, satélites, ISS, Hubble e James Webb, Programa Espacial Brasileiro e corpo humano no espaço",
 "2027-05-05"
 ],
 [
@@ -1675,13 +1817,13 @@ export const SESSIONS = [
 ],
 [
 "3 meses",
-"Plantas",
-"2027-02-10"
+"Cadeias alimentares, fluxo de energia e ciclo da matéria",
+"2027-02-12"
 ]
 ]
 },
 {
-"d": "2027-05-12",
+"d": "2027-05-14",
 "a": "fis",
 "t": "Uso racional e eficiência energética",
 "m": [
@@ -1703,11 +1845,6 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"1 semana",
-"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
-"2027-05-07"
-],
-[
 "1 mês",
 "Fontes renováveis e não renováveis",
 "2027-04-14"
@@ -1715,7 +1852,7 @@ export const SESSIONS = [
 ]
 },
 {
-"d": "2027-05-14",
+"d": "2027-05-18",
 "a": "fis",
 "t": "Prova antiga do mês + correção",
 "m": [
@@ -1730,10 +1867,21 @@ export const SESSIONS = [
 "https://noic.com.br/olimpiadas/ciencias/"
 ]
 ],
-"r": []
+"r": [
+[
+"1 semana",
+"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
+"2027-05-11"
+],
+[
+"3 meses",
+"Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
+"2027-02-16"
+]
+]
 },
 {
-"d": "2027-05-18",
+"d": "2027-05-19",
 "a": "his",
 "t": "História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
 "m": [
@@ -1762,17 +1910,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Consumo de energia: potência × tempo (usar a conta de luz de casa)",
-"2027-05-11"
+"2027-05-12"
 ],
 [
 "3 meses",
-"Características e desenvolvimento dos animais; biodiversidade",
-"2027-02-16"
+"Ecossistemas, impactos ambientais e preservação",
+"2027-02-17"
 ]
 ]
 },
 {
-"d": "2027-05-19",
+"d": "2027-05-21",
 "a": "fis",
 "t": "Leis de Newton: inércia e massa",
 "m": [
@@ -1801,17 +1949,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Uso racional e eficiência energética",
-"2027-05-12"
+"2027-05-14"
 ],
 [
 "3 meses",
-"Cadeias alimentares, fluxo de energia e ciclo da matéria",
-"2027-02-17"
+"Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
+"2027-02-19"
 ]
 ]
 },
 {
-"d": "2027-05-21",
+"d": "2027-05-25",
 "a": "fis",
 "t": "Força, velocidade e equilíbrio; ação e reação",
 "m": [
@@ -1838,14 +1986,19 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
+"2027-05-19"
+],
+[
 "3 meses",
-"Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
-"2027-02-19"
+"Corpo humano: digestório, respiratório e circulatório integrados",
+"2027-02-23"
 ]
 ]
 },
 {
-"d": "2027-05-25",
+"d": "2027-05-26",
 "a": "fis",
 "t": "Calor, temperatura e escalas termométricas",
 "m": [
@@ -1873,18 +2026,18 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
-"2027-05-18"
+"Leis de Newton: inércia e massa",
+"2027-05-21"
 ],
 [
 "3 meses",
-"Ecossistemas, impactos ambientais e preservação",
-"2027-02-23"
+"História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
+"2027-02-24"
 ]
 ]
 },
 {
-"d": "2027-05-26",
+"d": "2027-05-28",
 "a": "fis",
 "t": "Luz e cor: RGB e CMYK; espectro eletromagnético",
 "m": [
@@ -1911,19 +2064,14 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"1 semana",
-"Leis de Newton: inércia e massa",
-"2027-05-19"
-],
-[
 "3 meses",
-"Brasil no século XIX: Período Joanino, Independência, Império, Abolição",
-"2027-02-24"
+"Nutrição, hábitos alimentares e saúde pública",
+"2027-02-26"
 ]
 ]
 },
 {
-"d": "2027-05-28",
+"d": "2027-06-01",
 "a": "fis",
 "t": "Exercícios de Física e prova antiga do mês + correção",
 "m": [
@@ -1942,17 +2090,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Força, velocidade e equilíbrio; ação e reação",
-"2027-05-21"
+"2027-05-25"
+],
+[
+"1 mês",
+"Astronáutica (1): conquista do espaço, viagens interplanetárias e exploração de Marte",
+"2027-05-04"
 ],
 [
 "3 meses",
-"Corpo humano: digestório, respiratório e circulatório integrados",
-"2027-02-26"
+"Sistemas locomotor e nervoso (a ponte com a Psicologia)",
+"2027-03-02"
 ]
 ]
 },
 {
-"d": "2027-06-01",
+"d": "2027-06-02",
 "a": "qui",
 "t": "Matéria: corpo, objeto e substância; propriedades gerais",
 "m": [
@@ -1981,22 +2134,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Calor, temperatura e escalas termométricas",
-"2027-05-25"
+"2027-05-26"
 ],
 [
 "1 mês",
-"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"Astronáutica (2): foguetes, satélites, ISS, Hubble e James Webb, Programa Espacial Brasileiro e corpo humano no espaço",
 "2027-05-05"
 ],
 [
 "3 meses",
-"História: independências nas Américas, nacionalismos e imperialismo; resistências dos povos colonizados",
-"2027-03-02"
+"História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
+"2027-03-03"
 ]
 ]
 },
 {
-"d": "2027-06-02",
+"d": "2027-06-04",
 "a": "qui",
 "t": "Propriedades específicas: organolépticas, físicas e químicas",
 "m": [
@@ -2020,17 +2173,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Luz e cor: RGB e CMYK; espectro eletromagnético",
-"2027-05-26"
+"2027-05-28"
 ],
 [
 "3 meses",
-"Nutrição, hábitos alimentares e saúde pública",
-"2027-03-03"
+"Lentes corretivas e visão",
+"2027-03-05"
 ]
 ]
 },
 {
-"d": "2027-06-04",
+"d": "2027-06-08",
 "a": "qui",
 "t": "Estados físicos e mudanças de estado",
 "m": [
@@ -2052,19 +2205,24 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"Matéria: corpo, objeto e substância; propriedades gerais",
+"2027-06-02"
+],
+[
 "1 mês",
 "Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
-"2027-05-07"
+"2027-05-11"
 ],
 [
 "3 meses",
-"Sistemas locomotor e nervoso (a ponte com a Psicologia)",
-"2027-03-05"
+"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
+"2027-03-09"
 ]
 ]
 },
 {
-"d": "2027-06-08",
+"d": "2027-06-09",
 "a": "qui",
 "t": "Fenômenos físicos e químicos",
 "m": [
@@ -2092,23 +2250,23 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Matéria: corpo, objeto e substância; propriedades gerais",
-"2027-06-01"
+"Propriedades específicas: organolépticas, físicas e químicas",
+"2027-06-04"
 ],
 [
 "1 mês",
 "Consumo de energia: potência × tempo (usar a conta de luz de casa)",
-"2027-05-11"
+"2027-05-12"
 ],
 [
 "3 meses",
-"História: pensamento do século XIX (darwinismo social, racismo, \"missão civilizatória\") e culturas africanas, ameríndias e asiáticas",
-"2027-03-09"
+"Mecanismos reprodutivos e sexualidade",
+"2027-03-10"
 ]
 ]
 },
 {
-"d": "2027-06-09",
+"d": "2027-06-11",
 "a": "qui",
 "t": "Substâncias simples e compostas; alotropia",
 "m": [
@@ -2135,24 +2293,19 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"1 semana",
-"Propriedades específicas: organolépticas, físicas e químicas",
-"2027-06-02"
-],
-[
 "1 mês",
 "Uso racional e eficiência energética",
-"2027-05-12"
+"2027-05-14"
 ],
 [
 "3 meses",
-"Lentes corretivas e visão",
-"2027-03-10"
+"Hereditariedade",
+"2027-03-12"
 ]
 ]
 },
 {
-"d": "2027-06-11",
+"d": "2027-06-15",
 "a": "qui",
 "t": "Misturas homogêneas e heterogêneas",
 "m": [
@@ -2176,17 +2329,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Estados físicos e mudanças de estado",
-"2027-06-04"
+"2027-06-08"
+],
+[
+"1 mês",
+"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
+"2027-05-19"
 ],
 [
 "3 meses",
-"História: Primeira República (revoltas da Vacina e da Chibata, Canudos, Contestado), imigração, coronelismo e pós-abolição",
-"2027-03-12"
+"Brasil República: Era Vargas, anos 1945–1964 (Dutra, JK, Jango), Ditadura, redemocratização e Constituição de 1988",
+"2027-03-16"
 ]
 ]
 },
 {
-"d": "2027-06-15",
+"d": "2027-06-16",
 "a": "qui",
 "t": "Separação de misturas (1): filtração, decantação, peneiração",
 "m": [
@@ -2210,22 +2368,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Fenômenos físicos e químicos",
-"2027-06-08"
-],
-[
-"1 mês",
-"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
-"2027-05-18"
+"2027-06-09"
 ],
 [
 "3 meses",
-"Mecanismos reprodutivos e sexualidade",
-"2027-03-16"
+"Ideias evolucionistas",
+"2027-03-17"
 ]
 ]
 },
 {
-"d": "2027-06-16",
+"d": "2027-06-18",
 "a": "qui",
 "t": "Separação de misturas (2): destilação, evaporação, centrifugação",
 "m": [
@@ -2249,22 +2402,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Substâncias simples e compostas; alotropia",
-"2027-06-09"
+"2027-06-11"
 ],
 [
 "1 mês",
 "Leis de Newton: inércia e massa",
-"2027-05-19"
+"2027-05-21"
 ],
 [
 "3 meses",
-"Hereditariedade",
-"2027-03-17"
+"Século XX: Guerras Mundiais, socialismo e Guerra Fria, descolonização da Ásia e da África, globalização",
+"2027-03-19"
 ]
 ]
 },
 {
-"d": "2027-06-18",
+"d": "2027-06-22",
 "a": "qui",
 "t": "A água e o ar na natureza",
 "m": [
@@ -2288,22 +2441,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Misturas homogêneas e heterogêneas",
-"2027-06-11"
+"2027-06-15"
 ],
 [
 "1 mês",
 "Força, velocidade e equilíbrio; ação e reação",
-"2027-05-21"
+"2027-05-25"
 ],
 [
 "3 meses",
-"Brasil República: Era Vargas, anos 1945–1964 (Dutra, JK, Jango), Ditadura, redemocratização e Constituição de 1988",
-"2027-03-19"
+"História da Ciência: Europa e povos não europeus",
+"2027-03-24"
 ]
 ]
 },
 {
-"d": "2027-06-22",
+"d": "2027-06-23",
 "a": "qui",
 "t": "Exercícios de Química I e prova antiga do mês + correção",
 "m": [
@@ -2322,22 +2475,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Separação de misturas (1): filtração, decantação, peneiração",
-"2027-06-15"
+"2027-06-16"
 ],
 [
 "1 mês",
 "Calor, temperatura e escalas termométricas",
-"2027-05-25"
-],
-[
-"3 meses",
-"Ideias evolucionistas",
-"2027-03-23"
+"2027-05-26"
 ]
 ]
 },
 {
-"d": "2027-06-23",
+"d": "2027-06-25",
 "a": "qui",
 "t": "Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
 "m": [
@@ -2366,22 +2514,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Separação de misturas (2): destilação, evaporação, centrifugação",
-"2027-06-16"
+"2027-06-18"
 ],
 [
 "1 mês",
 "Luz e cor: RGB e CMYK; espectro eletromagnético",
-"2027-05-26"
-],
-[
-"3 meses",
-"Século XX: Guerras Mundiais, socialismo e Guerra Fria, descolonização da Ásia e da África, globalização",
-"2027-03-24"
+"2027-05-28"
 ]
 ]
 },
 {
-"d": "2027-06-25",
+"d": "2027-06-29",
 "a": "qui",
 "t": "Número atômico, número de massa, prótons, nêutrons e elétrons",
 "m": [
@@ -2405,12 +2548,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "A água e o ar na natureza",
-"2027-06-18"
+"2027-06-22"
+],
+[
+"1 mês",
+"Matéria: corpo, objeto e substância; propriedades gerais",
+"2027-06-02"
+],
+[
+"3 meses",
+"Notação científica; Sistema Internacional e prefixos",
+"2027-03-30"
 ]
 ]
 },
 {
-"d": "2027-06-29",
+"d": "2027-06-30",
 "a": "qui",
 "t": "Isótopos, isóbaros e isótonos",
 "m": [
@@ -2439,22 +2592,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
-"2027-06-23"
-],
-[
-"1 mês",
-"Matéria: corpo, objeto e substância; propriedades gerais",
-"2027-06-01"
+"2027-06-25"
 ],
 [
 "3 meses",
-"História da Ciência: Europa e povos não europeus",
+"Medidas: valor mais provável, desvio e erro",
 "2027-03-31"
 ]
 ]
 },
 {
-"d": "2027-06-30",
+"d": "2027-07-02",
 "a": "qui",
 "t": "Elementos químicos e sua origem nas estrelas",
 "m": [
@@ -2476,24 +2624,19 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"1 semana",
-"Número atômico, número de massa, prótons, nêutrons e elétrons",
-"2027-06-25"
-],
-[
 "1 mês",
 "Propriedades específicas: organolépticas, físicas e químicas",
-"2027-06-02"
+"2027-06-04"
 ],
 [
 "3 meses",
-"Notação científica; Sistema Internacional e prefixos",
+"Plano cartesiano: reta e equação do 1º grau; sistemas de equações",
 "2027-04-02"
 ]
 ]
 },
 {
-"d": "2027-07-02",
+"d": "2027-07-06",
 "a": "qui",
 "t": "Reações e equações químicas: conceitos básicos",
 "m": [
@@ -2520,14 +2663,24 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"Número atômico, número de massa, prótons, nêutrons e elétrons",
+"2027-06-29"
+],
+[
 "1 mês",
 "Estados físicos e mudanças de estado",
-"2027-06-04"
+"2027-06-08"
+],
+[
+"3 meses",
+"Grandezas diretamente e inversamente proporcionais no gráfico",
+"2027-04-06"
 ]
 ]
 },
 {
-"d": "2027-07-06",
+"d": "2027-07-07",
 "a": "qui",
 "t": "Energia: conceito e aplicações",
 "m": [
@@ -2551,22 +2704,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Isótopos, isóbaros e isótonos",
-"2027-06-29"
+"2027-06-30"
 ],
 [
 "1 mês",
 "Fenômenos físicos e químicos",
-"2027-06-08"
+"2027-06-09"
 ],
 [
 "3 meses",
-"Medidas: valor mais provável, desvio e erro",
-"2027-04-06"
+"Equações do 2º grau",
+"2027-04-07"
 ]
 ]
 },
 {
-"d": "2027-07-07",
+"d": "2027-07-09",
 "a": "qui",
 "t": "Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
 "m": [
@@ -2590,22 +2743,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Elementos químicos e sua origem nas estrelas",
-"2027-06-30"
+"2027-07-02"
 ],
 [
 "1 mês",
 "Substâncias simples e compostas; alotropia",
-"2027-06-09"
+"2027-06-11"
 ],
 [
 "3 meses",
-"Gráficos: plano cartesiano, reta e leitura de gráficos",
-"2027-04-07"
+"Triângulo retângulo; área do círculo, volume do cilindro, litro e m³",
+"2027-04-09"
 ]
 ]
 },
 {
-"d": "2027-07-09",
+"d": "2027-07-13",
 "a": "qui",
 "t": "Ambiente, química verde e sustentabilidade",
 "m": [
@@ -2629,22 +2782,22 @@ export const SESSIONS = [
 [
 "1 semana",
 "Reações e equações químicas: conceitos básicos",
-"2027-07-02"
+"2027-07-06"
 ],
 [
 "1 mês",
 "Misturas homogêneas e heterogêneas",
-"2027-06-11"
+"2027-06-15"
 ],
 [
 "3 meses",
-"Grandezas diretamente e inversamente proporcionais no gráfico",
-"2027-04-09"
+"Tipos de energia e conservação da energia",
+"2027-04-13"
 ]
 ]
 },
 {
-"d": "2027-07-13",
+"d": "2027-07-14",
 "a": "qui",
 "t": "Laboratório: segurança, vidrarias, reagentes e equipamentos",
 "m": [
@@ -2673,24 +2826,24 @@ export const SESSIONS = [
 [
 "1 semana",
 "Energia: conceito e aplicações",
-"2027-07-06"
+"2027-07-07"
 ],
 [
 "1 mês",
 "Separação de misturas (1): filtração, decantação, peneiração",
-"2027-06-15"
+"2027-06-16"
 ],
 [
 "3 meses",
-"Tipos de energia e conservação da energia",
-"2027-04-13"
+"Fontes renováveis e não renováveis",
+"2027-04-14"
 ]
 ]
 },
 {
-"d": "2027-07-14",
+"d": "2027-07-16",
 "a": "qui",
-"t": "Exercícios de Química II e revisão geral",
+"t": "Exercícios de Química II, revisão geral e prova antiga do mês + correção",
 "m": [
 [
 "Prova",
@@ -2712,45 +2865,11 @@ export const SESSIONS = [
 [
 "1 semana",
 "Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
-"2027-07-07"
-],
-[
-"1 mês",
-"Separação de misturas (2): destilação, evaporação, centrifugação",
-"2027-06-16"
-],
-[
-"3 meses",
-"Fontes renováveis e não renováveis",
-"2027-04-14"
-]
-]
-},
-{
-"d": "2027-07-16",
-"a": "qui",
-"t": "Exercícios mistos de Química e prova antiga do mês + correção",
-"m": [
-[
-"Prova",
-"Provas antigas ONC (Nível B)",
-"https://www.onciencias.org/exames"
-],
-[
-"Gabarito",
-"NOIC: gabaritos extraoficiais ONC",
-"https://noic.com.br/olimpiadas/ciencias/"
-]
-],
-"r": [
-[
-"1 semana",
-"Ambiente, química verde e sustentabilidade",
 "2027-07-09"
 ],
 [
 "1 mês",
-"A água e o ar na natureza",
+"Separação de misturas (2): destilação, evaporação, centrifugação",
 "2027-06-18"
 ]
 ]
@@ -2769,13 +2888,13 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Laboratório: segurança, vidrarias, reagentes e equipamentos",
+"Ambiente, química verde e sustentabilidade",
 "2027-07-13"
 ],
 [
 "1 mês",
-"Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
-"2027-06-23"
+"A água e o ar na natureza",
+"2027-06-22"
 ]
 ]
 },
@@ -2810,8 +2929,13 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"Laboratório: segurança, vidrarias, reagentes e equipamentos",
+"2027-07-14"
+],
+[
 "1 mês",
-"Número atômico, número de massa, prótons, nêutrons e elétrons",
+"Modelos atômicos: Dalton, Thomson, Rutherford, Bohr",
 "2027-06-25"
 ]
 ]
@@ -2830,7 +2954,7 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"Isótopos, isóbaros e isótonos",
+"Número atômico, número de massa, prótons, nêutrons e elétrons",
 "2027-06-29"
 ]
 ]
@@ -2872,7 +2996,7 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"Elementos químicos e sua origem nas estrelas",
+"Isótopos, isóbaros e isótonos",
 "2027-06-30"
 ]
 ]
@@ -2880,20 +3004,31 @@ export const SESSIONS = [
 {
 "d": "2027-08-03",
 "a": "rev",
-"t": "Simulado 3: prova antiga no formato da 1ª fase",
+"t": "Treino com os seus erros: refazer as questões erradas dos simulados",
 "m": [
+[
+"Atividade",
+"Refazer, sem consultar, as questões da lista de erros dos simulados 1 e 2",
+""
+],
 [
 "Prova",
 "Provas antigas ONC (Nível B)",
 "https://www.onciencias.org/exames"
-],
-[
-"Atividade",
-"Formato da 1ª fase, com cronômetro",
-""
 ]
 ],
-"r": []
+"r": [
+[
+"1 mês",
+"Elementos químicos e sua origem nas estrelas",
+"2027-07-02"
+],
+[
+"3 meses",
+"Astronáutica (1): conquista do espaço, viagens interplanetárias e exploração de Marte",
+"2027-05-04"
+]
+]
 },
 {
 "d": "2027-08-04",
@@ -2914,12 +3049,12 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"Energia: conceito e aplicações",
+"Reações e equações químicas: conceitos básicos",
 "2027-07-06"
 ],
 [
 "3 meses",
-"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"Astronáutica (2): foguetes, satélites, ISS, Hubble e James Webb, Programa Espacial Brasileiro e corpo humano no espaço",
 "2027-05-05"
 ]
 ]
@@ -2948,13 +3083,8 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
+"Energia: conceito e aplicações",
 "2027-07-07"
-],
-[
-"3 meses",
-"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
-"2027-05-07"
 ]
 ]
 },
@@ -2977,12 +3107,12 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"Ambiente, química verde e sustentabilidade",
+"Alimentos: proteínas, carboidratos, lipídios, sais minerais e vitaminas",
 "2027-07-09"
 ],
 [
 "3 meses",
-"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
+"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
 "2027-05-11"
 ]
 ]

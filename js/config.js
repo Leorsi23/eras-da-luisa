@@ -12,9 +12,9 @@ export const CONFIG = {
   // Data prevista da 1ª fase da ONC 2027 (ajuste quando sair o edital).
   oncDate: "2027-08-13",
 
-  // Horário padrão de cada dia de estudo (2 = terça, 3 = quarta, 5 = sexta).
+  // Horário padrão de cada dia de estudo (1 = segunda, só nas férias de janeiro; 2 = terça, 3 = quarta, 5 = sexta).
   // O pai pode mudar pela tela Bastidores; isto é só o valor inicial.
-  horarioPadrao: { 2: "15:30", 3: "14:00", 5: "14:00" },
+  horarioPadrao: { 1: "14:00", 2: "15:30", 3: "14:00", 5: "14:00" },
 
   // Blocos do modo foco, em minutos.
   // 10 de aquecimento + 40 aqui + 10 de mapa mental = 1h.
@@ -42,8 +42,8 @@ export const ERAS = {
   1: { nome: "Midnights", sub: "Astronomia: o céu à noite", cor: "#6c4cf0", trilha: "" },
   2: { nome: "Fearless", sub: "Biologia e História I", cor: "#e0a400", trilha: "" },
   3: { nome: "Red", sub: "Biologia e História II", cor: "#e0364e", trilha: "" },
-  4: { nome: "1989", sub: "Física I · Paris · OBA", cor: "#2b9bd8", trilha: "" },
-  5: { nome: "Reputation", sub: "Física II", cor: "#55556b", trilha: "" },
+  4: { nome: "1989", sub: "Matemática da Física · Paris · OBA", cor: "#2b9bd8", trilha: "" },
+  5: { nome: "Reputation", sub: "OBA e Física II", cor: "#55556b", trilha: "" },
   6: { nome: "Folklore", sub: "Química I", cor: "#7d9466", trilha: "" },
   7: { nome: "Evermore", sub: "Química II e simulados", cor: "#b8723a", trilha: "" },
   8: { nome: "The Life of a Showgirl", sub: "Reta final", cor: "#f2662f", trilha: "" },
@@ -59,5 +59,5 @@ export const REWARDS = [
   { id: "planetario", titulo: "Planetário", desc: "Metade do caminho! Uma sessão de planetário em São Paulo.", alvo: 44 },
   { id: "rodizio", titulo: "Rodízio japonês com uma amiga", desc: "Ela e uma amiga, por conta do pai.", alvo: 60 },
   { id: "taylor", titulo: "Noite Taylor", desc: "Karaokê e o filme do show em casa, com quem ela quiser.", alvo: 75 },
-  { id: "grande", titulo: "A grande recompensa", desc: "Fez a turnê inteira, qualquer que seja o resultado da ONC.", alvo: 88 },
+  { id: "grande", titulo: "A grande recompensa", desc: "Fez a turnê inteira, qualquer que seja o resultado da ONC.", alvo: 90 },
 ];

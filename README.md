@@ -1,6 +1,6 @@
 # Eras da Luísa
 
-Site de estudos da Luísa para a ONC 2027: 88 encontros de janeiro a agosto, organizados em 8 "eras" da Taylor Swift. Cada encontro tem aquecimento com revisão espaçada, modo foco com timer, material e trilha, e uma miçanga para a pulseira. Os ingressos (recompensas) são liberados pelo esforço.
+Site de estudos da Luísa para a ONC 2027: 90 encontros de janeiro a agosto, organizados em 8 "eras" da Taylor Swift. Cada encontro tem aquecimento com revisão espaçada, modo foco com timer, material e trilha, e uma miçanga para a pulseira. Os ingressos (recompensas) são liberados pelo esforço.
 
 É um site estático, sem etapa de build. Roda no GitHub Pages.
 
@@ -9,7 +9,7 @@ Site de estudos da Luísa para a ONC 2027: 88 encontros de janeiro a agosto, org
 | Arquivo | O que é |
 |---|---|
 | `js/config.js` | **O que você vai editar**: chaves do Supabase, data da ONC, horários, blocos do timer, eras, trilhas e recompensas |
-| `js/data.js` | Os 88 encontros com materiais e revisões (gerado a partir do plano) |
+| `js/data.js` | Os 90 encontros com materiais e revisões (gerado a partir do plano) |
 | `js/store.js` | Salva no navegador e sincroniza com o Supabase |
 | `js/app.js` | As telas |
 | `css/app.css` | O visual |
@@ -69,7 +69,7 @@ No fim de cada encontro ela faz um mapa mental no papel, sem olhar o material, e
 
 Para isso funcionar, rode também o `supabase/002_mapas.sql` no SQL Editor (uma vez).
 
-Os prêmios caem nas miçangas aprovadas 6, 12, 20, 30, 44, 60, 75 e 88 (editável em `js/config.js`).
+Os prêmios caem nas miçangas aprovadas 6, 12, 20, 30, 44, 60, 75 e 90 (editável em `js/config.js`).
 
 ## Como funciona a revisão
 

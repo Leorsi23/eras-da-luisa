@@ -241,7 +241,7 @@ function viewPortao() {
     return `<section class="portao done-p card">
       <span class="eyebrow pink">Portão ${PORTAO.length} de ${PORTAO.length} · completo</span>
       <h1 class="display xxl">Acesso liberado.</h1>
-      <p class="lead">Só uma verdadeira Swiftie passaria por aqui. A turnê de 2027 é sua: 8 eras, 88 encontros e um grande show em agosto.</p>
+      <p class="lead">Só uma verdadeira Swiftie passaria por aqui. A turnê de 2027 é sua: 8 eras, ${REAL.length} encontros e um grande show em agosto.</p>
       <p class="small muted">Use o e-mail e a senha que vieram na mensagem do pai.</p>
       <button type="button" class="btn primary big" data-act="portao-entrar">Entrar na turnê ${I.arrow}</button>
     </section>`;
@@ -329,7 +329,7 @@ function viewHoje() {
     </article>` : `<article class="card hero"><h2 class="display lg">Turnê completa!</h2><p>Todos os encontros feitos. Agora é o grande show.</p></article>`}
     <section class="card stack-s up-card">
       <div class="row between"><h2 class="display md">Próximas sessões</h2><a href="#/turne" class="small">calendário completo</a></div>
-      <p class="small muted">Terça, quarta e sexta. Para mudar um horário, fale com o pai.</p>
+      <p class="small muted">Terça, quarta e sexta (em janeiro, também às segundas). Para mudar um horário, fale com o pai.</p>
       <ol class="uplist">${agenda || '<li class="muted">Nenhuma outra sessão marcada.</li>'}</ol>
     </section>
     <details class="card howto" ${howtoOpen() ? "open" : ""}>
