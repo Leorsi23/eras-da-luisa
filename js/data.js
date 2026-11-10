@@ -1493,7 +1493,7 @@ export const SESSIONS = [
 {
 "d": "2027-04-30",
 "a": "ast",
-"t": "Revisão para a OBA (2): Sistema Solar, estrelas e constelações",
+"t": "Revisão para a OBA (2): Sistema Solar, estrelas, constelações e Astronáutica",
 "m": [
 [
 "Prova",
@@ -1501,14 +1501,19 @@ export const SESSIONS = [
 "https://site.oba.org.br/"
 ],
 [
-"Prova",
-"OBA 2010, nível 3, com gabarito",
-"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
-],
-[
 "App",
 "Stellarium Web (céu ao vivo)",
 "https://stellarium-web.org/"
+],
+[
+"Leitura",
+"Regulamento da OBA 2025: lista de temas de Astronáutica do nível 3",
+"https://midiasstoragesec.blob.core.windows.net/001/2025/04/regulamento-da-28a-oba-de-2025-compactado-1-pdf-crdownload.pdf"
+],
+[
+"Atividade",
+"Marcar na lista os temas de Astronáutica que ainda não sabe e pesquisar 2 deles",
+""
 ]
 ],
 "r": [
@@ -1527,17 +1532,17 @@ export const SESSIONS = [
 {
 "d": "2027-05-04",
 "a": "ast",
-"t": "OBA: prova antiga completa (nível 3) + correção",
+"t": "OBA: prova mais recente (nível 3) + correção",
 "m": [
 [
 "Prova",
-"OBA 2010, nível 3, com gabarito",
-"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
+"OBA: prova mais recente do nível 3, com gabarito (site oficial, Provas e gabaritos)",
+"https://site.oba.org.br/"
 ],
 [
 "Prova",
-"Provas antigas da OBA (site oficial)",
-"https://site.oba.org.br/"
+"Reserva: OBA 2010, nível 3, com gabarito",
+"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
 ],
 [
 "Atividade",
@@ -1560,6 +1565,40 @@ export const SESSIONS = [
 },
 {
 "d": "2027-05-05",
+"a": "fis",
+"t": "Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"m": [
+[
+"Aula",
+"Nerdologia: Corrida espacial",
+"https://www.youtube.com/watch?v=urAy6BRsMTE"
+],
+[
+"Prova",
+"OBA 2010, nível 3: questões de astronáutica (foguete VS-30, satélites)",
+"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
+],
+[
+"Atividade",
+"Listar 5 dificuldades de ir a Marte e uma solução para cada",
+""
+]
+],
+"r": [
+[
+"1 mês",
+"Gráficos: plano cartesiano, reta e leitura de gráficos",
+"2027-04-07"
+],
+[
+"3 meses",
+"Microrganismos",
+"2027-02-03"
+]
+]
+},
+{
+"d": "2027-05-07",
 "a": "fis",
 "t": "Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
 "m": [
@@ -1587,18 +1626,18 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"Gráficos: plano cartesiano, reta e leitura de gráficos",
-"2027-04-07"
+"Grandezas diretamente e inversamente proporcionais no gráfico",
+"2027-04-09"
 ],
 [
 "3 meses",
-"Microrganismos",
-"2027-02-03"
+"História: como ler uma fonte histórica (teoria, método e historiografia)",
+"2027-02-05"
 ]
 ]
 },
 {
-"d": "2027-05-07",
+"d": "2027-05-11",
 "a": "fis",
 "t": "Consumo de energia: potência × tempo (usar a conta de luz de casa)",
 "m": [
@@ -1625,19 +1664,24 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"2027-05-05"
+],
+[
 "1 mês",
-"Grandezas diretamente e inversamente proporcionais no gráfico",
-"2027-04-09"
+"Tipos de energia e conservação da energia",
+"2027-04-13"
 ],
 [
 "3 meses",
-"História: como ler uma fonte histórica (teoria, método e historiografia)",
-"2027-02-05"
+"Plantas",
+"2027-02-10"
 ]
 ]
 },
 {
-"d": "2027-05-11",
+"d": "2027-05-12",
 "a": "fis",
 "t": "Uso racional e eficiência energética",
 "m": [
@@ -1661,22 +1705,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
-"2027-05-05"
+"2027-05-07"
 ],
 [
 "1 mês",
-"Tipos de energia e conservação da energia",
-"2027-04-13"
-],
-[
-"3 meses",
-"Plantas",
-"2027-02-10"
+"Fontes renováveis e não renováveis",
+"2027-04-14"
 ]
 ]
 },
 {
-"d": "2027-05-12",
+"d": "2027-05-14",
 "a": "fis",
 "t": "Prova antiga do mês + correção",
 "m": [
@@ -1691,21 +1730,10 @@ export const SESSIONS = [
 "https://noic.com.br/olimpiadas/ciencias/"
 ]
 ],
-"r": [
-[
-"1 semana",
-"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
-"2027-05-07"
-],
-[
-"1 mês",
-"Fontes renováveis e não renováveis",
-"2027-04-14"
-]
-]
+"r": []
 },
 {
-"d": "2027-05-14",
+"d": "2027-05-18",
 "a": "his",
 "t": "História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
 "m": [
@@ -1730,10 +1758,21 @@ export const SESSIONS = [
 ""
 ]
 ],
-"r": []
+"r": [
+[
+"1 semana",
+"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
+"2027-05-11"
+],
+[
+"3 meses",
+"Características e desenvolvimento dos animais; biodiversidade",
+"2027-02-16"
+]
+]
 },
 {
-"d": "2027-05-18",
+"d": "2027-05-19",
 "a": "fis",
 "t": "Leis de Newton: inércia e massa",
 "m": [
@@ -1762,17 +1801,17 @@ export const SESSIONS = [
 [
 "1 semana",
 "Uso racional e eficiência energética",
-"2027-05-11"
+"2027-05-12"
 ],
 [
 "3 meses",
-"Características e desenvolvimento dos animais; biodiversidade",
-"2027-02-16"
+"Cadeias alimentares, fluxo de energia e ciclo da matéria",
+"2027-02-17"
 ]
 ]
 },
 {
-"d": "2027-05-19",
+"d": "2027-05-21",
 "a": "fis",
 "t": "Força, velocidade e equilíbrio; ação e reação",
 "m": [
@@ -1799,19 +1838,14 @@ export const SESSIONS = [
 ],
 "r": [
 [
-"1 semana",
-"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
-"2027-05-14"
-],
-[
 "3 meses",
-"Cadeias alimentares, fluxo de energia e ciclo da matéria",
-"2027-02-17"
+"Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
+"2027-02-19"
 ]
 ]
 },
 {
-"d": "2027-05-21",
+"d": "2027-05-25",
 "a": "fis",
 "t": "Calor, temperatura e escalas termométricas",
 "m": [
@@ -1838,14 +1872,19 @@ export const SESSIONS = [
 ],
 "r": [
 [
+"1 semana",
+"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
+"2027-05-18"
+],
+[
 "3 meses",
-"Era das revoluções: Iluminismo, Revolução Francesa, Revolução Industrial",
-"2027-02-19"
+"Ecossistemas, impactos ambientais e preservação",
+"2027-02-23"
 ]
 ]
 },
 {
-"d": "2027-05-25",
+"d": "2027-05-26",
 "a": "fis",
 "t": "Luz e cor: RGB e CMYK; espectro eletromagnético",
 "m": [
@@ -1874,40 +1913,6 @@ export const SESSIONS = [
 [
 "1 semana",
 "Leis de Newton: inércia e massa",
-"2027-05-18"
-],
-[
-"3 meses",
-"Ecossistemas, impactos ambientais e preservação",
-"2027-02-23"
-]
-]
-},
-{
-"d": "2027-05-26",
-"a": "fis",
-"t": "Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
-"m": [
-[
-"Aula",
-"Nerdologia: Corrida espacial",
-"https://www.youtube.com/watch?v=urAy6BRsMTE"
-],
-[
-"Prova",
-"OBA 2010, nível 3: questões de astronáutica (foguete VS-30, satélites)",
-"https://sistema.oba.org.br/sisglob/sisglob_arquivos/provas_gabaritos/2010/GABARITO_Prova_nivel_3_da_XIII_OBA_2010.pdf"
-],
-[
-"Atividade",
-"Listar 5 dificuldades de ir a Marte e uma solução para cada",
-""
-]
-],
-"r": [
-[
-"1 semana",
-"Força, velocidade e equilíbrio; ação e reação",
 "2027-05-19"
 ],
 [
@@ -1936,7 +1941,7 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Calor, temperatura e escalas termométricas",
+"Força, velocidade e equilíbrio; ação e reação",
 "2027-05-21"
 ],
 [
@@ -1975,12 +1980,12 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Luz e cor: RGB e CMYK; espectro eletromagnético",
+"Calor, temperatura e escalas termométricas",
 "2027-05-25"
 ],
 [
 "1 mês",
-"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
+"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
 "2027-05-05"
 ],
 [
@@ -2014,7 +2019,7 @@ export const SESSIONS = [
 "r": [
 [
 "1 semana",
-"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"Luz e cor: RGB e CMYK; espectro eletromagnético",
 "2027-05-26"
 ],
 [
@@ -2048,7 +2053,7 @@ export const SESSIONS = [
 "r": [
 [
 "1 mês",
-"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
+"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
 "2027-05-07"
 ],
 [
@@ -2092,7 +2097,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Uso racional e eficiência energética",
+"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
 "2027-05-11"
 ],
 [
@@ -2135,6 +2140,11 @@ export const SESSIONS = [
 "2027-06-02"
 ],
 [
+"1 mês",
+"Uso racional e eficiência energética",
+"2027-05-12"
+],
+[
 "3 meses",
 "Lentes corretivas e visão",
 "2027-03-10"
@@ -2167,11 +2177,6 @@ export const SESSIONS = [
 "1 semana",
 "Estados físicos e mudanças de estado",
 "2027-06-04"
-],
-[
-"1 mês",
-"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
-"2027-05-14"
 ],
 [
 "3 meses",
@@ -2209,7 +2214,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Leis de Newton: inércia e massa",
+"História das Mulheres na ciência e na sociedade (séculos XVIII a XXI) e feminismo",
 "2027-05-18"
 ],
 [
@@ -2248,7 +2253,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Força, velocidade e equilíbrio; ação e reação",
+"Leis de Newton: inércia e massa",
 "2027-05-19"
 ],
 [
@@ -2287,7 +2292,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Calor, temperatura e escalas termométricas",
+"Força, velocidade e equilíbrio; ação e reação",
 "2027-05-21"
 ],
 [
@@ -2321,7 +2326,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Luz e cor: RGB e CMYK; espectro eletromagnético",
+"Calor, temperatura e escalas termométricas",
 "2027-05-25"
 ],
 [
@@ -2365,7 +2370,7 @@ export const SESSIONS = [
 ],
 [
 "1 mês",
-"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
+"Luz e cor: RGB e CMYK; espectro eletromagnético",
 "2027-05-26"
 ],
 [
@@ -2914,7 +2919,7 @@ export const SESSIONS = [
 ],
 [
 "3 meses",
-"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
+"Conquista do espaço e viagens interplanetárias: aspectos e dificuldades",
 "2027-05-05"
 ]
 ]
@@ -2948,7 +2953,7 @@ export const SESSIONS = [
 ],
 [
 "3 meses",
-"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
+"Circuitos elétricos: pilha, fios, lâmpadas × circuito de casa",
 "2027-05-07"
 ]
 ]
@@ -2977,7 +2982,7 @@ export const SESSIONS = [
 ],
 [
 "3 meses",
-"Uso racional e eficiência energética",
+"Consumo de energia: potência × tempo (usar a conta de luz de casa)",
 "2027-05-11"
 ]
 ]
